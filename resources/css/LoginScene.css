@@ -1,0 +1,92 @@
+@font-face {
+  src: url("/assets/fonts/Futurist.TTF");
+}
+
+.text {
+    -fx-font-family: Futurist Fixed-width;
+}
+
+.label {
+  -fx-text-fill: #dbdbdb;
+  -fx-font-weight: bold;
+  -fx-font-size: 15;
+}
+
+.label:hover {
+    -fx-text-fill: rgba(183,140,37,0.8);
+}
+
+.text-field {
+    -fx-text-fill: #dbdbdb;
+    -fx-background-color:#181c25;
+    -fx-border-color: #dbdbdb;
+    -fx-font-family: Futurist Fixed-width;
+    -fx-font-size: 15;
+}
+
+.text-field:focused {
+    -fx-border-width: 3px;
+    -fx-border-color: #ffce1f;
+}
+
+.button {
+    -fx-background-color: rgba(183,140,37,0.8);
+    -fx-border-color: #ffce1f;
+    -fx-text-fill: #dbdbdb;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+}
+
+.button:hover {
+    -fx-underline: true;
+    -fx-border-width: 3px;
+}
+
+.button:focused {
+    -fx-underline: true;
+    -fx-border-width: 3px;
+}
+
+.check-box {
+    -fx-text-fill: #dbdbdb;
+    -fx-font-size: 13;
+}
+
+.check-box:hover .box {
+    -fx-border-width: 2px;
+}
+
+.check-box:focused .box {
+    -fx-border-width: 2px;
+}
+
+.check-box .box {
+    -fx-background-color: rgba(183,140,37,0.8);
+    -fx-border-color: #ffce1f;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #dbdbdb;
+    -fx-border-color: #dbdbdb;
+}
+
+.tooltip {
+    -fx-background: rgba(30,30,30);
+    -fx-text-fill: white;
+    -fx-background-color: rgba(30,30,30,0.8);
+    -fx-background-radius: 6px;
+    -fx-background-insets: 0;
+    -fx-padding: 0.667em 0.75em 0.667em 0.75em;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 10, 0.0 , 0 , 3 );
+    -fx-font-size: 0.85em;
+}
+
+#painel {
+    -fx-background-color: #181c25;
+}
+
+#lbWelcome {
+    -fx-text-fill: #dbdbdb;
+    -fx-font-weight: bold;
+    -fx-font-size: 22;
+}
