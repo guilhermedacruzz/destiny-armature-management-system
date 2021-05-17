@@ -50,7 +50,7 @@
                      </tooltip></CheckBox>
                   <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <children>
-                        <Label fx:id="lbSignUp" text="Criar Conta">
+                        <Label fx:id="lbSignUp" onMouseClicked="#changeScene" text="Criar Conta">
                            <tooltip>
                               <Tooltip text="Criar Conta" />
                            </tooltip></Label>

@@ -1,5 +1,6 @@
 package info.oo.control;
 
+import info.oo.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -56,5 +57,10 @@ public class LoginScene implements Initializable {
     void login() {
         System.out.println("User: " + tfUsername.getText());
         System.out.println("Password: " + pfSecret.getText());
+    }
+
+    @FXML
+    void changeScene() {
+        Main.mudaCena(Main.CADASTRO, (aClass)-> new SignInScene());
     }
 }

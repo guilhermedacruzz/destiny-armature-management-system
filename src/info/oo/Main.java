@@ -6,27 +6,48 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.util.Callback;
+
+import java.io.IOException;
 
 public class Main extends Application {
+
+    public static final String LOGIN = "/fxml/LoginScene.fxml";
+    public static final String CADASTRO = "/fxml/SignInScene.fxml";
+    private static StackPane base;
+
     public static void main(String[] args) {
-        Application.launch(args);
+        launch(args);
     }
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage primaryStage) throws Exception {
 
-        FXMLLoader loader = new FXMLLoader();
+        base = new StackPane();
+        primaryStage.setScene(new Scene(base, 801, 534));
 
-        loader.setLocation(Main.class.getResource("/fxml/SignInScene.fxml"));
-        loader.setControllerFactory((aClass) -> new SignInScene());
+        mudaCena(Main.LOGIN,(aClass)->new LoginScene());
 
-        Parent root = loader.load();
+        primaryStage.show();
+    }
 
-        Scene scene = new Scene(root,801,534);
+    public static void mudaCena(String cena, Callback construtor){
 
-        stage.setScene(scene);
-        stage.setTitle("Sei lá");
-        stage.show();
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource(cena));
+            loader.setControllerFactory(construtor);
+            Parent root = loader.load();
+
+            if (base.getChildren().stream().count() > 0) {
+                base.getChildren().remove(0);
+            }
+            base.getChildren().add(root);
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }
