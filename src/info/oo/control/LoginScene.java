@@ -37,24 +37,4 @@ public class LoginScene implements Initializable {
         tfUsername.setPromptText("Username");
         pfSecret.setPromptText("Senha");
     }
-
-    @FXML
-    void hidePassword() {
-        if (cbPass.isSelected()){
-            pfSecret.setPromptText(pfSecret.getText());
-            pfSecret.setText("");
-            pfSecret.setDisable(true);
-
-        }else {
-            pfSecret.setText(pfSecret.getPromptText());
-            pfSecret.setPromptText("Senha");
-            pfSecret.setDisable(false);
-        }
-    }
-
-    @FXML
-    void login() {
-        System.out.println("User: " + tfUsername.getText());
-        System.out.println("Password: " + pfSecret.getText());
-    }
 }

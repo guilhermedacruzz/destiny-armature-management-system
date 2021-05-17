@@ -23,7 +23,7 @@ public class Main extends Application {
 
         Parent root = loader.load();
 
-        Scene scene = new Scene(root,600,400);
+        Scene scene = new Scene(root,801,534);
 
         stage.setScene(scene);
         stage.setTitle("Sei lá");

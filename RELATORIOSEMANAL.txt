@@ -1,0 +1,8 @@
+11/05/2021 - 14/05/2021
+Planejamento de projeto e perguntas aos professores se vale a pena fazer tudo isso.
+
+15/05/2021 -
+Criação da tela de Login e Estilo base do projeto.
+
+17/05/2021 -
+Foi dado a Merge da Tela de Login com a Main.
