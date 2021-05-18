@@ -65,6 +65,6 @@ public class SignInScene implements Initializable {
 
     @FXML
     void comeBack() {
-        Main.changeSceneFade(Main.LOGIN, (aClass)-> new LoginScene());
+        Main.changeSceneSlide2(Main.LOGIN, (aClass)-> new LoginScene());
     }
 }
