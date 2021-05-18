@@ -6,3 +6,10 @@ Criação da tela de Login e Estilo base do projeto.
 
 17/05/2021 -
 Foi dado a Merge da Tela de Login com a Main.
+Criação da tela de Criar Conta.
+Foi dado a Merge da Tela de Criar Conta com a Main.
+Integração das telas.
+
+18/05/2021
+Desenvolvimento Inicial das Entidades.
+Modelo Conceitual do Banco de Dados.
