@@ -2,10 +2,7 @@ package info.oo;
 
 import info.oo.control.LoginScene;
 import info.oo.control.SignInScene;
-import javafx.animation.Interpolator;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
+import javafx.animation.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -33,72 +30,38 @@ public class Main extends Application {
         stackPane = new StackPane();
         primaryStage.setScene(new Scene(stackPane, 801, 534));
 
-        mudaCena(Main.LOGIN,(aClass)->new LoginScene());
+        changeScene(Main.LOGIN,(aClass)->new LoginScene());
 
         primaryStage.show();
     }
 
-    public static void mudaCenaDireita(String cena, Callback construtor) {
+    public static void changeSceneFade(String cena, Callback construtor) {
         try{
             var paneToRemove = stackPane.getChildren().get(0);
+
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource(cena));
             loader.setControllerFactory(construtor);
             Parent paneToAdd = loader.load();
 
-            paneToAdd.translateXProperty().set(stackPane.getWidth());
             stackPane.getChildren().add(paneToAdd);
 
-            var keyValue2 = new KeyValue(paneToRemove.translateXProperty(), -stackPane.getWidth(), Interpolator.EASE_IN);
-            var keyFrame2 = new KeyFrame(Duration.millis(900), keyValue2);
-            var timeline2 = new Timeline(keyFrame2);
+            var fadeInTransition = new FadeTransition(Duration.millis(800));
 
-            var keyValue = new KeyValue(paneToAdd.translateXProperty(), 0, Interpolator.EASE_IN);
-            var keyFrame = new KeyFrame(Duration.millis(900), keyValue);
-            var timeline = new Timeline(keyFrame);
-            timeline.setOnFinished(evt -> {
+            fadeInTransition.setOnFinished(evt -> {
                 stackPane.getChildren().remove(paneToRemove);
             });
-
-            timeline2.play();
-            timeline.play();
+            fadeInTransition.setNode(paneToAdd);
+            fadeInTransition.setFromValue(0);
+            fadeInTransition.setToValue(1);
+            fadeInTransition.play();
 
         }catch (IOException e){
             e.printStackTrace();
         }
     }
 
-    public static void mudaCenaEsquerda(String cena, Callback construtor) {
-        try{
-            var paneToRemove = stackPane.getChildren().get(0);
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource(cena));
-            loader.setControllerFactory(construtor);
-            Parent paneToAdd = loader.load();
-
-            paneToAdd.translateXProperty().set(-1 * stackPane.getWidth());
-            stackPane.getChildren().add(paneToAdd);
-
-            var keyValue2 = new KeyValue(paneToRemove.translateXProperty(), stackPane.getWidth(), Interpolator.EASE_IN);
-            var keyFrame2 = new KeyFrame(Duration.millis(900), keyValue2);
-            var timeline2 = new Timeline(keyFrame2);
-
-            var keyValue = new KeyValue(paneToAdd.translateXProperty(), 0, Interpolator.EASE_IN);
-            var keyFrame = new KeyFrame(Duration.millis(900), keyValue);
-            var timeline = new Timeline(keyFrame);
-            timeline.setOnFinished(evt -> {
-                stackPane.getChildren().remove(paneToRemove);
-            });
-
-            timeline2.play();
-            timeline.play();
-
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-
-    public static void mudaCena(String cena, Callback construtor){
+    public static void changeScene(String cena, Callback construtor){
 
         try{
             FXMLLoader loader = new FXMLLoader();

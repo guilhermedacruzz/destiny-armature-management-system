@@ -65,6 +65,6 @@ public class SignInScene implements Initializable {
 
     @FXML
     void comeBack() {
-        Main.mudaCenaEsquerda(Main.LOGIN, (aClass)-> new LoginScene());
+        Main.changeSceneFade(Main.LOGIN, (aClass)-> new LoginScene());
     }
 }

@@ -84,7 +84,7 @@
       </VBox>
       <ImageView fx:id="imgLogo" fitHeight="534.0" fitWidth="400.0" nodeOrientation="INHERIT" pickOnBounds="true" smooth="false">
          <image>
-            <Image url="@../assets/images/c1.png" />
+            <Image url="@../assets/images/destiny2-concept-art-edited.png" />
          </image>
       </ImageView>
    </children>

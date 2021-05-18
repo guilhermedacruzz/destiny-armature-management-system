@@ -61,6 +61,6 @@ public class LoginScene implements Initializable {
 
     @FXML
     void changeScene() {
-        Main.mudaCenaDireita(Main.CADASTRO, (aClass)-> new SignInScene());
+        Main.changeSceneFade(Main.CADASTRO, (aClass)-> new SignInScene());
     }
 }
