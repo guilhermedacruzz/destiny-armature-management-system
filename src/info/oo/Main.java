@@ -49,12 +49,18 @@ public class Main extends Application {
             paneToAdd.translateXProperty().set(stackPane.getWidth());
             stackPane.getChildren().add(paneToAdd);
 
+            var keyValue2 = new KeyValue(paneToRemove.translateXProperty(), -stackPane.getWidth(), Interpolator.EASE_IN);
+            var keyFrame2 = new KeyFrame(Duration.millis(900), keyValue2);
+            var timeline2 = new Timeline(keyFrame2);
+
             var keyValue = new KeyValue(paneToAdd.translateXProperty(), 0, Interpolator.EASE_IN);
             var keyFrame = new KeyFrame(Duration.millis(900), keyValue);
             var timeline = new Timeline(keyFrame);
             timeline.setOnFinished(evt -> {
                 stackPane.getChildren().remove(paneToRemove);
             });
+
+            timeline2.play();
             timeline.play();
 
         }catch (IOException e){
@@ -73,12 +79,18 @@ public class Main extends Application {
             paneToAdd.translateXProperty().set(-1 * stackPane.getWidth());
             stackPane.getChildren().add(paneToAdd);
 
+            var keyValue2 = new KeyValue(paneToRemove.translateXProperty(), stackPane.getWidth(), Interpolator.EASE_IN);
+            var keyFrame2 = new KeyFrame(Duration.millis(900), keyValue2);
+            var timeline2 = new Timeline(keyFrame2);
+
             var keyValue = new KeyValue(paneToAdd.translateXProperty(), 0, Interpolator.EASE_IN);
             var keyFrame = new KeyFrame(Duration.millis(900), keyValue);
             var timeline = new Timeline(keyFrame);
             timeline.setOnFinished(evt -> {
                 stackPane.getChildren().remove(paneToRemove);
             });
+
+            timeline2.play();
             timeline.play();
 
         }catch (IOException e){
