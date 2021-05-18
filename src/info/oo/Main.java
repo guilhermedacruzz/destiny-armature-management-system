@@ -18,6 +18,7 @@ public class Main extends Application {
 
     public static final String LOGIN = "/fxml/LoginScene.fxml";
     public static final String CADASTRO = "/fxml/SignInScene.fxml";
+    public static final String CHARACTER = "/fxml/CharacterScene.fxml";
     private static StackPane stackPane;
 
     public static void main(String[] args) {
@@ -46,7 +47,7 @@ public class Main extends Application {
 
             stackPane.getChildren().add(paneToAdd);
 
-            var fadeInTransition = new FadeTransition(Duration.millis(800));
+            var fadeInTransition = new FadeTransition(Duration.millis(600));
 
             fadeInTransition.setOnFinished(evt -> {
                 stackPane.getChildren().remove(paneToRemove);
@@ -76,7 +77,7 @@ public class Main extends Application {
             KeyFrame start = new KeyFrame(Duration.ZERO,
                     new KeyValue(paneToAdd.translateXProperty(), stackPane.getWidth()),
                     new KeyValue(paneToRemove.translateXProperty(), 0));
-            KeyFrame end = new KeyFrame(Duration.millis(700),
+            KeyFrame end = new KeyFrame(Duration.millis(850),
                     new KeyValue(paneToAdd.translateXProperty(), 0),
                     new KeyValue(paneToRemove.translateXProperty(), -stackPane.getWidth()));
 
@@ -108,7 +109,7 @@ public class Main extends Application {
             KeyFrame start = new KeyFrame(Duration.ZERO,
                     new KeyValue(paneToAdd.translateXProperty(), -stackPane.getWidth()),
                     new KeyValue(paneToRemove.translateXProperty(), 0));
-            KeyFrame end = new KeyFrame(Duration.millis(700),
+            KeyFrame end = new KeyFrame(Duration.millis(850),
                     new KeyValue(paneToAdd.translateXProperty(), 0),
                     new KeyValue(paneToRemove.translateXProperty(), stackPane.getWidth()));
 

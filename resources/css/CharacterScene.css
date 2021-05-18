@@ -1,0 +1,39 @@
+@font-face {
+  src: url("/assets/fonts/Futurist.TTF");
+}
+
+.text {
+    -fx-font-family: Futurist Fixed-width;
+}
+
+.label {
+  -fx-text-fill: #dbdbdb;
+  -fx-font-weight: bold;
+  -fx-font-size: 22;
+}
+
+#painel {
+    -fx-background-color: #181c25;
+}
+
+.button {
+    -fx-background-color: #232936;
+    -fx-border-color: #dbdbdb;
+    -fx-border-width: 5px;
+}
+
+.button:hover {
+    -fx-border-width: 9px;
+}
+
+#btHunter {
+    -fx-border-color: #0095E9;
+}
+
+#btTitan {
+    -fx-border-color: #E43B44;
+}
+
+#btWarlock {
+    -fx-border-color: #FEE761;
+}
