@@ -13,3 +13,8 @@ Integração das telas.
 18/05/2021
 Desenvolvimento Inicial das Entidades.
 Modelo Conceitual do Banco de Dados.
+Criando a tela de Escolha de personagem.
+Criando as transições entre telas.
+
+19/05/2021
+Criando o modelo relacional do Banco.

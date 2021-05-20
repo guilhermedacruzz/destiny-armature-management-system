@@ -60,6 +60,6 @@ public class LoginScene implements Initializable {
 
     @FXML
     void changeScene() {
-        Main.changeSceneSlide1(Main.CADASTRO, (aClass)-> new SignInScene());
+        Main.changeSceneSlideRight(Main.REGISTER, (aClass)-> new SignInScene());
     }
 }

@@ -17,7 +17,7 @@ import java.io.IOException;
 public class Main extends Application {
 
     public static final String LOGIN = "/fxml/LoginScene.fxml";
-    public static final String CADASTRO = "/fxml/SignInScene.fxml";
+    public static final String REGISTER = "/fxml/SignInScene.fxml";
     public static final String CHARACTER = "/fxml/CharacterScene.fxml";
     private static StackPane stackPane;
 
@@ -62,7 +62,7 @@ public class Main extends Application {
         }
     }
 
-    public static void changeSceneSlide1(String cena, Callback construtor) {
+    public static void changeSceneSlideRight(String cena, Callback construtor) {
         try{
             var paneToRemove = stackPane.getChildren().get(0);
 
@@ -94,7 +94,7 @@ public class Main extends Application {
         }
     }
 
-    public static void changeSceneSlide2(String cena, Callback construtor) {
+    public static void changeSceneSlideLeft(String cena, Callback construtor) {
         try{
             var paneToRemove = stackPane.getChildren().get(0);
 
