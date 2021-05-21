@@ -1,9 +1,9 @@
 @font-face {
-  src: url("/assets/fonts/Futurist.TTF");
+  src: url("/assets/fonts/itc-avant-garde-gothic-lt-bold.ttf");
 }
 
 .text {
-    -fx-font-family: Futurist Fixed-width;
+    -fx-font-family: ITC Avant Garde Gothic LT Bold;
 }
 
 .label {
@@ -20,7 +20,7 @@
     -fx-text-fill: #dbdbdb;
     -fx-background-color:#181c25;
     -fx-border-color: #dbdbdb;
-    -fx-font-family: Futurist Fixed-width;
+    -fx-font-family: ITC Avant Garde Gothic LT Bold;
     -fx-font-size: 15;
 }
 

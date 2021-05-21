@@ -7,6 +7,8 @@ public class User {
     private String surname;
     private String Username;
 
+    private String guardianClass;
+
     public User(int id, String name, String surname, String username) {
         this.id = id;
         this.name = name;
@@ -44,5 +46,13 @@ public class User {
 
     public void setUsername(String username) {
         Username = username;
+    }
+
+    public String getGuardianClass() {
+        return guardianClass;
+    }
+
+    public void setGuardianClass(String guardianClass) {
+        this.guardianClass = guardianClass;
     }
 }

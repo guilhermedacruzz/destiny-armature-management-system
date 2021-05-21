@@ -19,6 +19,7 @@ public class Main extends Application {
     public static final String LOGIN = "/fxml/LoginScene.fxml";
     public static final String REGISTER = "/fxml/SignInScene.fxml";
     public static final String CHARACTER = "/fxml/CharacterScene.fxml";
+    public static final String MENU = "/fxml/Menu.fxml";
     private static StackPane stackPane;
 
     public static void main(String[] args) {

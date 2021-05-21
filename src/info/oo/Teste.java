@@ -1,60 +1,63 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package info.oo;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
+import java.io.IOException;
+
+import info.oo.control.LoginScene;
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Group;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-import javafx.util.Duration;
+import javafx.util.Callback;
 
+/**
+ *
+ * @author nipun
+ */
 public class Teste extends Application {
-
-    @Override
-    public void start(Stage primaryStage) {
-        Rectangle rectangle1 = new Rectangle(300, 250);
-        rectangle1.setFill(Color.RED);
-
-        Button nextView = new Button("Next");
-        nextView.setPadding(new Insets(10));
-        BorderPane view1 = new BorderPane(rectangle1, null, null, nextView, null);
-        BorderPane.setAlignment(nextView, Pos.CENTER);
-
-        Group view2 = new Group();
-        Rectangle rectangle2 = new Rectangle(300, 250);
-        rectangle2.setFill(Color.BLUE);
-        view2.getChildren().add(rectangle2);
-
-        StackPane root = new StackPane(view1);
-
-        nextView.setOnAction(event -> {
-            root.getChildren().add(view2);
-            double width = root.getWidth();
-            KeyFrame start = new KeyFrame(Duration.ZERO,
-                    new KeyValue(view2.translateXProperty(), width),
-                    new KeyValue(view1.translateXProperty(), 0));
-            KeyFrame end = new KeyFrame(Duration.seconds(1),
-                    new KeyValue(view2.translateXProperty(), 0),
-                    new KeyValue(view1.translateXProperty(), -width));
-            Timeline slide = new Timeline(start, end);
-            slide.setOnFinished(e -> root.getChildren().remove(view1));
-            slide.play();
-        });
-
-        Scene scene = new Scene(root, 400, 400);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
+    private static StackPane stackPane;
 
     public static void main(String[] args) {
         launch(args);
     }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+        stackPane = new StackPane();
+        primaryStage.setScene(new Scene(stackPane, 801, 534));
+
+        changeScene("/fxml/Menu2.fxml",(aClass)->new LoginScene());
+
+        primaryStage.show();
+    }
+
+    public static void changeScene(String cena, Callback construtor){
+
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource(cena));
+            loader.setControllerFactory(construtor);
+            Parent paneToAdd = loader.load();
+
+            if (stackPane.getChildren().stream().count() > 0) {
+                stackPane.getChildren().remove(0);
+            }
+            stackPane.getChildren().add(paneToAdd);
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
 }
