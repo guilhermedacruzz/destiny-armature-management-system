@@ -1,8 +1,8 @@
 use sgda1;
 
 delimiter $$
-drop procedure if exists check_username2 $$
-create procedure check_username2(new_username VARCHAR(45), out retorno VARCHAR(45))
+drop procedure if exists check_username $$
+create procedure check_username(new_username VARCHAR(45), out retorno VARCHAR(45))
 begin
 
     declare result int default 0;
@@ -22,7 +22,7 @@ begin
 			leave myLoop;
 		end if;
         
-        if !strcmp(bd_username, new_username) then
+        if not strcmp(BINARY bd_username, new_username) then
 			set result = 1;
         end if;
 	end loop myLoop;
@@ -32,6 +32,19 @@ begin
 end $$
 delimiter ;
 
-call check_username2("roger", @var);
-select @var;
-
+delimiter $$
+drop trigger if exists duplicate_username $$
+create trigger duplicate_username before insert on table_user for each
+row
+begin
+	declare msg varchar(255);
+    declare result int;
+    
+    call check_username(new.username, result);
+    
+    if result = 1 then
+		set msg = "Username indisponível";
+        signal sqlstate '45000' set message_text = msg;
+	end if;
+end$$
+delimiter ;
