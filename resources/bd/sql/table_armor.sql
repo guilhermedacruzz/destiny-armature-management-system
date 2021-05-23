@@ -7,7 +7,7 @@ create table table_armor(
     guardian_class VARCHAR(45) NOT NULL,
     type VARCHAR(45) NOT NULL,
     rarity VARCHAR(45) NOT NULL,
-    status TINYINT  NOT NULL,
+    status TINYINT, 
     status_masterprice TINYINT NOT NULL,
     element VARCHAR(45) NOT NULL,
     cod_user INTEGER NOT NULL,
