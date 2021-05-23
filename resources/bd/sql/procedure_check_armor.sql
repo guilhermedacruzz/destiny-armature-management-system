@@ -32,9 +32,3 @@ begin
     
 end $$
 delimiter ;
-
-select * from table_armor;
-
-call check_armor("teste", @var);
-
-select @var;
