@@ -12,7 +12,7 @@ begin
     set new.name = UPPER(new.name);
     
     if result = 1 then
-        set new.name = CONCAT(new.name, "#", CONVERT(RAND(), CHAR));
+        set new.name = CONCAT(new.name, "#", CONVERT(random_integer(100, 1000), CHAR));
 	end if;
 end$$
 delimiter ;
