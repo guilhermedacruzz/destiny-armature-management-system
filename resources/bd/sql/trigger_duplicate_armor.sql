@@ -9,9 +9,10 @@ begin
     
     call check_armor(new.name, result);
     
+    set new.name = UPPER(new.name);
+    
     if result = 1 then
-		set new.name = UPPER(new.name);
-        set new.name = CONCAT(new.name, "67");
+        set new.name = CONCAT(new.name, "#", CONVERT(RAND(), CHAR));
 	end if;
 end$$
 delimiter ;
