@@ -11,6 +11,3 @@ create table table_attributes(
     strenght int not null,
     PRIMARY KEY(cod_attributes)
 );
-
-insert into table_attributes(mobility, resilience, recovery, dicipline, intellect, strenght) values(9, 9, 20, 4, 27, 4);
-select * from table_attributes;

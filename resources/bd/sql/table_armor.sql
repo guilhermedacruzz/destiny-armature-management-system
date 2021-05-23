@@ -10,9 +10,8 @@ create table table_armor(
     status TINYINT  NOT NULL,
     status_masterprice TINYINT NOT NULL,
     element VARCHAR(45) NOT NULL,
+    cod_user INTEGER NOT NULL,
     
-    PRIMARY KEY(cod_armor)
+    PRIMARY KEY(cod_armor),
+	FOREIGN KEY(cod_user) references table_user(cod_user)
 );
-
-insert into table_armor(name, guardian_class, type, rarity, status, status_masterprice, element) values ("teste", "a", "b", "c", 1, 0, "d");
-select * from table_armor;
