@@ -1,4 +1,3 @@
-create database sgda1;
 use sgda1;
 
 DROP TABLE table_user;

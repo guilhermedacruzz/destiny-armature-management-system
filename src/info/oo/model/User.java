@@ -9,15 +9,18 @@ public class User {
 
     private String guardianClass;
 
-    public User(int id, String name, String surname, String username) {
+    private Inventory inventory;
+
+    public User(int id, String name, String surname, String username, Inventory inventory) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.Username = username;
+        this.inventory = inventory;
     }
 
-    public User(String name, String surname, String username) {
-        this(-1, name, surname, username);
+    public User(String name, String surname, String username, Inventory inventory) {
+        this(-1, name, surname, username, inventory);
     }
 
     public int getId() {
@@ -54,5 +57,17 @@ public class User {
 
     public void setGuardianClass(String guardianClass) {
         this.guardianClass = guardianClass;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", Username='" + Username + '\'' +
+                ", guardianClass='" + guardianClass + '\'' +
+                ", inventory=" + inventory.toString() +
+                '}';
     }
 }
