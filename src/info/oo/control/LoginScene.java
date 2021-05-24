@@ -1,12 +1,14 @@
 package info.oo.control;
 
 import info.oo.Main;
+import info.oo.services.AuthService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 
@@ -33,6 +35,12 @@ public class LoginScene implements Initializable {
     @FXML
     CheckBox cbPass;
 
+    private AuthService authService;
+
+    public LoginScene(AuthService authService) {
+        this.authService = authService;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tfUsername.setPromptText("Username");
@@ -58,9 +66,22 @@ public class LoginScene implements Initializable {
         String username = tfUsername.getText();
         String secret = pfSecret.getText();
 
-        System.out.println(username + secret);
+        String msg = "";
+        try {
+            boolean status = authService.login(username, secret);
 
-        Main.changeSceneFade(Main.CHARACTER, (aClass)-> new CharacterScene());
+            if(status) {
+                Main.changeSceneFade(Main.CHARACTER, (aClass) -> new CharacterScene());
+                return;
+            } else {
+                msg = "Usuário Inválido!";
+            }
+        } catch (SQLException e) {
+            msg = e.getMessage();
+        }
+
+        Alert alert = new Alert(Alert.AlertType.ERROR,msg);
+        alert.showAndWait();
     }
 
     @FXML

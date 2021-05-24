@@ -2,6 +2,9 @@ package info.oo;
 
 import info.oo.control.LoginScene;
 import info.oo.control.SignInScene;
+import info.oo.model.ConnectionsFactory;
+import info.oo.model.daos.JDBCUser;
+import info.oo.services.AuthService;
 import javafx.animation.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +25,10 @@ public class Main extends Application {
     public static final String MENU = "/fxml/Menu.fxml";
     private static StackPane stackPane;
 
+    private ConnectionsFactory connectionsFactory;
+    private JDBCUser jdbcUser;
+    private AuthService authService;
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -29,10 +36,14 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
+        connectionsFactory = new ConnectionsFactory();
+        jdbcUser = new JDBCUser(connectionsFactory);
+        authService = new AuthService(jdbcUser);
+
         stackPane = new StackPane();
         primaryStage.setScene(new Scene(stackPane, 801, 534));
 
-        changeScene(Main.LOGIN,(aClass)->new LoginScene());
+        changeScene(Main.LOGIN,(aClass)->new LoginScene(authService));
 
         primaryStage.show();
     }
