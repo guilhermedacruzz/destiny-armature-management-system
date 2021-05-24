@@ -88,6 +88,8 @@ public class SignInScene implements Initializable {
 
         Alert alert = new Alert(Alert.AlertType.ERROR,msg);
         alert.showAndWait();
+
+        comeBack();
     }
 
     @FXML
