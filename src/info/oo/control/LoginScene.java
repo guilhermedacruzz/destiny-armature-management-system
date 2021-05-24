@@ -55,6 +55,11 @@ public class LoginScene implements Initializable {
 
     @FXML
     void login() {
+        String username = tfUsername.getText();
+        String secret = pfSecret.getText();
+
+        System.out.println(username + secret);
+
         Main.changeSceneFade(Main.CHARACTER, (aClass)-> new CharacterScene());
     }
 

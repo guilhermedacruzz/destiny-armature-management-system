@@ -2,7 +2,6 @@ package info.oo;
 
 
 import info.oo.model.ConnectionsFactory;
-import info.oo.model.User;
 import info.oo.model.daos.JDBCUser;
 import info.oo.model.daos.interfaces.UserDAO;
 import info.oo.services.AuthService;
@@ -17,11 +16,9 @@ public class Teste {
         UserDAO userDAO = new JDBCUser(connectionsFactory);
         AuthService authService = new AuthService(userDAO);
 
-        User user = new User("asdf", "fghj", "qwer", "qwer");
+        authService.signIn("asdf", "fghj", "qweffr", "qwer");
 
-        authService.signIn(user);
-
-        authService.login("qwer", "qwer");
+        authService.login("qweffr", "qwer");
 
         System.out.println(authService.getLogged().toString());
     }

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public interface UserDAO {
 
-    User login(String username, String password) throws SQLException;
+    User login(String username, String secret) throws SQLException;
 
-    boolean signIn(User user) throws SQLException;
+    boolean signIn(String name, String surname, String username, String secret) throws SQLException;
 }

@@ -19,7 +19,7 @@ public class JDBCUser implements UserDAO {
     }
 
     @Override
-    public User login(String username, String password) throws SQLException {
+    public User login(String username, String secret) throws SQLException {
         User user = null;
 
         Connection con = connectionsFactory.getConnection();
@@ -29,7 +29,7 @@ public class JDBCUser implements UserDAO {
         PreparedStatement pstm = con.prepareStatement(sql);
 
         pstm.setString(1, username);
-        pstm.setString(2, password);
+        pstm.setString(2, secret);
 
         ResultSet rs = pstm.executeQuery();
 
@@ -38,7 +38,7 @@ public class JDBCUser implements UserDAO {
             String name = rs.getString("name");
             String surname = rs.getString("surname");
             String usernamebd = rs.getString("username");
-            String secret = rs.getString("secret");
+            String secretbd = rs.getString("secret");
 
 
             int lumen = rs.getInt("lumen");
@@ -51,7 +51,7 @@ public class JDBCUser implements UserDAO {
             Inventory inventory = new Inventory(lumen, legendaryFragments, ascendentFragments,
                     enhancementPrism, improvementCore, enhancementModule);
 
-            user = new User(id, name, surname, usernamebd, secret, inventory);
+            user = new User(id, name, surname, usernamebd, secretbd, inventory);
         }
 
         rs.close();
@@ -62,17 +62,17 @@ public class JDBCUser implements UserDAO {
     }
 
     @Override
-    public boolean signIn(User user) throws SQLException {
+    public boolean signIn(String name, String surname, String username, String secret) throws SQLException {
         Connection conn = connectionsFactory.getConnection();
 
         String sql = "INSERT INTO table_user(name, surname, username, secret) values (?,?,?,?)";
 
         PreparedStatement pstmt = conn.prepareStatement(sql);
 
-        pstmt.setString(1, user.getName());
-        pstmt.setString(2, user.getSurname());
-        pstmt.setString(3, user.getUsername());
-        pstmt.setString(4, user.getSecret());
+        pstmt.setString(1, name);
+        pstmt.setString(2, surname);
+        pstmt.setString(3, username);
+        pstmt.setString(4, secret);
 
         pstmt.executeUpdate();
 

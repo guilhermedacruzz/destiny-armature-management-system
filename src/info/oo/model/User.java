@@ -5,8 +5,7 @@ public class User {
     private int id;
     private String name;
     private String surname;
-    private String Username;
-    private String secret;
+    private String username;
 
     private String guardianClass;
 
@@ -16,13 +15,8 @@ public class User {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        this.Username = username;
-        this.secret = secret;
+        this.username = username;
         this.inventory = inventory;
-    }
-
-    public User(String name, String surname, String username, String secret) {
-        this(-1, name, surname, username, secret, null);
     }
 
     public int getId() {
@@ -46,19 +40,15 @@ public class User {
     }
 
     public String getUsername() {
-        return Username;
+        return username;
     }
 
-    public void setUsername(String username) {
-        Username = username;
+    public Inventory getInventory() {
+        return inventory;
     }
 
-    public String getSecret() {
-        return secret;
-    }
-
-    public void setSecret(String secret) {
-        this.secret = secret;
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
     }
 
     public String getGuardianClass() {
@@ -75,7 +65,7 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", Username='" + Username + '\'' +
+                ", Username='" + username + '\'' +
                 ", guardianClass='" + guardianClass + '\'' +
                 ", inventory=" + inventory.toString() +
                 '}';
