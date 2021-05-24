@@ -1,4 +1,4 @@
-package info.oo.models;
+package info.oo.model;
 
 public class User {
 
@@ -13,7 +13,7 @@ public class User {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        Username = username;
+        this.Username = username;
     }
 
     public User(String name, String surname, String username) {

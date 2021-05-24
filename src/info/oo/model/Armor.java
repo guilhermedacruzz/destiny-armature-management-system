@@ -1,4 +1,4 @@
-package info.oo.models;
+package info.oo.model;
 
 public class Armor {
     private int id;

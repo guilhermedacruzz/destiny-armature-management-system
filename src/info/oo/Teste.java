@@ -1,63 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package info.oo;
 
-import java.io.IOException;
+import info.oo.model.ConnectionsFactory;
 
-import info.oo.control.LoginScene;
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
-import javafx.util.Callback;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-/**
- *
- * @author nipun
- */
-public class Teste extends Application {
-    private static StackPane stackPane;
+public class Teste {
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+    public static void main(String[] args) throws SQLException {
+        ConnectionsFactory connectionsFactory =  new ConnectionsFactory();
+        Connection conn = connectionsFactory.getConnection();
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
+        String sql = "SELECT * FROM table_armor";
 
-        stackPane = new StackPane();
-        primaryStage.setScene(new Scene(stackPane, 801, 534));
+        PreparedStatement pstmt = conn.prepareStatement(sql);
 
-        changeScene("/fxml/Menu2.fxml",(aClass)->new LoginScene());
+        ResultSet rs = pstmt.executeQuery();
 
-        primaryStage.show();
-    }
+        while(rs.next()){
 
-    public static void changeScene(String cena, Callback construtor){
+            String name = rs.getString("name");
 
-        try{
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource(cena));
-            loader.setControllerFactory(construtor);
-            Parent paneToAdd = loader.load();
-
-            if (stackPane.getChildren().stream().count() > 0) {
-                stackPane.getChildren().remove(0);
-            }
-            stackPane.getChildren().add(paneToAdd);
-
-        }catch (IOException e){
-            e.printStackTrace();
+            System.out.println(name);
         }
-    }
 
+        rs.close();
+        pstmt.close();
+        conn.close();
+
+    }
 }
