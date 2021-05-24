@@ -15,25 +15,25 @@ import java.util.ResourceBundle;
 public class LoginScene implements Initializable {
 
     @FXML
-    ImageView imgLogo;
+    private ImageView imgLogo;
 
     @FXML
-    TextField tfUsername;
+    private TextField tfUsername;
 
     @FXML
-    PasswordField pfSecret;
+    private PasswordField pfSecret;
 
     @FXML
-    Button btSend;
+    private Button btSend;
 
     @FXML
-    Label lbSignUp;
+    private Label lbSignUp;
 
     @FXML
-    Label lbWelcome;
+    private Label lbWelcome;
 
     @FXML
-    CheckBox cbPass;
+    private CheckBox cbPass;
 
     private AuthService authService;
 
@@ -71,7 +71,7 @@ public class LoginScene implements Initializable {
             boolean status = authService.login(username, secret);
 
             if(status) {
-                Main.changeSceneFade(Main.CHARACTER, (aClass) -> new CharacterScene());
+                Main.changeSceneFade(Main.CHARACTER, (aClass) -> new CharacterScene(authService));
                 return;
             } else {
                 msg = "Usuário Inválido!";
@@ -86,6 +86,6 @@ public class LoginScene implements Initializable {
 
     @FXML
     void changeScene() {
-        Main.changeSceneSlideRight(Main.REGISTER, (aClass)-> new SignInScene());
+        Main.changeSceneSlideRight(Main.REGISTER, (aClass)-> new SignInScene(authService));
     }
 }

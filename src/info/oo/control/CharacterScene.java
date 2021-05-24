@@ -1,10 +1,10 @@
 package info.oo.control;
 
 import info.oo.Main;
+import info.oo.services.AuthService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -22,6 +22,12 @@ public class CharacterScene implements Initializable {
     @FXML
     private Button btWarlock;
 
+    private AuthService authService;
+
+    public CharacterScene(AuthService authService) {
+        this.authService = authService;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btHunter.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/assets/images/hunter_logo.png"))));
@@ -31,6 +37,6 @@ public class CharacterScene implements Initializable {
 
     @FXML
     void comeBack() {
-        //Main.changeSceneFade(Main.LOGIN, (aClass)-> new LoginScene());
+        Main.changeSceneFade(Main.LOGIN, (aClass)-> new LoginScene(authService));
     }
 }

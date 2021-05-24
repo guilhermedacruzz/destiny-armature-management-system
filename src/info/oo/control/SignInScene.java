@@ -1,12 +1,14 @@
 package info.oo.control;
 
 import info.oo.Main;
+import info.oo.services.AuthService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class SignInScene implements Initializable {
@@ -35,6 +37,12 @@ public class SignInScene implements Initializable {
     @FXML
     private ImageView imgLogo;
 
+    private AuthService authService;
+
+    public SignInScene(AuthService authService) {
+        this.authService = authService;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tfNome.setPromptText("Nome");
@@ -59,12 +67,31 @@ public class SignInScene implements Initializable {
 
     @FXML
     void create() {
-        System.out.println("User: " + tfUsername.getText());
-        System.out.println("Password: " + pfSecret.getText());
+        String username = tfUsername.getText();
+        String secret = pfSecret.getText();
+        String name = tfNome.getText();
+        String surname = tfSobrenome.getText();
+
+        String msg = "";
+        try {
+            boolean status = authService.signIn(name, surname, username, secret);
+
+            if(status) {
+                msg = "Usuário cadastrado com Sucesso";
+            }
+            else {
+                msg = "Erro ao tentar cadastrar o Usuário";
+            }
+        } catch (SQLException e) {
+            msg = e.getMessage();
+        }
+
+        Alert alert = new Alert(Alert.AlertType.ERROR,msg);
+        alert.showAndWait();
     }
 
     @FXML
     void comeBack() {
-        //Main.changeSceneSlideLeft(Main.LOGIN, (aClass)-> new LoginScene());
+        Main.changeSceneSlideLeft(Main.LOGIN, (aClass)-> new LoginScene(authService));
     }
 }
