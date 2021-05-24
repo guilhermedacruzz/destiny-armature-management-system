@@ -17,12 +17,12 @@ public class Teste {
         UserDAO userDAO = new JDBCUser(connectionsFactory);
         AuthService authService = new AuthService(userDAO);
 
-        boolean a = authService.login("rofdfdadsdffdsfdssfger", "1234");
-        System.out.println(a);
+        User user = new User("asdf", "fghj", "qwer", "qwer");
 
-        User user =  authService.getLogged();
+        authService.signIn(user);
 
-        System.out.println(user.toString());
+        authService.login("qwer", "qwer");
 
+        System.out.println(authService.getLogged().toString());
     }
 }

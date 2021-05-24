@@ -6,21 +6,23 @@ public class User {
     private String name;
     private String surname;
     private String Username;
+    private String secret;
 
     private String guardianClass;
 
     private Inventory inventory;
 
-    public User(int id, String name, String surname, String username, Inventory inventory) {
+    public User(int id, String name, String surname, String username, String secret, Inventory inventory) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.Username = username;
+        this.secret = secret;
         this.inventory = inventory;
     }
 
-    public User(String name, String surname, String username, Inventory inventory) {
-        this(-1, name, surname, username, inventory);
+    public User(String name, String surname, String username, String secret) {
+        this(-1, name, surname, username, secret, null);
     }
 
     public int getId() {
@@ -49,6 +51,14 @@ public class User {
 
     public void setUsername(String username) {
         Username = username;
+    }
+
+    public String getSecret() {
+        return secret;
+    }
+
+    public void setSecret(String secret) {
+        this.secret = secret;
     }
 
     public String getGuardianClass() {

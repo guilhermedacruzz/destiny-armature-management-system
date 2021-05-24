@@ -38,6 +38,7 @@ public class JDBCUser implements UserDAO {
             String name = rs.getString("name");
             String surname = rs.getString("surname");
             String usernamebd = rs.getString("username");
+            String secret = rs.getString("secret");
 
 
             int lumen = rs.getInt("lumen");
@@ -45,12 +46,12 @@ public class JDBCUser implements UserDAO {
             int ascendentFragments = rs.getInt("ascendent_fragments");
             int enhancementPrism = rs.getInt("enhancement_prism");
             int improvementCore = rs.getInt("improvement_core");
-            int ehancementModule = rs.getInt("ehancement_module");
+            int enhancementModule = rs.getInt("ehancement_module");
 
             Inventory inventory = new Inventory(lumen, legendaryFragments, ascendentFragments,
-                    enhancementPrism, improvementCore, ehancementModule);
+                    enhancementPrism, improvementCore, enhancementModule);
 
-            user = new User(id, name, surname, username, inventory);
+            user = new User(id, name, surname, usernamebd, secret, inventory);
         }
 
         rs.close();
@@ -58,5 +59,26 @@ public class JDBCUser implements UserDAO {
         con.close();
 
         return user;
+    }
+
+    @Override
+    public boolean signIn(User user) throws SQLException {
+        Connection conn = connectionsFactory.getConnection();
+
+        String sql = "INSERT INTO table_user(name, surname, username, secret) values (?,?,?,?)";
+
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+
+        pstmt.setString(1, user.getName());
+        pstmt.setString(2, user.getSurname());
+        pstmt.setString(3, user.getUsername());
+        pstmt.setString(4, user.getSecret());
+
+        pstmt.executeUpdate();
+
+        pstmt.close();
+        conn.close();
+
+        return true;
     }
 }

@@ -19,6 +19,10 @@ public class AuthService {
         return logged!=null;
     }
 
+    public boolean signIn(User user) throws SQLException {
+        return userDAO.signIn(user);
+    }
+
     public User getLogged() {
         return logged;
     }
