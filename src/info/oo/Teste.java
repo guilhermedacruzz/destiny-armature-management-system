@@ -1,25 +1,34 @@
 package info.oo;
 
+import info.oo.control.LoginScene;
+import info.oo.control.MenuScene;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-import info.oo.model.ConnectionsFactory;
-import info.oo.model.daos.JDBCUser;
-import info.oo.model.daos.interfaces.UserDAO;
-import info.oo.services.AuthService;
 
-import java.sql.SQLException;
+    public class Teste extends Application {
+        public static void main(String[] args) {
+            System.out.println("Hello World!");
+            Application.launch(args);
+        }
 
-public class Teste {
+        @Override
+        public void start(Stage stage) throws Exception {
 
-    public static void main(String[] args) throws SQLException {
+            FXMLLoader loader = new FXMLLoader();
 
-        ConnectionsFactory connectionsFactory = new ConnectionsFactory();
-        UserDAO userDAO = new JDBCUser(connectionsFactory);
-        AuthService authService = new AuthService(userDAO);
+            loader.setLocation(Main.class.getResource("/fxml/MenuScene.fxml"));
+            loader.setControllerFactory((aClass) -> new MenuScene());
 
-        authService.signIn("asdf", "fghj", "qweffr", "qwer");
+            Parent root = loader.load();
 
-        authService.login("qweffr", "qwer");
+            Scene scene = new Scene(root,801,534);
 
-        System.out.println(authService.getLogged().toString());
+            stage.setScene(scene);
+            stage.setTitle("Sei lá");
+            stage.show();
+        }
     }
-}
