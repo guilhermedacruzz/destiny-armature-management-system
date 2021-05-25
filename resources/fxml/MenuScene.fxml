@@ -11,7 +11,7 @@
 
 <VBox fx:id="pane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="801.0" spacing="30.0" stylesheets="@/css/MenuScene.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="info.oo.control.MenuScene">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="420.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="169.0" fitWidth="548.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/images/logo.png" />
          </image>
@@ -28,19 +28,9 @@
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="180.0" text="VER INVENTÁRIO" />
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <children>
-                  <Button fx:id="btExit" mnemonicParsing="false" prefHeight="36.0" prefWidth="180.0" text="SAIR" />
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="380.0" styleClass="button-direct" text="CALCULAR ARMADURAS" />
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="380.0" text="CADASTRAR ARMADURAS" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
@@ -48,9 +38,19 @@
                   <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="380.0" text="VISUALIZAR ARMADURAS" />
                </children>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="380.0" text="CADASTRAR ARMADURAS" />
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="380.0" styleClass="button-direct" text="CALCULAR ARMADURAS" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="btInventory" mnemonicParsing="false" prefHeight="36.0" prefWidth="180.0" text="VER INVENTÁRIO" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="btExit" mnemonicParsing="false" prefHeight="36.0" prefWidth="180.0" text="SAIR" />
                </children>
             </VBox>
          </children>
