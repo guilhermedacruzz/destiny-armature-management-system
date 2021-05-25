@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -30,27 +31,42 @@
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="380.0" text="CADASTRAR ARMADURAS" />
+                  <Button fx:id="btRegister" mnemonicParsing="false" prefHeight="48.0" prefWidth="380.0" text="CADASTRAR ARMADURAS">
+                     <tooltip>
+                        <Tooltip text="Cadastrar Armaduras" />
+                     </tooltip></Button>
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="380.0" text="VISUALIZAR ARMADURAS" />
+                  <Button fx:id="btView" mnemonicParsing="false" prefHeight="48.0" prefWidth="380.0" text="VISUALIZAR ARMADURAS">
+                     <tooltip>
+                        <Tooltip text="Visualiar Armaduras" />
+                     </tooltip></Button>
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="380.0" styleClass="button-direct" text="CALCULAR ARMADURAS" />
+                  <Button fx:id="btCalc" mnemonicParsing="false" prefHeight="48.0" prefWidth="380.0" styleClass="button-direct" text="CALCULAR ARMADURAS">
+                     <tooltip>
+                        <Tooltip text="Calcular Armaduras" />
+                     </tooltip></Button>
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
                <children>
-                  <Button fx:id="btInventory" mnemonicParsing="false" prefHeight="36.0" prefWidth="180.0" text="VER INVENTÁRIO" />
+                  <Button fx:id="btInventory" mnemonicParsing="false" prefHeight="36.0" prefWidth="180.0" text="VER INVENTÁRIO">
+                     <tooltip>
+                        <Tooltip text="Ver inventário" />
+                     </tooltip></Button>
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <Button fx:id="btExit" mnemonicParsing="false" prefHeight="36.0" prefWidth="180.0" text="SAIR" />
+                  <Button fx:id="btExit" mnemonicParsing="false" prefHeight="36.0" prefWidth="180.0" text="SAIR">
+                     <tooltip>
+                        <Tooltip text="Sair" />
+                     </tooltip></Button>
                </children>
             </VBox>
          </children>

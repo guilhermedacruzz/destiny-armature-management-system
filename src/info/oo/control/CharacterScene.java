@@ -34,22 +34,29 @@ public class CharacterScene implements Initializable {
 
     @FXML
     void comeBack() {
-        Main.changeSceneFade(Main.LOGIN, (aClass)-> new LoginScene(authService));
+        Main.changeSceneFade(Main.LOGIN, (aClass)-> new LoginScene(authService), 600);
+    }
+
+    void changeScene() {
+        Main.mainMenu();
     }
 
     @FXML
     void selectHunter() {
         authService.getLogged().setGuardianClass("Hunter");
+        changeScene();
     }
 
     @FXML
     void selectTitan() {
         authService.getLogged().setGuardianClass("Titan");
+        changeScene();
     }
 
     @FXML
     void selectWarlock() {
         authService.getLogged().setGuardianClass("Warlock");
+        changeScene();
     }
 
 }

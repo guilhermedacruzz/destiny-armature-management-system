@@ -1,6 +1,7 @@
 package info.oo;
 
 import info.oo.control.LoginScene;
+import info.oo.control.MenuScene;
 import info.oo.control.SignInScene;
 import info.oo.model.ConnectionsFactory;
 import info.oo.model.daos.JDBCUser;
@@ -22,7 +23,7 @@ public class Main extends Application {
     public static final String LOGIN = "/fxml/LoginScene.fxml";
     public static final String REGISTER = "/fxml/SignInScene.fxml";
     public static final String CHARACTER = "/fxml/CharacterScene.fxml";
-    public static final String MENU = "/fxml/Menu.fxml";
+    public static final String MENU = "/fxml/MenuScene.fxml";
     private static StackPane stackPane;
 
     private ConnectionsFactory connectionsFactory;
@@ -48,7 +49,7 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    public static void changeSceneFade(String cena, Callback construtor) {
+    public static void changeSceneFade(String cena, Callback construtor, int timer) {
         try{
             var paneToRemove = stackPane.getChildren().get(0);
 
@@ -59,7 +60,7 @@ public class Main extends Application {
 
             stackPane.getChildren().add(paneToAdd);
 
-            var fadeInTransition = new FadeTransition(Duration.millis(600));
+            var fadeInTransition = new FadeTransition(Duration.millis(timer));
 
             fadeInTransition.setOnFinished(evt -> {
                 stackPane.getChildren().remove(paneToRemove);
@@ -154,5 +155,9 @@ public class Main extends Application {
         }catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public static void mainMenu() {
+        changeSceneFade(Main.MENU, (aclass) -> new MenuScene(), 1200);
     }
 }

@@ -72,7 +72,7 @@ public class LoginScene implements Initializable {
             boolean status = authService.login(username, secret);
 
             if(status) {
-                Main.changeSceneFade(Main.CHARACTER, (aClass) -> new CharacterScene(authService));
+                Main.changeSceneFade(Main.CHARACTER, (aClass) -> new CharacterScene(authService), 600);
                 return;
             } else {
                 msg = "Usuário Inválido!";
