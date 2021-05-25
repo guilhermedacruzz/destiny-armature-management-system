@@ -15,15 +15,15 @@
          </tooltip></Label>
       <HBox alignment="CENTER" prefHeight="202.0" prefWidth="579.0" spacing="20.0">
          <children>
-            <Button fx:id="btHunter" mnemonicParsing="false" prefHeight="160.0" prefWidth="160.0">
+            <Button fx:id="btHunter" mnemonicParsing="false" onAction="#selectHunter" prefHeight="160.0" prefWidth="160.0">
                <tooltip>
                   <Tooltip text="Caçador" />
                </tooltip></Button>
-            <Button fx:id="btTitan" mnemonicParsing="false" prefHeight="160.0" prefWidth="160.0">
+            <Button fx:id="btTitan" mnemonicParsing="false" onAction="#selectTitan" prefHeight="160.0" prefWidth="160.0">
                <tooltip>
                   <Tooltip text="Titã" />
                </tooltip></Button>
-            <Button fx:id="btWarlock" mnemonicParsing="false" prefHeight="160.0" prefWidth="160.0">
+            <Button fx:id="btWarlock" mnemonicParsing="false" onAction="#selectWarlock" prefHeight="160.0" prefWidth="160.0">
                <tooltip>
                   <Tooltip text="Arcano" />
                </tooltip></Button>

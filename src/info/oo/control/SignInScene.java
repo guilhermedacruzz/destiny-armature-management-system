@@ -29,10 +29,10 @@ public class SignInScene implements Initializable {
     private Label lbWelcome;
 
     @FXML
-    private TextField tfNome;
+    private TextField tfName;
 
     @FXML
-    private TextField tfSobrenome;
+    private TextField tfSurname;
 
     @FXML
     private ImageView imgLogo;
@@ -45,8 +45,8 @@ public class SignInScene implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        tfNome.setPromptText("Nome");
-        tfSobrenome.setPromptText("Sobrenome");
+        tfName.setPromptText("Nome");
+        tfSurname.setPromptText("Sobrenome");
         tfUsername.setPromptText("Username");
         pfSecret.setPromptText("Senha");
     }
@@ -69,8 +69,8 @@ public class SignInScene implements Initializable {
     void create() {
         String username = tfUsername.getText();
         String secret = pfSecret.getText();
-        String name = tfNome.getText();
-        String surname = tfSobrenome.getText();
+        String name = tfName.getText();
+        String surname = tfSurname.getText();
 
         String msg = "";
         try {

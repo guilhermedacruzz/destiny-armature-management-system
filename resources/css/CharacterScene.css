@@ -35,14 +35,23 @@
 
 #btHunter {
     -fx-border-color: #0095E9;
+    -fx-background-image: url("/assets/images/hunter_logo.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
 }
 
 #btTitan {
     -fx-border-color: #E43B44;
+    -fx-background-image: url("/assets/images/titan_logo.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
 }
 
 #btWarlock {
     -fx-border-color: #FEE761;
+    -fx-background-image: url("/assets/images/warlock_logo.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
 }
 
 #btReturn {

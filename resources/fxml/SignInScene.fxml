@@ -43,12 +43,12 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>
                <children>
-                  <TextField fx:id="tfNome" prefHeight="40.0" prefWidth="155.0" GridPane.rowIndex="1">
+                  <TextField fx:id="tfName" prefHeight="40.0" prefWidth="155.0" GridPane.rowIndex="1">
                      <tooltip>
                         <Tooltip text="Digite o seu nome" />
                      </tooltip>
                   </TextField>
-                  <TextField fx:id="tfSobrenome" prefHeight="40.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <TextField fx:id="tfSurname" prefHeight="40.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <tooltip>
                         <Tooltip text="Digite o seu Sobrenome" />
                      </tooltip>

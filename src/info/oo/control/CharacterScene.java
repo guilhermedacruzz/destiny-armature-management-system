@@ -30,13 +30,26 @@ public class CharacterScene implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        btHunter.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/assets/images/hunter_logo.png"))));
-        btWarlock.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/assets/images/warlock_logo.png"))));
-        btTitan.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/assets/images/titan_logo.png"))));
     }
 
     @FXML
     void comeBack() {
         Main.changeSceneFade(Main.LOGIN, (aClass)-> new LoginScene(authService));
     }
+
+    @FXML
+    void selectHunter() {
+        authService.getLogged().setGuardianClass("Hunter");
+    }
+
+    @FXML
+    void selectTitan() {
+        authService.getLogged().setGuardianClass("Titan");
+    }
+
+    @FXML
+    void selectWarlock() {
+        authService.getLogged().setGuardianClass("Warlock");
+    }
+
 }
