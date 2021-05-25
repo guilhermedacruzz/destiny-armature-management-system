@@ -1,0 +1,33 @@
+.myDialog{
+    -fx-background-color: #232936;
+    -fx-graphic: url("/assets/images/ghost_logo.png");
+}
+.myDialog > *.button-bar > *.container{
+    -fx-background-color: #232936;
+}
+.myDialog > *.label.content{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #dbdbdb;
+}
+.myDialog:header *.header-panel{
+    -fx-background-color: #181c25;
+}
+.myDialog:header *.header-panel *.label{
+    -fx-font-size: 24px;
+    -fx-font-style: italic;
+    -fx-text-fill: #dbdbdb;
+}
+
+.dialog-pane .button{
+    -fx-background-color: rgba(183,140,37,0.8);
+    -fx-border-color: #ffce1f;
+    -fx-text-fill: #dbdbdb;
+    -fx-font-weight: bold;
+    -fx-border-width: 2px;
+ }
+
+.dialog-pane .button:hover{
+    -fx-underline: true;
+    -fx-border-width: 3px;
+ }

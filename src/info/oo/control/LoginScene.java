@@ -5,6 +5,7 @@ import info.oo.services.AuthService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
@@ -81,6 +82,10 @@ public class LoginScene implements Initializable {
         }
 
         Alert alert = new Alert(Alert.AlertType.ERROR,msg);
+        DialogPane dialogPane = alert.getDialogPane();
+        dialogPane.getStylesheets().add(
+                getClass().getResource("/css/myAlerts.css").toExternalForm());
+        dialogPane.getStyleClass().add("myDialog");
         alert.showAndWait();
     }
 
