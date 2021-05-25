@@ -72,21 +72,30 @@ public class SignInScene implements Initializable {
         String name = tfName.getText();
         String surname = tfSurname.getText();
 
+        String msgTitle = "";
         String msg = "";
         try {
             boolean status = authService.signIn(name, surname, username, secret);
 
             if(status) {
+                msgTitle = "Olá, Mundo!";
                 msg = "Usuário cadastrado com Sucesso";
             }
             else {
+                msgTitle = "[ERRO] Guardião caído...";
                 msg = "Erro ao tentar cadastrar o Usuário";
             }
         } catch (SQLException e) {
+            msgTitle = "[ERRO] Guardião caído...";
             msg = e.getMessage();
         }
 
         Alert alert = new Alert(Alert.AlertType.ERROR,msg);
+        DialogPane dialogPane = alert.getDialogPane();
+        alert.setHeaderText(msgTitle);
+        dialogPane.getStylesheets().add(
+                getClass().getResource("/css/myAlerts.css").toExternalForm());
+        dialogPane.getStyleClass().add("myDialog");
         alert.showAndWait();
 
         comeBack();
