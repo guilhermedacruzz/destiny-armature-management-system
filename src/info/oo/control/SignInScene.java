@@ -78,15 +78,15 @@ public class SignInScene implements Initializable {
             boolean status = authService.signIn(name, surname, username, secret);
 
             if(status) {
-                msgTitle = "Olá, Mundo!";
+                msgTitle = "[OK]";
                 msg = "Usuário cadastrado com Sucesso";
             }
             else {
-                msgTitle = "[ERRO] Guardião caído...";
+                msgTitle = "[ERRO]";
                 msg = "Erro ao tentar cadastrar o Usuário";
             }
         } catch (SQLException e) {
-            msgTitle = "[ERRO] Guardião caído...";
+            msgTitle = "[ERRO]";
             msg = e.getMessage();
         }
 

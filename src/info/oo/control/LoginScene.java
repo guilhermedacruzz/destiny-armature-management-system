@@ -83,7 +83,7 @@ public class LoginScene implements Initializable {
 
         Alert alert = new Alert(Alert.AlertType.ERROR,msg);
         DialogPane dialogPane = alert.getDialogPane();
-        alert.setHeaderText("[ERRO] Guardião caído...");
+        alert.setHeaderText("[ERRO]");
         dialogPane.getStylesheets().add(
                 getClass().getResource("/css/myAlerts.css").toExternalForm());
         dialogPane.getStyleClass().add("myDialog");

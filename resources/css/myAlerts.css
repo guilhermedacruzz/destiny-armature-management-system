@@ -8,9 +8,9 @@
 
 .myDialog{
     -fx-background-color: #232936;
-    -fx-graphic: url("/assets/images/raid_logo.png");
+    -fx-graphic: url("/assets/images/guardians_logo.png");
 }
-.myDialog > *.button-bar > *.container{
+.myDialog > *.button-bar > *.container {
     -fx-background-color: #232936;
 }
 
