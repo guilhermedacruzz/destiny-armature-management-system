@@ -1,5 +1,6 @@
 package info.oo.control;
 
+import info.oo.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.RadioButton;
@@ -82,5 +83,10 @@ public class ArmorRegisterScene implements Initializable {
         tfStrenght.setPromptText("2");
 
 
+    }
+
+    @FXML
+    private void comeBack() {
+        Main.mainMenu();
     }
 }

@@ -1,5 +1,6 @@
 package info.oo.control;
 
+import info.oo.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -27,5 +28,11 @@ public class MenuScene implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    }
+
+
+    @FXML
+    private void registerArmors() {
+        Main.changeSceneFade(Main.REGISTER_ARMORS, (aclass) -> new ArmorRegisterScene(), 600);
     }
 }

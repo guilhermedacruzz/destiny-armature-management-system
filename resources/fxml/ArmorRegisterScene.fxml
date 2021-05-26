@@ -206,5 +206,16 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </GridPane>
+      <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="802.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#comeBack" prefHeight="34.0" prefWidth="160.0" text="VOLTAR" />
+         </children>
+         <padding>
+            <Insets right="60.0" />
+         </padding>
+      </HBox>
    </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
 </VBox>

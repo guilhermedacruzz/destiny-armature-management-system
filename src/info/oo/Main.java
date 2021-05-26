@@ -24,6 +24,7 @@ public class Main extends Application {
     public static final String REGISTER = "/fxml/SignInScene.fxml";
     public static final String CHARACTER = "/fxml/CharacterScene.fxml";
     public static final String MENU = "/fxml/MenuScene.fxml";
+    public static final String REGISTER_ARMORS = "/fxml/ArmorRegisterScene.fxml";
     private static StackPane stackPane;
 
     private ConnectionsFactory connectionsFactory;
@@ -139,7 +140,7 @@ public class Main extends Application {
         }
     }
 
-    public static void changeScene(String cena, Callback construtor){
+    public static void changeScene(String cena, Callback construtor) {
 
         try{
             FXMLLoader loader = new FXMLLoader();

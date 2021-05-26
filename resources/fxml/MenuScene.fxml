@@ -31,7 +31,7 @@
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2">
                <children>
-                  <Button fx:id="btRegister" mnemonicParsing="false" prefHeight="48.0" prefWidth="380.0" text="CADASTRAR ARMADURAS">
+                  <Button fx:id="btRegister" mnemonicParsing="false" onAction="#registerArmors" prefHeight="48.0" prefWidth="380.0" text="CADASTRAR ARMADURAS">
                      <tooltip>
                         <Tooltip text="Cadastrar Armaduras" />
                      </tooltip></Button>
