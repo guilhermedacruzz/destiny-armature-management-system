@@ -1,5 +1,6 @@
 package info.oo;
 
+import info.oo.control.ArmorRegisterScene;
 import info.oo.control.LoginScene;
 import info.oo.control.MenuScene;
 import javafx.application.Application;
@@ -20,8 +21,8 @@ import javafx.stage.Stage;
 
             FXMLLoader loader = new FXMLLoader();
 
-            loader.setLocation(Main.class.getResource("/fxml/MenuScene.fxml"));
-            loader.setControllerFactory((aClass) -> new MenuScene());
+            loader.setLocation(Main.class.getResource("/fxml/ArmorRegisterScene.fxml"));
+            loader.setControllerFactory((aClass) -> new ArmorRegisterScene());
 
             Parent root = loader.load();
 
