@@ -10,7 +10,7 @@
 
 #center {
     -fx-background-color: rgba(35, 41, 54, 0.7);
-    -fx-border-color: rgba(35, 41, 54, 1);
+    -fx-border-color: rgba(219, 219, 219, 0.5);
 }
 
 #tfName {
@@ -115,4 +115,12 @@
 
 #rbVoid .radio {
     -fx-background-image: url("/assets/images/void_icon.png");
+}
+
+#rbNoMasterprice .radio {
+    -fx-background-image: url("/assets/images/no_masterprice.jpg");
+}
+
+#rbYesMasterprice .radio {
+    -fx-background-image: url("/assets/images/yes_masterprice.jpg");
 }

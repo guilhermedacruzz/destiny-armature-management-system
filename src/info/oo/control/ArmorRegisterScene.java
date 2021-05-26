@@ -49,6 +49,27 @@ public class ArmorRegisterScene implements Initializable {
     @FXML
     private RadioButton rbClassItem;
 
+    @FXML
+    private RadioButton rbExotic;
+
+    @FXML
+    private RadioButton rbLegendary;
+
+    @FXML
+    private RadioButton rbNoMasterprice;
+
+    @FXML
+    private RadioButton rbYesMasterprice;
+
+    @FXML
+    private RadioButton rbSolar;
+
+    @FXML
+    private RadioButton rbVoid;
+
+    @FXML
+    private RadioButton rbArc;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tfName.setPromptText("Nome");
@@ -59,5 +80,7 @@ public class ArmorRegisterScene implements Initializable {
         tfDicipline.setPromptText("2");
         tfIntellect.setPromptText("2");
         tfStrenght.setPromptText("2");
+
+
     }
 }

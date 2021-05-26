@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -152,23 +153,32 @@
                   </VBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
                      <children>
-                        <RadioButton fx:id="rbHelmet" mnemonicParsing="false" />
-                        <RadioButton fx:id="rbArm" mnemonicParsing="false" />
-                        <RadioButton fx:id="rbChest" mnemonicParsing="false" />
-                        <RadioButton fx:id="rbBoot" mnemonicParsing="false" />
-                        <RadioButton fx:id="rbClassItem" mnemonicParsing="false" />
+                        <RadioButton fx:id="rbHelmet" mnemonicParsing="false">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="groupArmors" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="rbArm" mnemonicParsing="false" toggleGroup="$groupArmors" />
+                        <RadioButton fx:id="rbChest" mnemonicParsing="false" toggleGroup="$groupArmors" />
+                        <RadioButton fx:id="rbBoot" mnemonicParsing="false" toggleGroup="$groupArmors" />
+                        <RadioButton fx:id="rbClassItem" mnemonicParsing="false" toggleGroup="$groupArmors" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnSpan="3" GridPane.rowIndex="3">
                      <children>
-                        <RadioButton fx:id="rbExotic" mnemonicParsing="false" />
-                        <RadioButton fx:id="rbLegendary" mnemonicParsing="false" />
+                        <RadioButton fx:id="rbExotic" mnemonicParsing="false">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="groupType" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="rbLegendary" mnemonicParsing="false" toggleGroup="$groupType" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnSpan="3" GridPane.rowIndex="4">
                      <children>
-                        <RadioButton mnemonicParsing="false" />
-                        <RadioButton mnemonicParsing="false" />
+                        <RadioButton fx:id="rbNoMasterprice" mnemonicParsing="false">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="groupMasterprice" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="rbYesMasterprice" mnemonicParsing="false" toggleGroup="$groupMasterprice" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
@@ -178,9 +188,12 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnSpan="3" GridPane.rowIndex="2">
                      <children>
-                        <RadioButton fx:id="rbSolar" mnemonicParsing="false" />
-                        <RadioButton fx:id="rbVoid" mnemonicParsing="false" />
-                        <RadioButton fx:id="rbArc" mnemonicParsing="false" />
+                        <RadioButton fx:id="rbSolar" mnemonicParsing="false">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="groupElements" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="rbVoid" mnemonicParsing="false" toggleGroup="$groupElements" />
+                        <RadioButton fx:id="rbArc" mnemonicParsing="false" toggleGroup="$groupElements" />
                      </children>
                   </HBox>
                </children>
