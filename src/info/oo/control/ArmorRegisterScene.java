@@ -82,7 +82,6 @@ public class ArmorRegisterScene implements Initializable {
         tfIntellect.setPromptText("2");
         tfStrenght.setPromptText("2");
 
-
     }
 
     @FXML

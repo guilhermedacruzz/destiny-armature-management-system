@@ -1,35 +1,23 @@
 package info.oo;
 
-import info.oo.control.ArmorRegisterScene;
-import info.oo.control.LoginScene;
-import info.oo.control.MenuScene;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import info.oo.model.ArmorAttribute;
+import info.oo.model.ConnectionsFactory;
+import info.oo.model.daos.JDBCAttributes;
+import info.oo.model.daos.interfaces.AttributesDAO;
+
+import java.sql.SQLException;
 
 
-    public class Teste extends Application {
-        public static void main(String[] args) {
-            System.out.println("Hello World!");
-            Application.launch(args);
-        }
+public class Teste {
 
-        @Override
-        public void start(Stage stage) throws Exception {
+    public static void main(String[] args) throws SQLException {
+        ConnectionsFactory connectionsFactory = new ConnectionsFactory();
 
-            FXMLLoader loader = new FXMLLoader();
+        AttributesDAO attributesDAO = new JDBCAttributes(connectionsFactory);
 
-            loader.setLocation(Main.class.getResource("/fxml/ArmorRegisterScene.fxml"));
-            loader.setControllerFactory((aClass) -> new ArmorRegisterScene());
+        ArmorAttribute armorAttribute = new ArmorAttribute(9, 9, 22, 4, 2, 4);
+        attributesDAO.createAttributesDAO(armorAttribute);
 
-            Parent root = loader.load();
-
-            Scene scene = new Scene(root,801,534);
-
-            stage.setScene(scene);
-            stage.setTitle("Sei lá");
-            stage.show();
-        }
+        System.out.println(armorAttribute.toString());
     }
+}
