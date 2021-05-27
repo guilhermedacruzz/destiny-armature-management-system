@@ -1,4 +1,3 @@
-use sgda1;
 
 delimiter $$
 drop function if exists random_integer $$
@@ -10,5 +9,3 @@ begin
 	return FLOOR(start_number + RAND() * (stop_number - start_number + 1));
 end $$
 delimiter ;
-
-select random_integer(1, 5);

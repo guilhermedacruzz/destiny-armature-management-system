@@ -1,4 +1,3 @@
-use sgda1;
 
 delimiter $$
 drop procedure if exists check_armor $$

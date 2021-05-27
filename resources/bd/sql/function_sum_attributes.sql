@@ -1,4 +1,3 @@
-use sgda1;
 
 delimiter $$
 drop function if exists sum_attributes $$
@@ -16,6 +15,4 @@ begin
 end $$
 delimiter ;
 
-select * from table_attributes;
-select sum_attributes(1);
 

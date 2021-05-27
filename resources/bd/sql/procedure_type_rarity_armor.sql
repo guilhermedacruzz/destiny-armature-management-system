@@ -1,4 +1,3 @@
-use sgda1;
 
 delimiter $$
 drop procedure if exists rarity_type_armor $$
@@ -10,10 +9,3 @@ begin
     and a.type=type_armor and a.rarity=rarity_armor;
 end $$
 delimiter ;
-
-select * from table_armor;
-#select * from table_attributes;
-#insert into table_armor_attributes(cod_armor, cod_attributes) values(2, 1);
-#select * from table_armor_attributes;
-
-call rarity_type_armor("b", "d");

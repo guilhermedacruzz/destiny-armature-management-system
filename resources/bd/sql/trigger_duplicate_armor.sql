@@ -1,4 +1,3 @@
-use sgda1;
 
 delimiter $$
 drop trigger if exists duplicate_armor $$
@@ -17,6 +16,3 @@ begin
 	end if;
 end$$
 delimiter ;
-
-insert into table_armor(name, guardian_class, type, rarity, status_masterprice, element) values ("teste", "a", "b", "c", 0, "d");
-select * from table_armor;

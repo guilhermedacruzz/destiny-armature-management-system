@@ -1,4 +1,3 @@
-use sgda1;
 
 delimiter $$
 drop trigger if exists duplicate_username $$
