@@ -176,7 +176,5 @@ public class ArmorRegisterScene implements Initializable {
     }
 
     @FXML
-    private void comeBack() {
-        Main.mainMenu();
-    }
+    private void comeBack() { Main.mainMenu(); }
 }

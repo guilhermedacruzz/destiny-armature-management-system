@@ -103,6 +103,6 @@ public class SignInScene implements Initializable {
 
     @FXML
     void comeBack() {
-        Main.changeSceneSlideLeft(Main.LOGIN, (aClass)-> new LoginScene(authService));
+        Main.changeScene(Main.LOGIN, (aClass)-> new LoginScene(authService),1, 2);
     }
 }

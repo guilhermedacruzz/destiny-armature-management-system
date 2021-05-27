@@ -47,6 +47,6 @@ public class MenuScene implements Initializable {
 
     @FXML
     private void registerArmors() {
-        Main.changeSceneFade(Main.REGISTER_ARMORS, (aclass) -> new ArmorRegisterScene(authService, armorRepository, armorAttributesRepository), 600);
+        Main.changeScene(Main.REGISTER_ARMORS, (aclass) -> new ArmorRegisterScene(authService, armorRepository, armorAttributesRepository),1, 2);
     }
 }

@@ -53,132 +53,121 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        connectionsFactory = new ConnectionsFactory();
-        userDAO = new JDBCUser(connectionsFactory);
-        attributesDAO = new JDBCAttributes(connectionsFactory);
-        armorDAO = new JDBCArmor(connectionsFactory);
-
-        authService = new AuthService(userDAO);
-        armorRepository = new ArmorRepositoryImpl(armorDAO);
-        armorAttributesRepository = new ArmorAttributesRepositoryImpl(attributesDAO);
+        initDAOS();
+        initRepository();
 
         stackPane = new StackPane();
         primaryStage.setScene(new Scene(stackPane, 801, 534));
 
-        changeScene(Main.LOGIN,(aClass)->new LoginScene(authService));
+        changeScene(Main.LOGIN,(aClass)->new LoginScene(authService), 1, 1);
 
         primaryStage.show();
     }
 
-    public static void changeSceneFade(String cena, Callback construtor, int timer) {
-        try{
-            var paneToRemove = stackPane.getChildren().get(0);
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource(cena));
-            loader.setControllerFactory(construtor);
-            Parent paneToAdd = loader.load();
-
-            stackPane.getChildren().add(paneToAdd);
-
-            var fadeInTransition = new FadeTransition(Duration.millis(timer));
-
-            fadeInTransition.setOnFinished(evt -> {
-                stackPane.getChildren().remove(paneToRemove);
-            });
-            fadeInTransition.setNode(paneToAdd);
-            fadeInTransition.setFromValue(0);
-            fadeInTransition.setToValue(1);
-            fadeInTransition.play();
-
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+    private void initDAOS() {
+        connectionsFactory = new ConnectionsFactory();
+        userDAO = new JDBCUser(connectionsFactory);
+        attributesDAO = new JDBCAttributes(connectionsFactory);
+        armorDAO = new JDBCArmor(connectionsFactory);
     }
 
-    public static void changeSceneSlideRight(String cena, Callback construtor) {
-        try{
-            var paneToRemove = stackPane.getChildren().get(0);
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource(cena));
-            loader.setControllerFactory(construtor);
-            Parent paneToAdd = loader.load();
-
-            paneToAdd.translateXProperty().set(stackPane.getWidth());
-            stackPane.getChildren().add(paneToAdd);
-
-            KeyFrame start = new KeyFrame(Duration.ZERO,
-                    new KeyValue(paneToAdd.translateXProperty(), stackPane.getWidth()),
-                    new KeyValue(paneToRemove.translateXProperty(), 0));
-            KeyFrame end = new KeyFrame(Duration.millis(850),
-                    new KeyValue(paneToAdd.translateXProperty(), 0),
-                    new KeyValue(paneToRemove.translateXProperty(), -stackPane.getWidth()));
-
-            Timeline slide = new Timeline(start, end);
-
-            slide.setOnFinished(evt -> {
-                stackPane.getChildren().remove(paneToRemove);
-            });
-
-            slide.play();
-
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-
-    public static void changeSceneSlideLeft(String cena, Callback construtor) {
-        try{
-            var paneToRemove = stackPane.getChildren().get(0);
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource(cena));
-            loader.setControllerFactory(construtor);
-            Parent paneToAdd = loader.load();
-
-            paneToAdd.translateXProperty().set(stackPane.getWidth() * -1);
-            stackPane.getChildren().add(paneToAdd);
-
-            KeyFrame start = new KeyFrame(Duration.ZERO,
-                    new KeyValue(paneToAdd.translateXProperty(), -stackPane.getWidth()),
-                    new KeyValue(paneToRemove.translateXProperty(), 0));
-            KeyFrame end = new KeyFrame(Duration.millis(850),
-                    new KeyValue(paneToAdd.translateXProperty(), 0),
-                    new KeyValue(paneToRemove.translateXProperty(), stackPane.getWidth()));
-
-            Timeline slide = new Timeline(start, end);
-
-            slide.setOnFinished(evt -> {
-                stackPane.getChildren().remove(paneToRemove);
-            });
-
-            slide.play();
-
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-
-    public static void changeScene(String cena, Callback construtor) {
-
-        try{
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource(cena));
-            loader.setControllerFactory(construtor);
-            Parent paneToAdd = loader.load();
-
-            if (stackPane.getChildren().stream().count() > 0) {
-                stackPane.getChildren().remove(0);
-            }
-            stackPane.getChildren().add(paneToAdd);
-
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+    private void initRepository() {
+        authService = new AuthService(userDAO);
+        armorRepository = new ArmorRepositoryImpl(armorDAO);
+        armorAttributesRepository = new ArmorAttributesRepositoryImpl(attributesDAO);
     }
 
     public static void mainMenu() {
-        changeSceneFade(Main.MENU, (aclass) -> new MenuScene(authService, armorRepository, armorAttributesRepository), 1200);
+        changeScene(Main.MENU, (aclass) -> new MenuScene(authService, armorRepository, armorAttributesRepository), 1, 2);
+    }
+
+    public static void changeScene(String cena, Callback construtor, int timer, int type) {
+
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource(cena));
+            loader.setControllerFactory(construtor);
+            Parent paneToAdd = loader.load();
+
+            switch (type) {
+                case 1:
+                    noAnimation(paneToAdd);
+                    break;
+                case 2:
+                    fadeIn(paneToAdd);
+                    break;
+            }
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    private static void noAnimation(Parent paneToAdd) {
+        if (stackPane.getChildren().stream().count() > 0) {
+            stackPane.getChildren().remove(0);
+        }
+        stackPane.getChildren().add(paneToAdd);
+    }
+
+
+    private static void fadeIn(Parent paneToAdd) {
+        var paneToRemove = stackPane.getChildren().get(0);
+
+        stackPane.getChildren().add(paneToAdd);
+
+        var fadeInTransition = new FadeTransition(Duration.millis(900));
+
+        fadeInTransition.setOnFinished(evt -> {
+            stackPane.getChildren().remove(paneToRemove);
+        });
+        fadeInTransition.setNode(paneToAdd);
+        fadeInTransition.setFromValue(0);
+        fadeInTransition.setToValue(1);
+        fadeInTransition.play();
+    }
+
+    private static void slideRight(Parent paneToAdd) {
+        var paneToRemove = stackPane.getChildren().get(0);
+
+        paneToAdd.translateXProperty().set(stackPane.getWidth());
+        stackPane.getChildren().add(paneToAdd);
+
+        KeyFrame start = new KeyFrame(Duration.ZERO,
+                new KeyValue(paneToAdd.translateXProperty(), stackPane.getWidth()),
+                new KeyValue(paneToRemove.translateXProperty(), 0));
+        KeyFrame end = new KeyFrame(Duration.millis(850),
+                new KeyValue(paneToAdd.translateXProperty(), 0),
+                new KeyValue(paneToRemove.translateXProperty(), -stackPane.getWidth()));
+
+        Timeline slide = new Timeline(start, end);
+
+        slide.setOnFinished(evt -> {
+            stackPane.getChildren().remove(paneToRemove);
+        });
+
+        slide.play();
+    }
+
+    private static void slideLeft(Parent paneToAdd) {
+        var paneToRemove = stackPane.getChildren().get(0);
+
+        paneToAdd.translateXProperty().set(stackPane.getWidth() * -1);
+        stackPane.getChildren().add(paneToAdd);
+
+        KeyFrame start = new KeyFrame(Duration.ZERO,
+                new KeyValue(paneToAdd.translateXProperty(), -stackPane.getWidth()),
+                new KeyValue(paneToRemove.translateXProperty(), 0));
+        KeyFrame end = new KeyFrame(Duration.millis(850),
+                new KeyValue(paneToAdd.translateXProperty(), 0),
+                new KeyValue(paneToRemove.translateXProperty(), stackPane.getWidth()));
+
+        Timeline slide = new Timeline(start, end);
+
+        slide.setOnFinished(evt -> {
+            stackPane.getChildren().remove(paneToRemove);
+        });
+
+        slide.play();
     }
 }

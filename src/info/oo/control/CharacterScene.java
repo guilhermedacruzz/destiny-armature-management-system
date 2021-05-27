@@ -34,7 +34,7 @@ public class CharacterScene implements Initializable {
 
     @FXML
     void comeBack() {
-        Main.changeSceneFade(Main.LOGIN, (aClass)-> new LoginScene(authService), 600);
+        Main.changeScene(Main.LOGIN, (aClass)-> new LoginScene(authService),1, 2);
     }
 
     void changeScene() {
