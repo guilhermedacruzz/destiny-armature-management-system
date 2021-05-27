@@ -8,10 +8,10 @@ import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.services.AuthService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.DialogPane;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -91,32 +91,38 @@ public class ArmorRegisterScene implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tfName.setPromptText("Nome");
 
-        tfMobility.setPromptText("2");
-        tfResilience.setPromptText("2");
-        tfRecovery.setPromptText("2");
-        tfDicipline.setPromptText("2");
-        tfIntellect.setPromptText("2");
-        tfStrenght.setPromptText("2");
+        tfMobility.setText("2");
+        tfResilience.setText("2");
+        tfRecovery.setText("2");
+        tfDicipline.setText("2");
+        tfIntellect.setText("2");
+        tfStrenght.setText("2");
 
     }
 
-    @FXML
-    private void register() {
-        String name = tfName.getText();
-        int mod = 0, res = 0, rec = 0, dici = 0, inte = 0, stren = 0;
-        String type = "", element = "", rarity = "";
-        boolean masterprice = false;
+    private String getName() {
+        return tfName.getText();
+    }
+
+    private int[] getAttributes() {
+        int[] attributes = new int[6];
 
         try {
-            mod = Integer.parseInt(tfMobility.getText());
-            res = Integer.parseInt(tfResilience.getText());
-            rec = Integer.parseInt(tfRecovery.getText());
-            dici = Integer.parseInt(tfDicipline.getText());
-            inte = Integer.parseInt(tfIntellect.getText());
-            stren = Integer.parseInt(tfStrenght.getText());
+            attributes[0] = Integer.parseInt(tfMobility.getText());
+            attributes[1] = Integer.parseInt(tfResilience.getText());
+            attributes[2] = Integer.parseInt(tfRecovery.getText());
+            attributes[3] = Integer.parseInt(tfDicipline.getText());
+            attributes[4] = Integer.parseInt(tfIntellect.getText());
+            attributes[5] = Integer.parseInt(tfStrenght.getText());
         } catch (NumberFormatException e) {
-            errorRegister(e.getMessage());
+            attributes = null;
         }
+
+        return attributes;
+    }
+
+    private String getType() {
+        String type = "";
 
         if(rbHelmet.isSelected())
             type = "Capacete";
@@ -128,8 +134,12 @@ public class ArmorRegisterScene implements Initializable {
             type = "Armadura de Perna";
         else if(rbClassItem.isSelected())
             type = "Item de Classe";
-        else
-            errorRegister("Selecione tipo");
+
+        return type;
+    }
+
+    private String getElement() {
+        String element = "";
 
         if(rbArc.isSelected())
             element = "Arco";
@@ -137,42 +147,91 @@ public class ArmorRegisterScene implements Initializable {
             element = "Solar";
         else if(rbVoid.isSelected())
             element = "Vácuo";
-        else
-            errorRegister("Selecione eleme");
+
+        return element;
+    }
+
+    private String getRarity() {
+        String rarity = "";
 
         if(rbExotic.isSelected())
             rarity = "Exótico";
         else if(rbLegendary.isSelected())
             rarity = "Lendário";
-        else
-            errorRegister("Selecione Rar");
 
+        return rarity;
+    }
+
+    private boolean getMasterprice() {
+        boolean isMasterprice = false;
         if(rbYesMasterprice.isSelected())
-            masterprice = true;
-        else
-            errorRegister("Selecione Obra");
+            isMasterprice = true;
 
+        return isMasterprice;
+    }
 
-        ArmorAttribute armorAttribute = new ArmorAttribute(mod, res, rec, dici, inte, stren);
+    @FXML
+    private void register() {
 
-        Armor armor = new Armor(name, authService.getLogged().getGuardianClass(), type, rarity, true, masterprice,
+        String name = getName();
+        if(name.equals("")) {
+            errorRegister("ERRO", "Nome Inválido.");
+            return;
+        }
+
+        int[] attributes = getAttributes();
+        if(attributes == null) {
+            errorRegister("ERRO", "Verifiquei o valor dos Atributos.");
+            return;
+        }
+
+        String type = getType();
+        if(type.equals("")) {
+            errorRegister("ERRO", "Escolha um Tipo de Armadura.");
+            return;
+        }
+
+        String rarity = getRarity();
+        if(rarity.equals("")) {
+            errorRegister("ERRO", "Escolha uma raridade.");
+            return;
+        }
+
+        String element = getElement();
+        if(element.equals("")) {
+            errorRegister("ERRO", "Escolha um elemento.");
+            return;
+        }
+
+        boolean isMasterprice = getMasterprice();
+
+        ArmorAttribute armorAttribute = new ArmorAttribute(attributes[0], attributes[1], attributes[2],
+                                                           attributes[3], attributes[4], attributes[5]);
+
+        Armor armor = new Armor(name, authService.getLogged().getGuardianClass(), type, rarity, true, isMasterprice,
                 armorAttribute, element, authService.getLogged().getId());
 
         try {
             armorAttributesRepository.registerAttribute(armorAttribute);
         } catch (SQLException e) {
-            errorRegister(e.getMessage());
+            errorRegister("[ERRO]", e.getMessage());
         }
 
         try {
             armorRepository.register(armor);
         } catch (SQLException e) {
-            errorRegister(e.getMessage());
+            errorRegister("[ERRO]", e.getMessage());
         }
     }
 
-    private void errorRegister(String error) {
-        System.out.println("Erro: " + error);
+    private void errorRegister(String title, String error) {
+        Alert alert = new Alert(Alert.AlertType.ERROR, error);
+        DialogPane dialogPane = alert.getDialogPane();
+        alert.setHeaderText(title);
+        dialogPane.getStylesheets().add(
+                getClass().getResource("/css/myAlerts.css").toExternalForm());
+        dialogPane.getStyleClass().add("myDialog");
+        alert.showAndWait();
     }
 
     @FXML
