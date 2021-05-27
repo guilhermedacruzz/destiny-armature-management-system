@@ -11,8 +11,10 @@ public class Armor {
     private boolean statusMasterprice;
     private String element;
 
+    private int codUser;
+
     public Armor(int id, String name, String guardianClass, String type, String rarity, boolean status,
-                 boolean statusMasterprice, ArmorAttribute armorAttribute, String element) {
+                 boolean statusMasterprice, ArmorAttribute armorAttribute, String element, int codUser) {
         this.id = id;
         this.name = name;
         this.guardianClass = guardianClass;
@@ -22,11 +24,12 @@ public class Armor {
         this.armorAttribute = armorAttribute;
         this.statusMasterprice = statusMasterprice;
         this.element = element;
+        this.codUser = codUser;
     }
 
     public Armor(String name, String guardianClass, String type, String rarity, boolean status,
-                 boolean statusMasterprice, ArmorAttribute armorAttribute, String element) {
-        this(-1, name, guardianClass, type, rarity, status, statusMasterprice, armorAttribute, element);
+                 boolean statusMasterprice, ArmorAttribute armorAttribute, String element, int codUser) {
+        this(-1, name, guardianClass, type, rarity, status, statusMasterprice, armorAttribute, element, codUser);
     }
 
     public String getName() {
@@ -101,6 +104,14 @@ public class Armor {
         this.element = element;
     }
 
+    public int getCodUser() {
+        return codUser;
+    }
+
+    public void setCodUser(int codUser) {
+        this.codUser = codUser;
+    }
+
     @Override
     public String toString() {
         return "Armor{" +
@@ -110,7 +121,7 @@ public class Armor {
                 ", type='" + type + '\'' +
                 ", rarity='" + rarity + '\'' +
                 ", status=" + status +
-                ", armorAttribute=" + armorAttribute +
+                ", armorAttribute=" + armorAttribute.toString() +
                 ", statusMasterprice=" + statusMasterprice +
                 ", element='" + element + '\'' +
                 '}';

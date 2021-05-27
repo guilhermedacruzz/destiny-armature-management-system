@@ -183,7 +183,7 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="201.0" text="CADASTRAR" />
+                        <Button mnemonicParsing="false" onAction="#register" prefHeight="42.0" prefWidth="201.0" text="CADASTRAR" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnSpan="3" GridPane.rowIndex="2">

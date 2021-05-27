@@ -3,14 +3,14 @@ package info.oo.model.daos;
 import info.oo.model.Armor;
 import info.oo.model.ConnectionsFactory;
 import info.oo.model.daos.interfaces.ArmorDAO;
+import info.oo.services.AuthService;
 
 import java.sql.*;
 
 public class JDBCArmor implements ArmorDAO {
 
     private static String INSERT_ARMOR = "INSERT INTO table_armor(name, guardian_class, type, rarity, status, " +
-            "status_masterprice, element) values(?,?,?,?,?,?,?)";
-
+            "status_masterprice, element, cod_user) values(?,?,?,?,?,?,?,?)";
     private static String INSERT_ARMOR_ATTRIBUTE = "INSERT INTO table_armor_attributes(cod_armor, cod_attributes) " +
             "values(?,?)";
 
@@ -33,6 +33,7 @@ public class JDBCArmor implements ArmorDAO {
         pstmt.setBoolean(5, armor.isStatus());
         pstmt.setBoolean(6, armor.isStatusMasterprice());
         pstmt.setString(7, armor.getElement());
+        pstmt.setInt(8, armor.getCodUser());
 
         pstmt.executeUpdate();
 

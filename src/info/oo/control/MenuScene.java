@@ -1,6 +1,9 @@
 package info.oo.control;
 
 import info.oo.Main;
+import info.oo.model.repository.interfaces.ArmorAttributesRepository;
+import info.oo.model.repository.interfaces.ArmorRepository;
+import info.oo.services.AuthService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -25,6 +28,17 @@ public class MenuScene implements Initializable {
     @FXML
     private Button btExit;
 
+    private AuthService authService;
+    private ArmorRepository armorRepository;
+    private ArmorAttributesRepository armorAttributesRepository;
+
+
+    public MenuScene(AuthService authService, ArmorRepository armorRepository, ArmorAttributesRepository armorAttributesRepository) {
+        this.authService = authService;
+        this.armorRepository = armorRepository;
+        this.armorAttributesRepository = armorAttributesRepository;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -33,6 +47,6 @@ public class MenuScene implements Initializable {
 
     @FXML
     private void registerArmors() {
-        Main.changeSceneFade(Main.REGISTER_ARMORS, (aclass) -> new ArmorRegisterScene(), 600);
+        Main.changeSceneFade(Main.REGISTER_ARMORS, (aclass) -> new ArmorRegisterScene(authService, armorRepository, armorAttributesRepository), 600);
     }
 }

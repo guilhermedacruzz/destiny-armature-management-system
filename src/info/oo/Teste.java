@@ -24,7 +24,7 @@ public class Teste {
 
         System.out.println(armorAttribute.toString());
 
-        Armor armor = new Armor("Armsnd", "arc", "tipo", "rarity", true, false, armorAttribute, "solar");
+        Armor armor = new Armor("Armsnd", "arc", "tipo", "rarity", true, false, armorAttribute, "solar", 1);
 
         armorDAO.createArmor(armor);
 

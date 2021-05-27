@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConnectionsFactory {
     private static final Integer MAX_CON = 5;
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/sgda1";
+    private static final String URL = "jdbc:mysql://127.0.0.1:3306/sgda6";
     private static final String USER = "cruz";
     private static final String PASSWORD = "cruz";
 

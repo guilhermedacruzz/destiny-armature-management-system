@@ -8,3 +8,4 @@ create table table_armor_attributes(
     FOREIGN KEY(cod_armor) references table_armor(cod_armor),
     FOREIGN KEY(cod_attributes) references table_attributes(cod_attributes)
 );
+

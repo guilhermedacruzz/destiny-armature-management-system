@@ -3,8 +3,18 @@ package info.oo;
 import info.oo.control.LoginScene;
 import info.oo.control.MenuScene;
 import info.oo.control.SignInScene;
+import info.oo.model.ArmorAttribute;
 import info.oo.model.ConnectionsFactory;
+import info.oo.model.daos.JDBCArmor;
+import info.oo.model.daos.JDBCAttributes;
 import info.oo.model.daos.JDBCUser;
+import info.oo.model.daos.interfaces.ArmorDAO;
+import info.oo.model.daos.interfaces.AttributesDAO;
+import info.oo.model.daos.interfaces.UserDAO;
+import info.oo.model.repository.ArmorAttributesRepositoryImpl;
+import info.oo.model.repository.ArmorRepositoryImpl;
+import info.oo.model.repository.interfaces.ArmorAttributesRepository;
+import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.services.AuthService;
 import javafx.animation.*;
 import javafx.application.Application;
@@ -28,8 +38,13 @@ public class Main extends Application {
     private static StackPane stackPane;
 
     private ConnectionsFactory connectionsFactory;
-    private JDBCUser jdbcUser;
-    private AuthService authService;
+    private UserDAO userDAO;
+    private AttributesDAO attributesDAO;
+    private ArmorDAO armorDAO;
+
+    private static AuthService authService;
+    private static ArmorRepository armorRepository;
+    private static ArmorAttributesRepository armorAttributesRepository;
 
     public static void main(String[] args) {
         launch(args);
@@ -39,8 +54,13 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         connectionsFactory = new ConnectionsFactory();
-        jdbcUser = new JDBCUser(connectionsFactory);
-        authService = new AuthService(jdbcUser);
+        userDAO = new JDBCUser(connectionsFactory);
+        attributesDAO = new JDBCAttributes(connectionsFactory);
+        armorDAO = new JDBCArmor(connectionsFactory);
+
+        authService = new AuthService(userDAO);
+        armorRepository = new ArmorRepositoryImpl(armorDAO);
+        armorAttributesRepository = new ArmorAttributesRepositoryImpl(attributesDAO);
 
         stackPane = new StackPane();
         primaryStage.setScene(new Scene(stackPane, 801, 534));
@@ -159,6 +179,6 @@ public class Main extends Application {
     }
 
     public static void mainMenu() {
-        changeSceneFade(Main.MENU, (aclass) -> new MenuScene(), 1200);
+        changeSceneFade(Main.MENU, (aclass) -> new MenuScene(authService, armorRepository, armorAttributesRepository), 1200);
     }
 }
