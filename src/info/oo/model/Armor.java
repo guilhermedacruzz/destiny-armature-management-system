@@ -2,6 +2,7 @@ package info.oo.model;
 
 public class Armor {
     private int id;
+    private String name;
     private String guardianClass;
     private String type;
     private String rarity;
@@ -10,9 +11,10 @@ public class Armor {
     private boolean statusMasterprice;
     private String element;
 
-    public Armor(int id, String guardianClass, String type, String rarity,
-                 boolean status, ArmorAttribute armorAttribute, boolean statusMasterprice, String element) {
+    public Armor(int id, String name, String guardianClass, String type, String rarity, boolean status,
+                 boolean statusMasterprice, ArmorAttribute armorAttribute, String element) {
         this.id = id;
+        this.name = name;
         this.guardianClass = guardianClass;
         this.type = type;
         this.rarity = rarity;
@@ -22,7 +24,95 @@ public class Armor {
         this.element = element;
     }
 
-    public Armor(String guardianClass, String type, String rarity, boolean status, ArmorAttribute armorAttribute, boolean statusMasterprice, String element) {
-        this(-1, guardianClass, type, rarity, status, armorAttribute, statusMasterprice, element);
+    public Armor(String name, String guardianClass, String type, String rarity, boolean status,
+                 boolean statusMasterprice, ArmorAttribute armorAttribute, String element) {
+        this(-1, name, guardianClass, type, rarity, status, statusMasterprice, armorAttribute, element);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getGuardianClass() {
+        return guardianClass;
+    }
+
+    public void setGuardianClass(String guardianClass) {
+        this.guardianClass = guardianClass;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getRarity() {
+        return rarity;
+    }
+
+    public void setRarity(String rarity) {
+        this.rarity = rarity;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public ArmorAttribute getArmorAttribute() {
+        return armorAttribute;
+    }
+
+    public void setArmorAttribute(ArmorAttribute armorAttribute) {
+        this.armorAttribute = armorAttribute;
+    }
+
+    public boolean isStatusMasterprice() {
+        return statusMasterprice;
+    }
+
+    public void setStatusMasterprice(boolean statusMasterprice) {
+        this.statusMasterprice = statusMasterprice;
+    }
+
+    public String getElement() {
+        return element;
+    }
+
+    public void setElement(String element) {
+        this.element = element;
+    }
+
+    @Override
+    public String toString() {
+        return "Armor{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", guardianClass='" + guardianClass + '\'' +
+                ", type='" + type + '\'' +
+                ", rarity='" + rarity + '\'' +
+                ", status=" + status +
+                ", armorAttribute=" + armorAttribute +
+                ", statusMasterprice=" + statusMasterprice +
+                ", element='" + element + '\'' +
+                '}';
     }
 }
