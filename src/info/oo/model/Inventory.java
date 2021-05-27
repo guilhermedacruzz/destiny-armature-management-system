@@ -17,6 +17,30 @@ public class Inventory {
         this.ehancementModule = ehancementModule;
     }
 
+    public int getLumen() {
+        return lumen;
+    }
+
+    public int getLegendaryFragments() {
+        return legendaryFragments;
+    }
+
+    public int getAscendentFragments() {
+        return ascendentFragments;
+    }
+
+    public int getEnhancementPrism() {
+        return enhancementPrism;
+    }
+
+    public int getImprovementCore() {
+        return improvementCore;
+    }
+
+    public int getEhancementModule() {
+        return ehancementModule;
+    }
+
     @Override
     public String toString() {
         return "Inventory{" +

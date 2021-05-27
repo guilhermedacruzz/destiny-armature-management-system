@@ -8,7 +8,6 @@ public class User {
     private String username;
 
     private String guardianClass;
-
     private Inventory inventory;
 
     public User(int id, String name, String surname, String username, String secret, Inventory inventory) {

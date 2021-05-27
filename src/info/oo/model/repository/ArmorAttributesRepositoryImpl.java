@@ -4,7 +4,6 @@ import info.oo.model.ArmorAttribute;
 import info.oo.model.daos.interfaces.AttributesDAO;
 import info.oo.model.repository.interfaces.ArmorAttributesRepository;
 
-import javax.print.attribute.Attribute;
 import java.sql.SQLException;
 
 public class ArmorAttributesRepositoryImpl implements ArmorAttributesRepository {

@@ -12,6 +12,9 @@ import java.sql.SQLException;
 
 public class JDBCUser implements UserDAO {
 
+    private static String INSERT_USER = "INSERT INTO table_user(name, surname, username, secret) values (?,?,?,?)";
+    private static String SELECT_USER = "select * from table_user where username=? and secret=?";
+
     private ConnectionsFactory connectionsFactory;
 
     public JDBCUser(ConnectionsFactory connectionsFactory) {
@@ -24,9 +27,7 @@ public class JDBCUser implements UserDAO {
 
         Connection con = connectionsFactory.getConnection();
 
-        String sql = "select * from table_user where username=? and secret=?";
-
-        PreparedStatement pstm = con.prepareStatement(sql);
+        PreparedStatement pstm = con.prepareStatement(SELECT_USER);
 
         pstm.setString(1, username);
         pstm.setString(2, secret);
@@ -65,9 +66,7 @@ public class JDBCUser implements UserDAO {
     public boolean signIn(String name, String surname, String username, String secret) throws SQLException {
         Connection conn = connectionsFactory.getConnection();
 
-        String sql = "INSERT INTO table_user(name, surname, username, secret) values (?,?,?,?)";
-
-        PreparedStatement pstmt = conn.prepareStatement(sql);
+        PreparedStatement pstmt = conn.prepareStatement(INSERT_USER);
 
         pstmt.setString(1, name);
         pstmt.setString(2, surname);
