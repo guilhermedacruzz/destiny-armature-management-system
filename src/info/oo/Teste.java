@@ -15,7 +15,7 @@ public class Teste {
 
         ArmorDAO armorDAO = new JDBCArmor(connectionsFactory);
 
-        List<Armor> armorList = armorDAO.selectArmorByType(1, "Capacete");
+        List<Armor> armorList = armorDAO.selectArmor(1);
 
         System.out.println(armorList.toString());
     }

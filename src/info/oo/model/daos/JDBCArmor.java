@@ -4,8 +4,6 @@ import info.oo.model.Armor;
 import info.oo.model.ArmorAttribute;
 import info.oo.model.ConnectionsFactory;
 import info.oo.model.daos.interfaces.ArmorDAO;
-import info.oo.services.AuthService;
-import javafx.collections.ObservableList;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -17,8 +15,8 @@ public class JDBCArmor implements ArmorDAO {
             "status_masterprice, element, cod_user) values(?,?,?,?,?,?,?,?)";
     private static String INSERT_ARMOR_ATTRIBUTE = "INSERT INTO table_armor_attributes(cod_armor, cod_attributes) " +
             "values(?,?)";
-    private static String CALL_TYPE = "call type_armor(?)";
-    private static String CALL_TYPE_RARITY = "call rarity_type_armor(?, ?)";
+
+    private static String SELECT_ID_USER = "select * from table_armor where cod_user=?";
 
     private ConnectionsFactory connectionsFactory;
 
@@ -69,27 +67,18 @@ public class JDBCArmor implements ArmorDAO {
     }
 
     @Override
-    public List<Armor> selectArmorByType(int id, String type) throws SQLException {
-
+    public List selectArmor(int id) throws SQLException {
         List<Armor> armorList = new ArrayList<>();
 
         Connection conn = connectionsFactory.getConnection();
 
-        CallableStatement cstmt = conn.prepareCall(CALL_TYPE);
+        PreparedStatement pstmt = conn.prepareStatement(SELECT_ID_USER);
 
-        cstmt.setString(1, type);
+        pstmt.setInt(1, id);
 
-        ResultSet rs = cstmt.executeQuery();
+        ResultSet rs = pstmt.executeQuery();
 
         while(rs.next()) {
-            int id_attributes = rs.getInt("cod_attributes");
-            int modility = rs.getInt("mobility");
-            int resilience = rs.getInt("resilience");
-            int recovery = rs.getInt("recovery");
-            int dicipline = rs.getInt("dicipline");
-            int intellect = rs.getInt("intellect");
-            int strenght = rs.getInt("strenght");
-
             int id_armor = rs.getInt("cod_armor");
             String name = rs.getString("name");
             String guardian_class = rs.getString("guardian_class");
@@ -100,25 +89,13 @@ public class JDBCArmor implements ArmorDAO {
             String element = rs.getString("Element");
             int cod_user = rs.getInt("cod_user");
 
-            ArmorAttribute armorAttribute = new ArmorAttribute(id_attributes, modility, resilience,
-                    recovery, dicipline, intellect, strenght);
-
             Armor armor = new Armor(id_armor, name, guardian_class, typeBd, rarity, status,
-                                    masterprice, armorAttribute, element, cod_user);
+                    masterprice, null, element, cod_user);
 
             armorList.add(armor);
         }
 
-        rs.close();
-        cstmt.close();
-        conn.close();
-
         return armorList;
-
     }
 
-    @Override
-    public List<Armor> selectArmorByTypeAndRarity(int id, String type, String rarity) throws SQLException {
-        return null;
-    }
 }

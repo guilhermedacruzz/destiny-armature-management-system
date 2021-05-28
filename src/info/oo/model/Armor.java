@@ -121,9 +121,10 @@ public class Armor {
                 ", type='" + type + '\'' +
                 ", rarity='" + rarity + '\'' +
                 ", status=" + status +
-                ", armorAttribute=" + armorAttribute.toString() +
+                ", armorAttribute=" + armorAttribute +
                 ", statusMasterprice=" + statusMasterprice +
                 ", element='" + element + '\'' +
+                ", codUser=" + codUser +
                 '}';
     }
 }
