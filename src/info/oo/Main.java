@@ -73,7 +73,7 @@ public class Main extends Application {
 
     private void initRepository() {
         authService = new AuthService(userDAO);
-        armorRepository = new ArmorRepositoryImpl(armorDAO);
+        armorRepository = new ArmorRepositoryImpl(armorDAO, attributesDAO);
         armorAttributesRepository = new ArmorAttributesRepositoryImpl(attributesDAO);
     }
 

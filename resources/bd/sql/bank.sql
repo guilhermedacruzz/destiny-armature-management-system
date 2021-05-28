@@ -1,5 +1,5 @@
-create database sgda6;
-use sgda6;
+create database sgda7;
+use sgda7;
 
 DROP TABLE table_user;
 CREATE TABLE table_user (

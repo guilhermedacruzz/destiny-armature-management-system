@@ -7,6 +7,8 @@ import info.oo.model.daos.JDBCArmor;
 import info.oo.model.daos.JDBCAttributes;
 import info.oo.model.daos.interfaces.ArmorDAO;
 import info.oo.model.daos.interfaces.AttributesDAO;
+import info.oo.model.repository.ArmorRepositoryImpl;
+import info.oo.model.repository.interfaces.ArmorRepository;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -17,16 +19,13 @@ public class Teste {
         ConnectionsFactory connectionsFactory = new ConnectionsFactory();
 
         ArmorDAO armorDAO = new JDBCArmor(connectionsFactory);
-
-        List<Armor> armorList = armorDAO.selectArmor(1);
-
-        System.out.println(armorList);
-
         AttributesDAO attributesDAO = new JDBCAttributes(connectionsFactory);
 
-        List<ArmorAttribute> armorAttributeList = attributesDAO.selectAttributes(armorList.get(armorList.size()-1).getId());
+        ArmorRepository armorRepository = new ArmorRepositoryImpl(armorDAO, attributesDAO);
 
-        System.out.println(armorAttributeList.toString());
+        List<Armor> armorList = armorRepository.search(1);
 
+        for (Armor armor: armorList)
+            System.out.println(armor.toString());
     }
 }
