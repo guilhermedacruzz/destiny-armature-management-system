@@ -10,106 +10,124 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="pane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="801.0" spacing="10.0" stylesheets="@../css/ViewArmorScene.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="pane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="801.0" spacing="20.0" stylesheets="@../css/ViewArmorScene.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="info.oo.control.ViewArmorScene">
    <children>
-      <Label text="VISUALIZAR ARMADURAS">
+      <Label fx:id="btTitle" text="VISUALIZAR ARMADURAS">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
       <ScrollPane prefHeight="494.0" prefWidth="761.0">
          <content>
-            <HBox alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0">
+            <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0">
                <children>
-                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="444.0" prefWidth="200.0" spacing="10.0">
+                  <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
                      <children>
                         <Label text="CAPACETES">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0">
+                        <TableView fx:id="tvHelmet" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="424.0" prefWidth="262.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn fx:id="tcNameHelmet" prefWidth="130.0" text="NOME" />
+                              <TableColumn fx:id="tcAttributesHelmet" prefWidth="130.0" text="ATRIBUTOS" />
                           </columns>
                         </TableView>
                      </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
                   </VBox>
-                  <VBox alignment="CENTER" layoutX="25.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="444.0" prefWidth="200.0" spacing="10.0">
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
                      <children>
                         <Label text="MANOPLAS">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0">
+                        <TableView fx:id="tvArms" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="424.0" prefWidth="262.0">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn fx:id="tcNameArm" prefWidth="130.0" text="NOME" />
+                              <TableColumn fx:id="tcAttributeArm" prefWidth="130.0" text="ATRIBUTOS" />
                            </columns>
                         </TableView>
                      </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
                   </VBox>
-                  <VBox alignment="CENTER" layoutX="25.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="444.0" prefWidth="200.0" spacing="10.0">
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
                      <children>
                         <Label text="TORSOS">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0">
+                        <TableView fx:id="tvChests" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="424.0" prefWidth="262.0">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn fx:id="tcNameChest" prefWidth="130.0" text="NOME" />
+                              <TableColumn fx:id="tcAttributesChest" prefWidth="130.0" text="ATRIBUTOS" />
                            </columns>
                         </TableView>
                      </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
                   </VBox>
-                  <VBox alignment="CENTER" layoutX="236.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="444.0" prefWidth="200.0" spacing="10.0">
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
                      <children>
                         <Label text="BOTAS">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0">
+                        <TableView fx:id="tvBoots" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="424.0" prefWidth="262.0">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn fx:id="tcNameBoot" prefWidth="130.0" text="NOME" />
+                              <TableColumn fx:id="tcAttributesBoot" prefWidth="130.0" text="ATRIBUTOS" />
                            </columns>
                         </TableView>
                      </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
                   </VBox>
-                  <VBox alignment="CENTER" layoutX="236.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="444.0" prefWidth="200.0" spacing="10.0">
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
                      <children>
-                        <Label text="CLASSE">
+                        <Label text="CLASSES">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0">
+                        <TableView fx:id="tvClassItem" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="424.0" prefWidth="262.0">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn fx:id="tcNameClassItem" prefWidth="130.0" text="NOME" />
+                              <TableColumn fx:id="tcAttributesClassItem" prefWidth="130.0" text="ATRIBUTOS" />
                            </columns>
                         </TableView>
                      </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
                   </VBox>
-                  <VBox alignment="CENTER" layoutX="446.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="444.0" prefWidth="200.0" spacing="10.0">
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
                      <children>
                         <Label text="EXÓTICOS">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0">
+                        <TableView fx:id="tvExotic" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="424.0" prefWidth="262.0">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn fx:id="tcNameExotic" prefWidth="130.0" text="NOME" />
+                              <TableColumn fx:id="tcAttributesExotic" prefWidth="130.0" text="ATRIBUTOS" />
                            </columns>
                         </TableView>
                      </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
                   </VBox>
                </children>
             </HBox>
@@ -120,8 +138,11 @@
       </ScrollPane>
       <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="VOLTAR" />
+            <Button fx:id="btReturn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#comeBack" prefHeight="40.0" prefWidth="200.0" text="VOLTAR" />
          </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
       </HBox>
    </children>
    <padding>

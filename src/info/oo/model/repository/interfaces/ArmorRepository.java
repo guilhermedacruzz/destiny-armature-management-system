@@ -9,5 +9,5 @@ import java.util.List;
 public interface ArmorRepository {
     boolean register(Armor armor) throws SQLException;
 
-    List<Armor> search(int id) throws SQLException;
+    ObservableList<Armor> search(int id) throws SQLException;
 }

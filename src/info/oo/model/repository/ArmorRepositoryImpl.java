@@ -5,12 +5,16 @@ import info.oo.model.ArmorAttribute;
 import info.oo.model.daos.interfaces.ArmorDAO;
 import info.oo.model.daos.interfaces.AttributesDAO;
 import info.oo.model.repository.interfaces.ArmorRepository;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ArmorRepositoryImpl implements ArmorRepository {
+
+    private ObservableList<Armor> armorObservableList;
 
     private ArmorDAO armorDAO;
     private AttributesDAO attributesDAO;
@@ -25,6 +29,8 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     public ArmorRepositoryImpl(ArmorDAO armorDAO, AttributesDAO attributesDAO) {
         this.armorDAO = armorDAO;
         this.attributesDAO = attributesDAO;
+
+        this.armorObservableList = FXCollections.observableArrayList();
     }
 
     @Override
@@ -33,7 +39,10 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     }
 
     @Override
-    public List<Armor> search(int id) throws SQLException {
+    public ObservableList<Armor> search(int id) throws SQLException {
+
+        this.armorObservableList.clear();
+
         List<Armor> armorList = armorDAO.selectArmor(id);
 
         for(Armor armor: armorList) {
@@ -41,7 +50,9 @@ public class ArmorRepositoryImpl implements ArmorRepository {
             armor.setArmorAttribute(armorAttributeList.get(0));
         }
 
-        return armorList;
+        this.armorObservableList.addAll(armorList);
+
+        return FXCollections.unmodifiableObservableList(this.armorObservableList);
     }
 
     private List<Armor> organizeByType(List<Armor> armorList, String type) {
