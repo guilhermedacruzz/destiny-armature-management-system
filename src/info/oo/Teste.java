@@ -47,8 +47,6 @@ public class Teste extends Application {
         stage.setScene(scene);
         stage.setTitle("Cadastro Pessoa");
         stage.show();
-
-
     }
 
 }

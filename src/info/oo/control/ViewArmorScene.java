@@ -120,7 +120,13 @@ public class ViewArmorScene implements Initializable {
         tcAttributes.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Armor, String>, ObservableValue<String>>() {
             @Override
             public ObservableValue<String> call(TableColumn.CellDataFeatures<Armor, String> armorStringCellDataFeatures) {
-                return new SimpleStringProperty(armorStringCellDataFeatures.getValue().getArmorAttribute().toString());
+                String valueCell = armorStringCellDataFeatures.getValue().getArmorAttribute().getMobility() + "-";
+                valueCell += armorStringCellDataFeatures.getValue().getArmorAttribute().getResilience() + "-";
+                valueCell += armorStringCellDataFeatures.getValue().getArmorAttribute().getRecovery() + "-";
+                valueCell += armorStringCellDataFeatures.getValue().getArmorAttribute().getDicipline() + "-";
+                valueCell += armorStringCellDataFeatures.getValue().getArmorAttribute().getIntellect() + "-";
+                valueCell += armorStringCellDataFeatures.getValue().getArmorAttribute().getStrenght();
+                return new SimpleStringProperty(valueCell);
             }
         });
     }

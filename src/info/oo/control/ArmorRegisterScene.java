@@ -129,7 +129,7 @@ public class ArmorRegisterScene implements Initializable {
         else if(rbArm.isSelected())
             type = "Manopla";
         else if(rbChest.isSelected())
-            type = "Armadura de Torço";
+            type = "Armadura de Torso";
         else if(rbBoot.isSelected())
             type = "Armadura de Perna";
         else if(rbClassItem.isSelected())
