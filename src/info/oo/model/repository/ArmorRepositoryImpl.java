@@ -14,23 +14,12 @@ import java.util.List;
 
 public class ArmorRepositoryImpl implements ArmorRepository {
 
-    private ObservableList<Armor> armorObservableList;
-
     private ArmorDAO armorDAO;
     private AttributesDAO attributesDAO;
-
-    private List<Armor> helmets;
-    private List<Armor> arms;
-    private List<Armor> chest;
-    private List<Armor> boots;
-    private List<Armor> classItens;
-    private List<Armor> exoticos;
 
     public ArmorRepositoryImpl(ArmorDAO armorDAO, AttributesDAO attributesDAO) {
         this.armorDAO = armorDAO;
         this.attributesDAO = attributesDAO;
-
-        this.armorObservableList = FXCollections.observableArrayList();
     }
 
     @Override
@@ -39,9 +28,7 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     }
 
     @Override
-    public ObservableList<Armor> search(int id) throws SQLException {
-
-        this.armorObservableList.clear();
+    public List<Armor> search(int id) throws SQLException {
 
         List<Armor> armorList = armorDAO.selectArmor(id);
 
@@ -50,28 +37,34 @@ public class ArmorRepositoryImpl implements ArmorRepository {
             armor.setArmorAttribute(armorAttributeList.get(0));
         }
 
-        this.armorObservableList.addAll(armorList);
-
-        return FXCollections.unmodifiableObservableList(this.armorObservableList);
+        return armorList;
     }
 
-    private List<Armor> organizeByType(List<Armor> armorList, String type) {
+    public ObservableList<Armor> organizeByType(List<Armor> armorList, String type) {
+        ObservableList<Armor> armorObservableList = FXCollections.observableArrayList();
+
         List<Armor> armorListByType = new ArrayList<>();
 
         for(Armor armor: armorList)
             if(armor.getType().equals(type) && armor.getRarity().equals("Lendário"))
                 armorListByType.add(armor);
 
-        return armorListByType;
+        armorObservableList.addAll(armorListByType);
+
+        return FXCollections.unmodifiableObservableList(armorObservableList);
     }
 
-    private List<Armor> organizeByRarity(List<Armor> armorList, String rarity) {
+    public ObservableList<Armor> organizeByRarity(List<Armor> armorList, String rarity) {
+        ObservableList<Armor> armorObservableList = FXCollections.observableArrayList();
+
         List<Armor> armorListByRarity = new ArrayList<>();
 
         for(Armor armor: armorList)
             if(armor.getRarity().equals(rarity))
                 armorListByRarity.add(armor);
 
-        return armorListByRarity;
+        armorObservableList.addAll(armorListByRarity);
+
+        return FXCollections.unmodifiableObservableList(armorObservableList);
     }
 }

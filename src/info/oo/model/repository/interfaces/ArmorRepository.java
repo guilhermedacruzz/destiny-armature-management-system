@@ -9,5 +9,9 @@ import java.util.List;
 public interface ArmorRepository {
     boolean register(Armor armor) throws SQLException;
 
-    ObservableList<Armor> search(int id) throws SQLException;
+    List<Armor> search(int id) throws SQLException;
+
+    ObservableList<Armor> organizeByRarity(List<Armor> armorList, String rarity);
+
+    ObservableList<Armor> organizeByType(List<Armor> armorList, String type);
 }
