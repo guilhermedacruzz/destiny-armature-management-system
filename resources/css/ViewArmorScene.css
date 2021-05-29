@@ -7,7 +7,7 @@
 }
 
 #btTitle {
-    -fx-font-size: 22;
+    -fx-font-size: 24;
 }
 
 #pane {
@@ -21,7 +21,7 @@ VBox, HBox {
 .label {
   -fx-text-fill: #dbdbdb;
   -fx-font-weight: bold;
-  -fx-font-size: 14;
+  -fx-font-size: 16;
 }
 
 .button {
@@ -85,6 +85,7 @@ VBox, HBox {
 .table-view .table-cell{
     -fx-text-fill: #dbdbdb;
     -fx-table-cell-border-color: #ffce1f;
+    -fx-font-size: 14;
 }
 
 .table-row-cell{
