@@ -25,7 +25,5 @@ public class Teste {
 
         List<Armor> armorList = armorRepository.search(1);
 
-        for (Armor armor: armorList)
-            System.out.println(armor.toString());
     }
 }
