@@ -95,6 +95,10 @@ public class JDBCArmor implements ArmorDAO {
             armorList.add(armor);
         }
 
+        rs.close();
+        pstmt.close();
+        conn.close();
+
         return armorList;
     }
 
