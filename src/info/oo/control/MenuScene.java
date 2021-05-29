@@ -11,7 +11,7 @@ import javafx.scene.control.Button;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MenuScene implements Initializable {
+public class MenuScene extends BasicScene implements Initializable {
 
     @FXML
     private Button btRegister;

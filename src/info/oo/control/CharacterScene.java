@@ -11,7 +11,7 @@ import javafx.scene.image.ImageView;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class CharacterScene implements Initializable {
+public class CharacterScene extends BasicScene implements Initializable {
 
     @FXML
     private Button btHunter;

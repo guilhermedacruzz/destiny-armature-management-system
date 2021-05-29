@@ -11,7 +11,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class SignInScene implements Initializable {
+public class SignInScene extends BasicScene implements Initializable {
 
     @FXML
     private TextField tfUsername;
@@ -90,13 +90,7 @@ public class SignInScene implements Initializable {
             msg = e.getMessage();
         }
 
-        Alert alert = new Alert(Alert.AlertType.ERROR,msg);
-        DialogPane dialogPane = alert.getDialogPane();
-        alert.setHeaderText(msgTitle);
-        dialogPane.getStylesheets().add(
-                getClass().getResource("/css/myAlerts.css").toExternalForm());
-        dialogPane.getStyleClass().add("myDialog");
-        alert.showAndWait();
+        errorRegister(msgTitle, msg);
 
         comeBack();
     }

@@ -13,7 +13,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 
-public class LoginScene implements Initializable {
+public class LoginScene extends BasicScene implements Initializable {
 
     @FXML
     private ImageView imgLogo;
@@ -81,13 +81,7 @@ public class LoginScene implements Initializable {
             msg = e.getMessage();
         }
 
-        Alert alert = new Alert(Alert.AlertType.ERROR,msg);
-        DialogPane dialogPane = alert.getDialogPane();
-        alert.setHeaderText("[ERRO]");
-        dialogPane.getStylesheets().add(
-                getClass().getResource("/css/myAlerts.css").toExternalForm());
-        dialogPane.getStyleClass().add("myDialog");
-        alert.showAndWait();
+        errorRegister("[ERRO]", msg);
     }
 
     @FXML

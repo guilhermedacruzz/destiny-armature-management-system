@@ -17,7 +17,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class ViewArmorScene implements Initializable {
+public class ViewArmorScene extends BasicScene implements Initializable {
 
     @FXML
     private TableView<Armor> tvHelmet;
@@ -117,13 +117,7 @@ public class ViewArmorScene implements Initializable {
         tcAttributes.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Armor, String>, ObservableValue<String>>() {
             @Override
             public ObservableValue<String> call(TableColumn.CellDataFeatures<Armor, String> armorStringCellDataFeatures) {
-                String valueCell = armorStringCellDataFeatures.getValue().getArmorAttribute().getMobility() + "-";
-                valueCell += armorStringCellDataFeatures.getValue().getArmorAttribute().getResilience() + "-";
-                valueCell += armorStringCellDataFeatures.getValue().getArmorAttribute().getRecovery() + "-";
-                valueCell += armorStringCellDataFeatures.getValue().getArmorAttribute().getDicipline() + "-";
-                valueCell += armorStringCellDataFeatures.getValue().getArmorAttribute().getIntellect() + "-";
-                valueCell += armorStringCellDataFeatures.getValue().getArmorAttribute().getStrenght();
-                return new SimpleStringProperty(valueCell);
+                return new SimpleStringProperty(armorStringCellDataFeatures.getValue().getArmorAttribute().getAttributes());
             }
         });
     }

@@ -23,6 +23,16 @@ public class ArmorAttribute {
         this(-1, mobility, resilience, recovery, dicipline, intellect, strenght);
     }
 
+    public String getAttributes() {
+        return  mobility + "-" +
+                resilience + "-" +
+                recovery + "-" +
+                dicipline + "-" +
+                intellect + "-" +
+                strenght;
+
+    }
+
     public int getId() {
         return id;
     }

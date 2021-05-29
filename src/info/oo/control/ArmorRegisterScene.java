@@ -17,7 +17,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class ArmorRegisterScene implements Initializable {
+public class ArmorRegisterScene extends BasicScene implements Initializable {
 
     @FXML
     TextField tfName;
@@ -222,16 +222,6 @@ public class ArmorRegisterScene implements Initializable {
         } catch (SQLException e) {
             errorRegister("[ERRO]", e.getMessage());
         }
-    }
-
-    private void errorRegister(String title, String error) {
-        Alert alert = new Alert(Alert.AlertType.ERROR, error);
-        DialogPane dialogPane = alert.getDialogPane();
-        alert.setHeaderText(title);
-        dialogPane.getStylesheets().add(
-                getClass().getResource("/css/myAlerts.css").toExternalForm());
-        dialogPane.getStyleClass().add("myDialog");
-        alert.showAndWait();
     }
 
     @FXML
