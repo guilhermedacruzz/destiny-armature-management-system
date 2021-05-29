@@ -44,6 +44,10 @@ public class MenuScene implements Initializable {
 
     }
 
+    @FXML
+    private void viewArmors() {
+        Main.changeScene(Main.VIEWS_ARMORS, (aclass) -> new ViewArmorScene(armorRepository), 1, 2);
+    }
 
     @FXML
     private void registerArmors() {

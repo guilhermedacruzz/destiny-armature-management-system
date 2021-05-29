@@ -35,6 +35,7 @@ public class Main extends Application {
     public static final String CHARACTER = "/fxml/CharacterScene.fxml";
     public static final String MENU = "/fxml/MenuScene.fxml";
     public static final String REGISTER_ARMORS = "/fxml/ArmorRegisterScene.fxml";
+    public static final String VIEWS_ARMORS = "/fxml/ViewArmorScene.fxml";
     private static StackPane stackPane;
 
     private ConnectionsFactory connectionsFactory;
