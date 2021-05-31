@@ -63,10 +63,10 @@ public class ArmorRegisterScene extends BasicScene implements Initializable {
     private RadioButton rbLegendary;
 
     @FXML
-    private RadioButton rbNoMasterprice;
+    private RadioButton rbYesMasterprice;
 
     @FXML
-    private RadioButton rbYesMasterprice;
+    private RadioButton rbNoMasterprice;
 
     @FXML
     private RadioButton rbSolar;
@@ -215,13 +215,45 @@ public class ArmorRegisterScene extends BasicScene implements Initializable {
             armorAttributesRepository.registerAttribute(armorAttribute);
         } catch (SQLException e) {
             errorRegister("[ERRO]", e.getMessage());
+            return;
         }
 
         try {
             armorRepository.register(armor);
         } catch (SQLException e) {
             errorRegister("[ERRO]", e.getMessage());
+            return;
         }
+
+        errorRegister("[OK]", "Armadura Cadastrada com Sucesso!");
+        clearInfos();
+    }
+
+    private void clearInfos() {
+        tfName.setText("");
+
+        tfMobility.setText("2");
+        tfResilience.setText("2");
+        tfRecovery.setText("2");
+        tfDicipline.setText("2");
+        tfIntellect.setText("2");
+        tfStrenght.setText("2");
+
+        rbYesMasterprice.setSelected(false);
+        rbNoMasterprice.setSelected(false);
+
+        rbLegendary.setSelected(false);
+        rbExotic.setSelected(false);
+
+        rbArc.setSelected(false);
+        rbSolar.setSelected(false);
+        rbVoid.setSelected(false);
+
+        rbHelmet.setSelected(false);
+        rbArm.setSelected(false);
+        rbChest.setSelected(false);
+        rbBoot.setSelected(false);
+        rbClassItem.setSelected(false);
     }
 
     @FXML
