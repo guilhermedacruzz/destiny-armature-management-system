@@ -1,5 +1,6 @@
 package info.oo;
 
+import info.oo.control.CalculateArmorScene;
 import info.oo.control.ViewArmorScene;
 import info.oo.model.Armor;
 import info.oo.model.ArmorAttribute;
@@ -37,8 +38,8 @@ public class Teste extends Application {
 
         FXMLLoader loader = new FXMLLoader();
 
-        loader.setLocation(Main.class.getResource("/fxml/ViewArmorScene.fxml"));
-        loader.setControllerFactory((aClass) -> new ViewArmorScene(armorRepository));
+        loader.setLocation(Main.class.getResource("/fxml/CalculateArmorScene.fxml"));
+        loader.setControllerFactory((aClass) -> new CalculateArmorScene(armorRepository));
 
         Parent root = loader.load();
 
