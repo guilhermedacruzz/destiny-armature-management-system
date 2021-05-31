@@ -43,19 +43,19 @@ public class CharacterScene extends BasicScene implements Initializable {
 
     @FXML
     void selectHunter() {
-        authService.getLogged().setGuardianClass("Hunter");
+        authService.getLogged().setGuardianClass("Caçador");
         changeScene();
     }
 
     @FXML
     void selectTitan() {
-        authService.getLogged().setGuardianClass("Titan");
+        authService.getLogged().setGuardianClass("Titã");
         changeScene();
     }
 
     @FXML
     void selectWarlock() {
-        authService.getLogged().setGuardianClass("Warlock");
+        authService.getLogged().setGuardianClass("Arcano");
         changeScene();
     }
 

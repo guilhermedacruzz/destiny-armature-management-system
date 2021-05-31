@@ -3,6 +3,7 @@ package info.oo.control;
 import info.oo.Main;
 import info.oo.model.Armor;
 import info.oo.model.repository.interfaces.ArmorRepository;
+import info.oo.services.AuthService;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -74,9 +75,11 @@ public class ViewArmorScene extends BasicScene implements Initializable {
     private TableColumn<Armor, String> tcAttributesExotic;
 
     private ArmorRepository armorRepository;
+    private AuthService authService;
 
-    public ViewArmorScene(ArmorRepository armorRepository) {
+    public ViewArmorScene(ArmorRepository armorRepository, AuthService authService) {
         this.armorRepository = armorRepository;
+        this.authService = authService;
     }
 
     @Override
@@ -92,7 +95,10 @@ public class ViewArmorScene extends BasicScene implements Initializable {
 
 
         try {
-            List<Armor> armorList = armorRepository.search(1, "Arcano");
+            int id = authService.getLogged().getId();
+            String guardianClass = authService.getLogged().getGuardianClass();
+
+            List<Armor> armorList = armorRepository.search(id, guardianClass);
 
             tvHelmet.setItems(armorRepository.organizeByType(armorList, "Capacete"));
             tvArms.setItems(armorRepository.organizeByType(armorList, "Manopla"));
@@ -101,6 +107,7 @@ public class ViewArmorScene extends BasicScene implements Initializable {
             tvClassItem.setItems(armorRepository.organizeByType(armorList, "Item de Classe"));
 
             tvExotic.setItems(armorRepository.organizeByRarity(armorList, "Exótico"));
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

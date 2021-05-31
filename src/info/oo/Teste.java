@@ -30,24 +30,6 @@ public class Teste extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        ConnectionsFactory connectionsFactory = new ConnectionsFactory();
-        ArmorDAO armorDAO = new JDBCArmor(connectionsFactory);
-        AttributesDAO attributesDAO = new JDBCAttributes(connectionsFactory);
-        ArmorAttributesRepository armorAttributesRepository = new ArmorAttributesRepositoryImpl(attributesDAO);
-        ArmorRepository armorRepository = new ArmorRepositoryImpl(armorDAO, attributesDAO);
-
-        FXMLLoader loader = new FXMLLoader();
-
-        loader.setLocation(Main.class.getResource("/fxml/CalculateArmorScene.fxml"));
-        loader.setControllerFactory((aClass) -> new CalculateArmorScene(armorRepository));
-
-        Parent root = loader.load();
-
-        Scene scene = new Scene(root, 801, 534);
-
-        stage.setScene(scene);
-        stage.setTitle("Cadastro Pessoa");
-        stage.show();
     }
 
 }

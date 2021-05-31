@@ -1,8 +1,10 @@
 package info.oo.control;
 
+import info.oo.Main;
 import info.oo.model.Armor;
 import info.oo.model.ResultArmor;
 import info.oo.model.repository.interfaces.ArmorRepository;
+import info.oo.services.AuthService;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -42,11 +44,13 @@ public class CalculateArmorScene implements Initializable {
     private CheckBox cbStasis;
 
     private ArmorRepository armorRepository;
+    private AuthService authService;
 
     private List<Armor> armorList;
 
-    public CalculateArmorScene(ArmorRepository armorRepository) {
+    public CalculateArmorScene(ArmorRepository armorRepository, AuthService authService) {
         this.armorRepository = armorRepository;
+        this.authService = authService;
     }
 
     @Override
@@ -58,7 +62,10 @@ public class CalculateArmorScene implements Initializable {
         initTableColumn();
 
         try {
-            armorList = armorRepository.search(1, "Arcano");
+            int id = authService.getLogged().getId();
+            String guardianClass = authService.getLogged().getGuardianClass();
+
+            armorList = armorRepository.search(id, guardianClass);
 
             tvExotic.setItems(armorRepository.organizeByRarity(armorList, "Exótico"));
         } catch (SQLException throwables) {
@@ -94,8 +101,16 @@ public class CalculateArmorScene implements Initializable {
         boolean powerfulFriends = cbPowerfulFriends.isSelected();
         boolean radiantLight = cbRadiantLight.isSelected();
         boolean stasis = cbStasis.isSelected();
+
         Armor exotic = tvExotic.getSelectionModel().getSelectedItem();
+
         tvResult.setItems(armorRepository.resultCalculateArmors(armorList, exotic,
                                                     powerfulFriends, radiantLight, stasis));
+    }
+
+
+    @FXML
+    private void comeBack() {
+        Main.mainMenu();
     }
 }
