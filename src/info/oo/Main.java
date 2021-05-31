@@ -62,7 +62,7 @@ public class Main extends Application {
         stackPane = new StackPane();
         primaryStage.setScene(new Scene(stackPane, 801, 534));
 
-        changeScene(Main.LOGIN,(aClass)->new LoginScene(authService), 1, 1);
+        changeScene(Main.LOGIN,(aClass)->new LoginScene(authService), -1, 1);
 
         primaryStage.show();
     }
@@ -81,7 +81,7 @@ public class Main extends Application {
     }
 
     public static void mainMenu() {
-        changeScene(Main.MENU, (aclass) -> new MenuScene(authService, armorRepository, armorAttributesRepository), 1, 2);
+        changeScene(Main.MENU, (aclass) -> new MenuScene(authService, armorRepository, armorAttributesRepository), 950, 2);
     }
 
     public static void changeScene(String cena, Callback construtor, int timer, int type) {
@@ -97,7 +97,13 @@ public class Main extends Application {
                     noAnimation(paneToAdd);
                     break;
                 case 2:
-                    fadeIn(paneToAdd);
+                    fadeIn(paneToAdd, timer);
+                    break;
+                case 4:
+                    slideLeft(paneToAdd, timer);
+                    break;
+                case 5:
+                    slideRight(paneToAdd, timer);
                     break;
             }
 
@@ -114,12 +120,12 @@ public class Main extends Application {
     }
 
 
-    private static void fadeIn(Parent paneToAdd) {
+    private static void fadeIn(Parent paneToAdd, int timer) {
         var paneToRemove = stackPane.getChildren().get(0);
 
         stackPane.getChildren().add(paneToAdd);
 
-        var fadeInTransition = new FadeTransition(Duration.millis(900));
+        var fadeInTransition = new FadeTransition(Duration.millis(timer));
 
         fadeInTransition.setOnFinished(evt -> {
             stackPane.getChildren().remove(paneToRemove);
@@ -130,7 +136,7 @@ public class Main extends Application {
         fadeInTransition.play();
     }
 
-    private static void slideRight(Parent paneToAdd) {
+    private static void slideRight(Parent paneToAdd, int timer) {
         var paneToRemove = stackPane.getChildren().get(0);
 
         paneToAdd.translateXProperty().set(stackPane.getWidth());
@@ -139,7 +145,7 @@ public class Main extends Application {
         KeyFrame start = new KeyFrame(Duration.ZERO,
                 new KeyValue(paneToAdd.translateXProperty(), stackPane.getWidth()),
                 new KeyValue(paneToRemove.translateXProperty(), 0));
-        KeyFrame end = new KeyFrame(Duration.millis(850),
+        KeyFrame end = new KeyFrame(Duration.millis(timer),
                 new KeyValue(paneToAdd.translateXProperty(), 0),
                 new KeyValue(paneToRemove.translateXProperty(), -stackPane.getWidth()));
 
@@ -152,7 +158,7 @@ public class Main extends Application {
         slide.play();
     }
 
-    private static void slideLeft(Parent paneToAdd) {
+    private static void slideLeft(Parent paneToAdd, int timer) {
         var paneToRemove = stackPane.getChildren().get(0);
 
         paneToAdd.translateXProperty().set(stackPane.getWidth() * -1);
@@ -161,7 +167,7 @@ public class Main extends Application {
         KeyFrame start = new KeyFrame(Duration.ZERO,
                 new KeyValue(paneToAdd.translateXProperty(), -stackPane.getWidth()),
                 new KeyValue(paneToRemove.translateXProperty(), 0));
-        KeyFrame end = new KeyFrame(Duration.millis(850),
+        KeyFrame end = new KeyFrame(Duration.millis(timer),
                 new KeyValue(paneToAdd.translateXProperty(), 0),
                 new KeyValue(paneToRemove.translateXProperty(), stackPane.getWidth()));
 

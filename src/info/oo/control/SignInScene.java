@@ -97,6 +97,6 @@ public class SignInScene extends BasicScene implements Initializable {
 
     @FXML
     void comeBack() {
-        Main.changeScene(Main.LOGIN, (aClass)-> new LoginScene(authService),1, 2);
+        Main.changeScene(Main.LOGIN, (aClass)-> new LoginScene(authService),850, 4);
     }
 }

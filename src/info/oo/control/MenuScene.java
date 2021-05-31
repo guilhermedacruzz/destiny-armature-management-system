@@ -31,21 +31,21 @@ public class MenuScene extends BasicScene implements Initializable {
 
     @FXML
     private void viewArmors() {
-        Main.changeScene(Main.VIEWS_ARMORS, (aclass) -> new ViewArmorScene(armorRepository, authService), 1, 2);
+        Main.changeScene(Main.VIEWS_ARMORS, (aclass) -> new ViewArmorScene(armorRepository, authService), 600, 2);
     }
 
     @FXML
     private void registerArmors() {
-        Main.changeScene(Main.REGISTER_ARMORS, (aclass) -> new ArmorRegisterScene(authService, armorRepository, armorAttributesRepository),1, 2);
+        Main.changeScene(Main.REGISTER_ARMORS, (aclass) -> new ArmorRegisterScene(authService, armorRepository, armorAttributesRepository),600, 2);
     }
 
     @FXML
     private void calculateArmors() {
-        Main.changeScene(Main.CALCULE_ARMORS, (aclass) -> new CalculateArmorScene(armorRepository, authService), 1, 2);
+        Main.changeScene(Main.CALCULE_ARMORS, (aclass) -> new CalculateArmorScene(armorRepository, authService), 600, 2);
     }
 
     @FXML
     private void exit() {
-        Main.changeScene(Main.LOGIN,(aClass)->new LoginScene(authService), 1, 2);
+        Main.changeScene(Main.LOGIN,(aClass)->new LoginScene(authService), 600, 2);
     }
 }

@@ -72,7 +72,7 @@ public class LoginScene extends BasicScene implements Initializable {
             boolean status = authService.login(username, secret);
 
             if(status) {
-                Main.changeScene(Main.CHARACTER, (aClass) -> new CharacterScene(authService), 1, 2);
+                Main.changeScene(Main.CHARACTER, (aClass) -> new CharacterScene(authService), 600, 2);
                 return;
             } else {
                 msg = "Usuário Inválido!";
@@ -86,6 +86,6 @@ public class LoginScene extends BasicScene implements Initializable {
 
     @FXML
     void changeScene() {
-        Main.changeScene(Main.REGISTER, (aClass)-> new SignInScene(authService),1, 2);
+        Main.changeScene(Main.REGISTER, (aClass)-> new SignInScene(authService),850, 5);
     }
 }

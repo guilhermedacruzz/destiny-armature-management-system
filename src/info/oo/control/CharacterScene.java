@@ -34,7 +34,7 @@ public class CharacterScene extends BasicScene implements Initializable {
 
     @FXML
     void comeBack() {
-        Main.changeScene(Main.LOGIN, (aClass)-> new LoginScene(authService),1, 2);
+        Main.changeScene(Main.LOGIN, (aClass)-> new LoginScene(authService),650, 2);
     }
 
     void changeScene() {
