@@ -1,8 +1,10 @@
-create database sgda7;
-use sgda7;
+create database sgda77;
+use sgda77;
 
-DROP TABLE table_user;
-CREATE TABLE table_user (
+# =============== TABLE ===============
+
+drop table if exists table_user;
+create table table_user (
 	cod_user INTEGER NOT NULL AUTO_INCREMENT,
     name VARCHAR(45) NOT NULL,
     surname VARCHAR(255),
@@ -56,6 +58,8 @@ create table table_armor_attributes(
     FOREIGN KEY(cod_attributes) references table_attributes(cod_attributes)
 );
 
+# =============== FUNCTIONS ===============
+
 delimiter $$
 drop function if exists sum_attributes $$
 create function sum_attributes (index_attribute int)
@@ -82,6 +86,8 @@ begin
 	return FLOOR(start_number + RAND() * (stop_number - start_number + 1));
 end $$
 delimiter ;
+
+# =============== STORED PROCEDURE ===============
 
 delimiter $$
 drop procedure if exists check_armor $$
@@ -171,6 +177,8 @@ begin
 end $$
 delimiter ;
 
+# =============== TRIGGERS ===============
+
 delimiter $$
 drop trigger if exists duplicate_armor $$
 create trigger duplicate_armor before insert on table_armor for each
@@ -212,5 +220,3 @@ begin
 	end if;
 end$$
 delimiter ;
-
-

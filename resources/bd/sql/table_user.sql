@@ -1,4 +1,3 @@
-use sgda1;
 
 DROP TABLE table_user;
 CREATE TABLE table_user (
