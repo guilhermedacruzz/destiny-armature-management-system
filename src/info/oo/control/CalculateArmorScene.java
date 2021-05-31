@@ -78,7 +78,7 @@ public class CalculateArmorScene implements Initializable {
         tcResult.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<ResultArmor, String>, ObservableValue<String>>() {
             @Override
             public ObservableValue<String> call(TableColumn.CellDataFeatures<ResultArmor, String> resultArmorStringCellDataFeatures) {
-                return new SimpleStringProperty(resultArmorStringCellDataFeatures.getValue().getAttributesSet().toString());
+                return new SimpleStringProperty(resultArmorStringCellDataFeatures.getValue().getAttributesSet().getAttributes());
             }
         });
     }

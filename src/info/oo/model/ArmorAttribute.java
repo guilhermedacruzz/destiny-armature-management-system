@@ -23,6 +23,10 @@ public class ArmorAttribute {
         this(-1, mobility, resilience, recovery, dicipline, intellect, strenght);
     }
 
+    public int[] getAttributesVetor() {
+        return new int[]{mobility, resilience, recovery, dicipline, intellect, strenght};
+    }
+
     public String getAttributes() {
         return  mobility + "-" +
                 resilience + "-" +
