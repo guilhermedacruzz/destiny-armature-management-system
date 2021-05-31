@@ -1,4 +1,2 @@
-use sgda6;
-
-select * from table_armor_attributes  where cod_armor=20;
-
+use sgda77;
+select * from table_armor where cod_user=1 and guardian_class="Arcano";

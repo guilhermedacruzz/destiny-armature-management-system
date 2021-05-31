@@ -23,19 +23,10 @@ public class SignInScene extends BasicScene implements Initializable {
     private CheckBox cbPass;
 
     @FXML
-    private Button btCreate;
-
-    @FXML
-    private Label lbWelcome;
-
-    @FXML
     private TextField tfName;
 
     @FXML
     private TextField tfSurname;
-
-    @FXML
-    private ImageView imgLogo;
 
     private AuthService authService;
 

@@ -41,6 +41,7 @@ public class ArmorRepositoryImpl implements ArmorRepository {
         return armorList;
     }
 
+    @Override
     public ObservableList<Armor> organizeByType(List<Armor> armorList, String type) {
         ObservableList<Armor> armorObservableList = FXCollections.observableArrayList();
 
@@ -51,6 +52,21 @@ public class ArmorRepositoryImpl implements ArmorRepository {
                 armorListByType.add(armor);
 
         armorObservableList.addAll(armorListByType);
+
+        return FXCollections.unmodifiableObservableList(armorObservableList);
+    }
+
+    @Override
+    public ObservableList<Armor> organizeByRarity(List<Armor> armorList, String rarity) {
+        ObservableList<Armor> armorObservableList = FXCollections.observableArrayList();
+
+        List<Armor> armorListByRarity = new ArrayList<>();
+
+        for(Armor armor: armorList)
+            if(armor.getRarity().equals(rarity))
+                armorListByRarity.add(armor);
+
+        armorObservableList.addAll(armorListByRarity);
 
         return FXCollections.unmodifiableObservableList(armorObservableList);
     }
@@ -94,20 +110,5 @@ public class ArmorRepositoryImpl implements ArmorRepository {
         if(armor.getType().equals(exotic.getType()))
             return exotic;
         return armor;
-    }
-
-
-    public ObservableList<Armor> organizeByRarity(List<Armor> armorList, String rarity) {
-        ObservableList<Armor> armorObservableList = FXCollections.observableArrayList();
-
-        List<Armor> armorListByRarity = new ArrayList<>();
-
-        for(Armor armor: armorList)
-            if(armor.getRarity().equals(rarity))
-                armorListByRarity.add(armor);
-
-        armorObservableList.addAll(armorListByRarity);
-
-        return FXCollections.unmodifiableObservableList(armorObservableList);
     }
 }

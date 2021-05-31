@@ -58,7 +58,7 @@
                   </HBox>
                   <VBox alignment="CENTER" prefHeight="46.0" prefWidth="502.0" GridPane.columnSpan="2" GridPane.rowIndex="4">
                      <children>
-                        <Button fx:id="btSend" mnemonicParsing="false" onAction="#login" prefHeight="44.0" prefWidth="322.0" text="ENVIAR">
+                        <Button mnemonicParsing="false" onAction="#login" prefHeight="44.0" prefWidth="322.0" text="ENVIAR">
                            <tooltip>
                               <Tooltip text="Enviar" />
                            </tooltip></Button>
@@ -82,7 +82,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </VBox>
-      <ImageView fx:id="imgLogo" fitHeight="534.0" fitWidth="400.0" nodeOrientation="INHERIT" pickOnBounds="true" smooth="false">
+      <ImageView fitHeight="534.0" fitWidth="400.0" nodeOrientation="INHERIT" pickOnBounds="true" smooth="false">
          <image>
             <Image url="@../assets/images/destiny2-concept-art-edited3.png" />
          </image></ImageView>

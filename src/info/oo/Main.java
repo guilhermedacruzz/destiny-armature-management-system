@@ -2,8 +2,6 @@ package info.oo;
 
 import info.oo.control.LoginScene;
 import info.oo.control.MenuScene;
-import info.oo.control.SignInScene;
-import info.oo.model.ArmorAttribute;
 import info.oo.model.ConnectionsFactory;
 import info.oo.model.daos.JDBCArmor;
 import info.oo.model.daos.JDBCAttributes;
