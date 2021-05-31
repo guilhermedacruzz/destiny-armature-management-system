@@ -65,6 +65,12 @@ insert into table_armor(name, guardian_class, type, rarity, status, status_maste
 values("Voto da Cristocrene", "Titan", "Item de Classe", "Lendário", 1, 1, "Arco", 2);
 insert into table_armor_attributes(cod_armor, cod_attributes) values(10, 11);
 
+
+insert into table_attributes(mobility, resilience, recovery, dicipline, intellect, strenght) values(13, 13, 2, 9, 14, 7);
+insert into table_armor(name, guardian_class, type, rarity, status, status_masterprice, element, cod_user)
+values("Capuz do Exílio", "Arcano", "Capacete", "Lendário", 1, 0, "Solar", 1);
+insert into table_armor_attributes(cod_armor, cod_attributes) values(11, 12);
+
 # Ver os Cadastros
 select * from table_user;
 select * from table_armor;

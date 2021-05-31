@@ -2,6 +2,7 @@ package info.oo.model.repository;
 
 import info.oo.model.Armor;
 import info.oo.model.ArmorAttribute;
+import info.oo.model.ResultArmor;
 import info.oo.model.daos.interfaces.ArmorDAO;
 import info.oo.model.daos.interfaces.AttributesDAO;
 import info.oo.model.repository.interfaces.ArmorRepository;
@@ -53,6 +54,44 @@ public class ArmorRepositoryImpl implements ArmorRepository {
 
         return FXCollections.unmodifiableObservableList(armorObservableList);
     }
+
+    @Override
+    public ObservableList<ResultArmor> resultCalculateArmors(List<Armor> armorList, Armor exotic) {
+        ObservableList<Armor> helmets = organizeByType(armorList, "Capacete");
+        ObservableList<Armor> arms = organizeByType(armorList, "Manopla");
+        ObservableList<Armor> chests = organizeByType(armorList, "Armadura de Torso");
+        ObservableList<Armor> boots = organizeByType(armorList, "Armadura de Perna");
+        ObservableList<Armor> classItens = organizeByType(armorList, "Item de Classe");
+
+        ObservableList<ResultArmor> resultArmors = FXCollections.observableArrayList();
+
+        for(Armor helmet: helmets) {
+            helmet = checkExotic(exotic, helmet);
+            for(Armor arm: arms) {
+                arm = checkExotic(exotic, arm);
+                for(Armor chest: chests) {
+                    chest = checkExotic(exotic, chest);
+                    for(Armor boot: boots) {
+                        boot = checkExotic(exotic, boot);
+                        for(Armor classItem: classItens) {
+                            ResultArmor resultArmor = new ResultArmor(helmet, arm, chest, boot, classItem);
+                            resultArmor.toString();
+                            resultArmors.add(resultArmor);
+                        }
+                    }
+                }
+            }
+        }
+
+        return resultArmors;
+    }
+
+    private Armor checkExotic(Armor exotic, Armor armor) {
+        if(armor.getType().equals(exotic.getType()))
+            return exotic;
+        return armor;
+    }
+
 
     public ObservableList<Armor> organizeByRarity(List<Armor> armorList, String rarity) {
         ObservableList<Armor> armorObservableList = FXCollections.observableArrayList();

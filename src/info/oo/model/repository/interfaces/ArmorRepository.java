@@ -1,6 +1,7 @@
 package info.oo.model.repository.interfaces;
 
 import info.oo.model.Armor;
+import info.oo.model.ResultArmor;
 import javafx.collections.ObservableList;
 
 import java.sql.SQLException;
@@ -14,4 +15,6 @@ public interface ArmorRepository {
     ObservableList<Armor> organizeByRarity(List<Armor> armorList, String rarity);
 
     ObservableList<Armor> organizeByType(List<Armor> armorList, String type);
+
+    ObservableList<ResultArmor> resultCalculateArmors(List<Armor> armorList, Armor exotic);
 }

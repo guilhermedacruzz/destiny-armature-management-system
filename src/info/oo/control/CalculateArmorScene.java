@@ -1,6 +1,7 @@
 package info.oo.control;
 
 import info.oo.model.Armor;
+import info.oo.model.ResultArmor;
 import info.oo.model.repository.interfaces.ArmorRepository;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
@@ -29,12 +30,14 @@ public class CalculateArmorScene implements Initializable {
     private TableColumn<Armor, String> tcAttributes;
 
     @FXML
-    private TableView<Armor> tvResult;
+    private TableView<ResultArmor> tvResult;
 
     @FXML
-    private TableColumn<Armor, String> tcResult;
+    private TableColumn<ResultArmor, String> tcResult;
 
     private ArmorRepository armorRepository;
+
+    private List<Armor> armorList;
 
     public CalculateArmorScene(ArmorRepository armorRepository) {
         this.armorRepository = armorRepository;
@@ -49,7 +52,7 @@ public class CalculateArmorScene implements Initializable {
         initTableColumn();
 
         try {
-            List<Armor> armorList = armorRepository.search(1);
+            armorList = armorRepository.search(1);
 
             tvExotic.setItems(armorRepository.organizeByRarity(armorList, "Exótico"));
         } catch (SQLException throwables) {
@@ -71,11 +74,18 @@ public class CalculateArmorScene implements Initializable {
                 return new SimpleStringProperty(armorStringCellDataFeatures.getValue().getArmorAttribute().getAttributes());
             }
         });
+
+        tcResult.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<ResultArmor, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<ResultArmor, String> resultArmorStringCellDataFeatures) {
+                return new SimpleStringProperty(resultArmorStringCellDataFeatures.getValue().getAttributesSet().toString());
+            }
+        });
     }
 
 
     private void calcule() {
-        Armor armor = tvExotic.getSelectionModel().getSelectedItem();
-        System.out.println(armor);
+        Armor exotic = tvExotic.getSelectionModel().getSelectedItem();
+        tvResult.setItems(armorRepository.resultCalculateArmors(armorList, exotic));
     }
 }
