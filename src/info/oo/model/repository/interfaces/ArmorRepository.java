@@ -16,5 +16,8 @@ public interface ArmorRepository {
 
     ObservableList<Armor> organizeByType(List<Armor> armorList, String type);
 
-    ObservableList<ResultArmor> resultCalculateArmors(List<Armor> armorList, Armor exotic);
+    ObservableList<ResultArmor> resultCalculateArmors(List<Armor> armorList, Armor exotic,
+                                                      boolean powerfulFriends,
+                                                      boolean radiantLight,
+                                                      boolean stasis);
 }

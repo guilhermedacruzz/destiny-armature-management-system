@@ -7,10 +7,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.util.Callback;
 
 import java.net.URL;
@@ -34,6 +31,15 @@ public class CalculateArmorScene implements Initializable {
 
     @FXML
     private TableColumn<ResultArmor, String> tcResult;
+
+    @FXML
+    private CheckBox cbPowerfulFriends;
+
+    @FXML
+    private CheckBox cbRadiantLight;
+
+    @FXML
+    private CheckBox cbStasis;
 
     private ArmorRepository armorRepository;
 
@@ -85,7 +91,11 @@ public class CalculateArmorScene implements Initializable {
 
 
     private void calcule() {
+        boolean powerfulFriends = cbPowerfulFriends.isSelected();
+        boolean radiantLight = cbRadiantLight.isSelected();
+        boolean stasis = cbStasis.isSelected();
         Armor exotic = tvExotic.getSelectionModel().getSelectedItem();
-        tvResult.setItems(armorRepository.resultCalculateArmors(armorList, exotic));
+        tvResult.setItems(armorRepository.resultCalculateArmors(armorList, exotic,
+                                                    powerfulFriends, radiantLight, stasis));
     }
 }

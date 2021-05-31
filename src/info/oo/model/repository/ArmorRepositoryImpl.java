@@ -56,7 +56,11 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     }
 
     @Override
-    public ObservableList<ResultArmor> resultCalculateArmors(List<Armor> armorList, Armor exotic) {
+    public ObservableList<ResultArmor> resultCalculateArmors(List<Armor> armorList, Armor exotic,
+                                                             boolean powerfulFriends,
+                                                             boolean radiantLight,
+                                                             boolean stasis) {
+
         ObservableList<Armor> helmets = organizeByType(armorList, "Capacete");
         ObservableList<Armor> arms = organizeByType(armorList, "Manopla");
         ObservableList<Armor> chests = organizeByType(armorList, "Armadura de Torso");
@@ -74,8 +78,8 @@ public class ArmorRepositoryImpl implements ArmorRepository {
                     for(Armor boot: boots) {
                         boot = checkExotic(exotic, boot);
                         for(Armor classItem: classItens) {
-                            ResultArmor resultArmor = new ResultArmor(helmet, arm, chest, boot, classItem);
-                            resultArmor.toString();
+                            ResultArmor resultArmor = new ResultArmor(helmet, arm, chest, boot, classItem,
+                                                          powerfulFriends, radiantLight, stasis);
                             resultArmors.add(resultArmor);
                         }
                     }
