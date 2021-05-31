@@ -92,7 +92,7 @@ public class ViewArmorScene extends BasicScene implements Initializable {
 
 
         try {
-            List<Armor> armorList = armorRepository.search(1);
+            List<Armor> armorList = armorRepository.search(1, "Arcano");
 
             tvHelmet.setItems(armorRepository.organizeByType(armorList, "Capacete"));
             tvArms.setItems(armorRepository.organizeByType(armorList, "Manopla"));

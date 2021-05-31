@@ -8,6 +8,6 @@ import java.util.List;
 public interface ArmorDAO {
     boolean createArmor(Armor armor) throws SQLException;
 
-    List selectArmor(int id) throws SQLException;
+    List selectArmor(int id, String guardianClass) throws SQLException;
 
 }

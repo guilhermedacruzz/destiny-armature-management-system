@@ -52,7 +52,7 @@ public class CalculateArmorScene implements Initializable {
         initTableColumn();
 
         try {
-            armorList = armorRepository.search(1);
+            armorList = armorRepository.search(1, "Arcano");
 
             tvExotic.setItems(armorRepository.organizeByRarity(armorList, "Exótico"));
         } catch (SQLException throwables) {

@@ -29,9 +29,9 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     }
 
     @Override
-    public List<Armor> search(int id) throws SQLException {
+    public List<Armor> search(int id, String guardianClass) throws SQLException {
 
-        List<Armor> armorList = armorDAO.selectArmor(id);
+        List<Armor> armorList = armorDAO.selectArmor(id, guardianClass);
 
         for(Armor armor: armorList) {
             List<ArmorAttribute> armorAttributeList = attributesDAO.selectAttributes(armor.getId());

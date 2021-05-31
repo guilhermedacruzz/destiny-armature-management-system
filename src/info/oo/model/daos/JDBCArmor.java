@@ -16,7 +16,7 @@ public class JDBCArmor implements ArmorDAO {
     private static String INSERT_ARMOR_ATTRIBUTE = "INSERT INTO table_armor_attributes(cod_armor, cod_attributes) " +
             "values(?,?)";
 
-    private static String SELECT_ID_USER = "select * from table_armor where cod_user=?";
+    private static String SELECT_ID_USER = "select * from table_armor where cod_user=? and guardian_class=?";
 
     private ConnectionsFactory connectionsFactory;
 
@@ -67,7 +67,7 @@ public class JDBCArmor implements ArmorDAO {
     }
 
     @Override
-    public List selectArmor(int id) throws SQLException {
+    public List selectArmor(int id, String guardianClass) throws SQLException {
         List<Armor> armorList = new ArrayList<>();
 
         Connection conn = connectionsFactory.getConnection();
@@ -75,6 +75,7 @@ public class JDBCArmor implements ArmorDAO {
         PreparedStatement pstmt = conn.prepareStatement(SELECT_ID_USER);
 
         pstmt.setInt(1, id);
+        pstmt.setString(2, guardianClass);
 
         ResultSet rs = pstmt.executeQuery();
 
