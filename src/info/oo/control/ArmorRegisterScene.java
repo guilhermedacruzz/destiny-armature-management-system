@@ -80,11 +80,19 @@ public class ArmorRegisterScene extends BasicScene implements Initializable {
     private AuthService authService;
     private ArmorRepository armorRepository;
     private ArmorAttributesRepository armorAttributesRepository;
+    private Armor currentArmor;
 
-    public ArmorRegisterScene(AuthService authService, ArmorRepository armorRepository, ArmorAttributesRepository armorAttributesRepository) {
+    public ArmorRegisterScene(AuthService authService, ArmorRepository armorRepository,
+                              ArmorAttributesRepository armorAttributesRepository, Armor currentArmor) {
         this.authService = authService;
         this.armorRepository = armorRepository;
         this.armorAttributesRepository = armorAttributesRepository;
+        this.currentArmor = currentArmor;
+    }
+
+    public ArmorRegisterScene(AuthService authService, ArmorRepository armorRepository,
+                              ArmorAttributesRepository armorAttributesRepository) {
+        this(authService, armorRepository, armorAttributesRepository, null);
     }
 
     @Override
@@ -98,6 +106,58 @@ public class ArmorRegisterScene extends BasicScene implements Initializable {
         tfIntellect.setText("2");
         tfStrenght.setText("2");
 
+        if(!(currentArmor == null)) {
+            tfName.setText(currentArmor.getName());
+
+            tfMobility.setText(String.valueOf(currentArmor.getArmorAttribute().getMobility()));
+            tfResilience.setText(String.valueOf(currentArmor.getArmorAttribute().getResilience()));
+            tfRecovery.setText(String.valueOf(currentArmor.getArmorAttribute().getRecovery()));
+            tfDicipline.setText(String.valueOf(currentArmor.getArmorAttribute().getDicipline()));
+            tfIntellect.setText(String.valueOf(currentArmor.getArmorAttribute().getIntellect()));
+            tfStrenght.setText(String.valueOf(currentArmor.getArmorAttribute().getStrenght()));
+
+            switch (currentArmor.getType()) {
+                case "Capacete":
+                    rbHelmet.setSelected(true);
+                    break;
+                case "Manopla":
+                    rbArm.setSelected(true);
+                    break;
+                case "Armadura de Torso":
+                    rbChest.setSelected(true);
+                    break;
+                case "Armadura de Perna":
+                    rbBoot.setSelected(true);
+                    break;
+                case "Item de Classe":
+                    rbClassItem.setSelected(true);
+                    break;
+            }
+
+            switch (currentArmor.getElement()) {
+                case "Arco":
+                    rbArc.setSelected(true);
+                    break;
+                case "Solar":
+                    rbSolar.setSelected(true);
+                    break;
+                case "Vácuo":
+                    rbVoid.setSelected(true);
+                    break;
+            }
+
+            switch (currentArmor.getRarity()) {
+                case "Exótico":
+                    rbExotic.setSelected(true);
+                    break;
+                case "Lendário":
+                    rbLegendary.setSelected(true);
+                    break;
+            }
+
+            rbYesMasterprice.setSelected(currentArmor.isStatusMasterprice());
+            rbNoMasterprice.setSelected(!currentArmor.isStatusMasterprice());
+        }
     }
 
     private String getName() {
