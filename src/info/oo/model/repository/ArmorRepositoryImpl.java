@@ -82,33 +82,32 @@ public class ArmorRepositoryImpl implements ArmorRepository {
                                                              boolean radiantLight,
                                                              boolean stasis) {
 
-        ObservableList<Armor> helmets = organizeByType("Capacete");
-        ObservableList<Armor> arms = organizeByType("Manopla");
-        ObservableList<Armor> chests = organizeByType("Armadura de Torso");
-        ObservableList<Armor> boots = organizeByType("Armadura de Perna");
-        ObservableList<Armor> classItens = organizeByType("Item de Classe");
+        ObservableList<ObservableList<Armor>> observableList = FXCollections.observableArrayList();
 
-        ObservableList<ResultArmor> resultArmors = FXCollections.observableArrayList();
+        if(!exotic.getType().equals("Capacete"))
+            observableList.addAll(organizeByType("Capacete"));
+        if(!exotic.getType().equals("Manopla"))
+            observableList.addAll(organizeByType("Manopla"));
+        if(!exotic.getType().equals("Armadura de Torso"))
+            observableList.addAll(organizeByType("Armadura de Torso"));
+        if(!exotic.getType().equals("Armadura de Perna"))
+            observableList.addAll(organizeByType("Armadura de Perna"));
+        if(!exotic.getType().equals("Item de Classe"))
+            observableList.addAll(organizeByType("Item de Classe"));
 
-        for(Armor helmet: helmets) {
-            helmet = checkExotic(exotic, helmet);
-            for(Armor arm: arms) {
-                arm = checkExotic(exotic, arm);
-                for(Armor chest: chests) {
-                    chest = checkExotic(exotic, chest);
-                    for(Armor boot: boots) {
-                        boot = checkExotic(exotic, boot);
-                        for(Armor classItem: classItens) {
-                            ResultArmor resultArmor = new ResultArmor(helmet, arm, chest, boot, classItem,
-                                                          powerfulFriends, radiantLight, stasis);
-                            resultArmors.add(resultArmor);
-                        }
-                    }
-                }
-            }
+        a(new Armor[4], observableList, 0);
+        return FXCollections.observableArrayList();
+    }
+
+    private void a(Armor[] resultArmors, ObservableList<ObservableList<Armor>> observableList, int index) {
+        if(index == 4) {
+            System.out.println(resultArmors.length);
+            return;
         }
-
-        return resultArmors;
+        for(Armor armor: observableList.get(index)) {
+            resultArmors[index] = armor;
+            a(resultArmors, observableList, index + 1);
+        }
     }
 
     private Armor checkExotic(Armor exotic, Armor armor) {
