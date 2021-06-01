@@ -11,12 +11,15 @@ import java.util.List;
 
 public class JDBCArmor implements ArmorDAO {
 
-    private static String INSERT_ARMOR = "INSERT INTO table_armor(name, guardian_class, type, rarity, status, " +
+    private static final String INSERT_ARMOR = "INSERT INTO table_armor(name, guardian_class, type, rarity, status, " +
             "status_masterprice, element, cod_user) values(?,?,?,?,?,?,?,?)";
-    private static String INSERT_ARMOR_ATTRIBUTE = "INSERT INTO table_armor_attributes(cod_armor, cod_attributes) " +
+    private static final String INSERT_ARMOR_ATTRIBUTE = "INSERT INTO table_armor_attributes(cod_armor, cod_attributes) " +
             "values(?,?)";
 
-    private static String SELECT_ID_USER = "select * from table_armor where cod_user=? and guardian_class=?";
+    private static final String SELECT_ID_USER = "select * from table_armor where cod_user=? and guardian_class=?";
+
+    private static final String UPDATE_ARMOR = "update table_armor set name=?, guardian_class=?, type=?," +
+                                         "rarity=?, status=?, status_masterprice=?, element=? where cod_armor=?";
 
     private ConnectionsFactory connectionsFactory;
 
@@ -64,6 +67,29 @@ public class JDBCArmor implements ArmorDAO {
         conn.close();
 
         return true;
+    }
+
+    @Override
+    public boolean editArmor(Armor armor) throws SQLException {
+        Connection conn = connectionsFactory.getConnection();
+
+        PreparedStatement pstmt = conn.prepareStatement(UPDATE_ARMOR);
+
+        pstmt.setString(1, armor.getName());
+        pstmt.setString(2, armor.getGuardianClass());
+        pstmt.setString(3, armor.getType());
+        pstmt.setString(4, armor.getRarity());
+        pstmt.setBoolean(5, armor.isStatus());
+        pstmt.setBoolean(6, armor.isStatusMasterprice());
+        pstmt.setString(7, armor.getRarity());
+        pstmt.setInt(8, armor.getId());
+
+        int ret = pstmt.executeUpdate();
+
+        pstmt.close();
+        conn.close();
+
+        return ret == 1;
     }
 
     @Override

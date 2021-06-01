@@ -80,9 +80,9 @@ public class ArmorRepositoryImpl implements ArmorRepository {
 
     @Override
     public boolean resultCalculateArmors(Armor exotic,
-                                                             boolean powerfulFriends,
-                                                             boolean radiantLight,
-                                                             boolean stasis) {
+                                         boolean powerfulFriends,
+                                         boolean radiantLight,
+                                         boolean stasis) {
 
         ObservableList<ObservableList<Armor>> observableList = FXCollections.observableArrayList();
 
@@ -107,11 +107,6 @@ public class ArmorRepositoryImpl implements ArmorRepository {
         return true;
     }
 
-    @Override
-    public ObservableList<Armor[]> getResultArmors() {
-        return results;
-    }
-
     private void a(Armor[] resultArmors, ObservableList<ObservableList<Armor>> observableList, int index) {
         if(index == 4) {
             results.add(resultArmors.clone());
@@ -121,5 +116,10 @@ public class ArmorRepositoryImpl implements ArmorRepository {
             resultArmors[index] = armor;
             a(resultArmors, observableList, index + 1);
         }
+    }
+
+    @Override
+    public ObservableList<Armor[]> getResultArmors() {
+        return results;
     }
 }
