@@ -16,8 +16,10 @@ public interface ArmorRepository {
 
     ObservableList<Armor> organizeByType(String type);
 
-    ObservableList<ResultArmor> resultCalculateArmors(Armor exotic,
-                                                      boolean powerfulFriends,
-                                                      boolean radiantLight,
-                                                      boolean stasis);
+    boolean resultCalculateArmors(Armor exotic,
+                                  boolean powerfulFriends,
+                                  boolean radiantLight,
+                                  boolean stasis);
+
+    ObservableList<Armor[]> getResultArmors();
 }

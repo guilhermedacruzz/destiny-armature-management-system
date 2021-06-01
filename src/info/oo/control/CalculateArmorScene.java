@@ -14,6 +14,7 @@ import javafx.util.Callback;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class CalculateArmorScene implements Initializable {
@@ -28,10 +29,10 @@ public class CalculateArmorScene implements Initializable {
     private TableColumn<Armor, String> tcAttributes;
 
     @FXML
-    private TableView<ResultArmor> tvResult;
+    private TableView<Armor[]> tvResult;
 
     @FXML
-    private TableColumn<ResultArmor, String> tcResult;
+    private TableColumn<Armor[], String> tcResult;
 
     @FXML
     private CheckBox cbPowerfulFriends;
@@ -85,12 +86,13 @@ public class CalculateArmorScene implements Initializable {
             }
         });
 
-        tcResult.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<ResultArmor, String>, ObservableValue<String>>() {
+        tcResult.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Armor[], String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TableColumn.CellDataFeatures<ResultArmor, String> resultArmorStringCellDataFeatures) {
-                return new SimpleStringProperty(resultArmorStringCellDataFeatures.getValue().getAttributesSet().getAttributes());
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<Armor[], String> stringCellDataFeatures) {
+                return new SimpleStringProperty(Arrays.toString(stringCellDataFeatures.getValue()));
             }
         });
+
     }
 
 
@@ -101,8 +103,9 @@ public class CalculateArmorScene implements Initializable {
 
         Armor exotic = tvExotic.getSelectionModel().getSelectedItem();
 
-        tvResult.setItems(armorRepository.resultCalculateArmors(exotic,
-                                                    powerfulFriends, radiantLight, stasis));
+        armorRepository.resultCalculateArmors(exotic, powerfulFriends, radiantLight, stasis);
+
+        tvResult.setItems(armorRepository.getResultArmors());
     }
 
 
