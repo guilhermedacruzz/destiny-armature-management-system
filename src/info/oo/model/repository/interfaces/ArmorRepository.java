@@ -10,13 +10,13 @@ import java.util.List;
 public interface ArmorRepository {
     boolean register(Armor armor) throws SQLException;
 
-    List<Armor> search(int id, String guardianClass) throws SQLException;
+    boolean search(int id, String guardianClass) throws SQLException;
 
-    ObservableList<Armor> organizeByRarity(List<Armor> armorList, String rarity);
+    ObservableList<Armor> organizeByRarity(String rarity);
 
-    ObservableList<Armor> organizeByType(List<Armor> armorList, String type);
+    ObservableList<Armor> organizeByType(String type);
 
-    ObservableList<ResultArmor> resultCalculateArmors(List<Armor> armorList, Armor exotic,
+    ObservableList<ResultArmor> resultCalculateArmors(Armor exotic,
                                                       boolean powerfulFriends,
                                                       boolean radiantLight,
                                                       boolean stasis);

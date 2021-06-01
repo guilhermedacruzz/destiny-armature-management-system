@@ -14,7 +14,6 @@ import javafx.util.Callback;
 
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class CalculateArmorScene implements Initializable {
@@ -46,8 +45,6 @@ public class CalculateArmorScene implements Initializable {
     private ArmorRepository armorRepository;
     private AuthService authService;
 
-    private List<Armor> armorList;
-
     public CalculateArmorScene(ArmorRepository armorRepository, AuthService authService) {
         this.armorRepository = armorRepository;
         this.authService = authService;
@@ -65,9 +62,9 @@ public class CalculateArmorScene implements Initializable {
             int id = authService.getLogged().getId();
             String guardianClass = authService.getLogged().getGuardianClass();
 
-            armorList = armorRepository.search(id, guardianClass);
+            armorRepository.search(id, guardianClass);
 
-            tvExotic.setItems(armorRepository.organizeByRarity(armorList, "Exótico"));
+            tvExotic.setItems(armorRepository.organizeByRarity("Exótico"));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -104,7 +101,7 @@ public class CalculateArmorScene implements Initializable {
 
         Armor exotic = tvExotic.getSelectionModel().getSelectedItem();
 
-        tvResult.setItems(armorRepository.resultCalculateArmors(armorList, exotic,
+        tvResult.setItems(armorRepository.resultCalculateArmors(exotic,
                                                     powerfulFriends, radiantLight, stasis));
     }
 

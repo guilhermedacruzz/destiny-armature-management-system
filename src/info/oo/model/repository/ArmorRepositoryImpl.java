@@ -18,6 +18,8 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     private ArmorDAO armorDAO;
     private AttributesDAO attributesDAO;
 
+    private List<Armor> armorList;
+
     public ArmorRepositoryImpl(ArmorDAO armorDAO, AttributesDAO attributesDAO) {
         this.armorDAO = armorDAO;
         this.attributesDAO = attributesDAO;
@@ -29,20 +31,23 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     }
 
     @Override
-    public List<Armor> search(int id, String guardianClass) throws SQLException {
+    public boolean search(int id, String guardianClass) throws SQLException {
 
-        List<Armor> armorList = armorDAO.selectArmor(id, guardianClass);
+        List<Armor> armorAllList = armorDAO.selectArmor(id, guardianClass);
 
-        for(Armor armor: armorList) {
+        for(Armor armor: armorAllList) {
             List<ArmorAttribute> armorAttributeList = attributesDAO.selectAttributes(armor.getId());
             armor.setArmorAttribute(armorAttributeList.get(0));
         }
 
-        return armorList;
+        armorList = new ArrayList<>();
+        armorList.addAll(armorAllList);
+
+        return true;
     }
 
     @Override
-    public ObservableList<Armor> organizeByType(List<Armor> armorList, String type) {
+    public ObservableList<Armor> organizeByType(String type) {
         ObservableList<Armor> armorObservableList = FXCollections.observableArrayList();
 
         List<Armor> armorListByType = new ArrayList<>();
@@ -57,7 +62,7 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     }
 
     @Override
-    public ObservableList<Armor> organizeByRarity(List<Armor> armorList, String rarity) {
+    public ObservableList<Armor> organizeByRarity(String rarity) {
         ObservableList<Armor> armorObservableList = FXCollections.observableArrayList();
 
         List<Armor> armorListByRarity = new ArrayList<>();
@@ -72,16 +77,16 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     }
 
     @Override
-    public ObservableList<ResultArmor> resultCalculateArmors(List<Armor> armorList, Armor exotic,
+    public ObservableList<ResultArmor> resultCalculateArmors(Armor exotic,
                                                              boolean powerfulFriends,
                                                              boolean radiantLight,
                                                              boolean stasis) {
 
-        ObservableList<Armor> helmets = organizeByType(armorList, "Capacete");
-        ObservableList<Armor> arms = organizeByType(armorList, "Manopla");
-        ObservableList<Armor> chests = organizeByType(armorList, "Armadura de Torso");
-        ObservableList<Armor> boots = organizeByType(armorList, "Armadura de Perna");
-        ObservableList<Armor> classItens = organizeByType(armorList, "Item de Classe");
+        ObservableList<Armor> helmets = organizeByType("Capacete");
+        ObservableList<Armor> arms = organizeByType("Manopla");
+        ObservableList<Armor> chests = organizeByType("Armadura de Torso");
+        ObservableList<Armor> boots = organizeByType("Armadura de Perna");
+        ObservableList<Armor> classItens = organizeByType("Item de Classe");
 
         ObservableList<ResultArmor> resultArmors = FXCollections.observableArrayList();
 
