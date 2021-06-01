@@ -8,8 +8,6 @@ import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.services.AuthService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.DialogPane;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 

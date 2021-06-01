@@ -31,7 +31,7 @@ public class MenuScene extends BasicScene implements Initializable {
 
     @FXML
     private void viewArmors() {
-        Main.changeScene(Main.VIEWS_ARMORS, (aclass) -> new ViewArmorScene(armorRepository, authService), 600, 2);
+        Main.changeScene(Main.VIEWS_ARMORS, (aclass) -> new ViewArmorScene(armorRepository, armorAttributesRepository, authService), 600, 2);
     }
 
     @FXML

@@ -2,6 +2,7 @@ package info.oo.control;
 
 import info.oo.Main;
 import info.oo.model.Armor;
+import info.oo.model.repository.interfaces.ArmorAttributesRepository;
 import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.services.AuthService;
 import javafx.beans.property.SimpleStringProperty;
@@ -11,7 +12,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
+
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -75,16 +78,21 @@ public class ViewArmorScene extends BasicScene implements Initializable {
     private TableColumn<Armor, String> tcAttributesExotic;
 
     private ArmorRepository armorRepository;
+    private ArmorAttributesRepository armorAttributesRepository;
     private AuthService authService;
 
-    public ViewArmorScene(ArmorRepository armorRepository, AuthService authService) {
+    public ViewArmorScene(ArmorRepository armorRepository, ArmorAttributesRepository armorAttributesRepository, AuthService authService) {
         this.armorRepository = armorRepository;
+        this.armorAttributesRepository = armorAttributesRepository;
         this.authService = authService;
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        tvHelmet.setOnMouseClicked((evt)->{
+            edit(tvHelmet.getSelectionModel().getSelectedItem());
+        });
 
         this.initTableColumn(tcNameHelmet, tcAttributesHelmet);
         this.initTableColumn(tcNameArm, tcAttributeArm);
@@ -127,6 +135,18 @@ public class ViewArmorScene extends BasicScene implements Initializable {
                 return new SimpleStringProperty(armorStringCellDataFeatures.getValue().getArmorAttribute().getAttributes());
             }
         });
+    }
+
+    @FXML
+    void edit(Armor armor) {
+        if(armor != null) {
+            Main.changeScene(Main.REGISTER_ARMORS, (aclass) -> new ArmorRegisterScene(authService,
+                    armorRepository, armorAttributesRepository, armor), 650, 2);
+            System.out.println("df");
+        }
+        else {
+            System.out.println("as");
+        }
     }
 
     @FXML
