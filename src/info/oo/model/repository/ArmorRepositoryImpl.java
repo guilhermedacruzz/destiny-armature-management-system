@@ -19,10 +19,12 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     private AttributesDAO attributesDAO;
 
     private List<Armor> armorList;
+    private ObservableList<Armor[]> results;
 
     public ArmorRepositoryImpl(ArmorDAO armorDAO, AttributesDAO attributesDAO) {
         this.armorDAO = armorDAO;
         this.attributesDAO = attributesDAO;
+        results = FXCollections.observableArrayList();
     }
 
     @Override
@@ -95,13 +97,20 @@ public class ArmorRepositoryImpl implements ArmorRepository {
         if(!exotic.getType().equals("Item de Classe"))
             observableList.addAll(organizeByType("Item de Classe"));
 
-        a(new Armor[4], observableList, 0);
+        results.clear();
+
+        Armor[] basic = new Armor[5];
+        basic[4] = exotic;
+
+        a(basic, observableList, 0);
+
+        System.out.println(results.toString());
         return FXCollections.observableArrayList();
     }
 
     private void a(Armor[] resultArmors, ObservableList<ObservableList<Armor>> observableList, int index) {
         if(index == 4) {
-            System.out.println(resultArmors.length);
+            results.add(resultArmors.clone());
             return;
         }
         for(Armor armor: observableList.get(index)) {
