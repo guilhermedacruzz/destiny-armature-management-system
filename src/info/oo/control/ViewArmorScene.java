@@ -90,16 +90,19 @@ public class ViewArmorScene extends BasicScene implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        tvHelmet.setOnMouseClicked((evt)->{
-            edit(tvHelmet.getSelectionModel().getSelectedItem());
-        });
+        initTableView(tvHelmet);
+        initTableView(tvArms);
+        initTableView(tvChests);
+        initTableView(tvBoots);
+        initTableView(tvClassItem);
+        initTableView(tvExotic);
 
-        this.initTableColumn(tcNameHelmet, tcAttributesHelmet);
-        this.initTableColumn(tcNameArm, tcAttributeArm);
-        this.initTableColumn(tcNameChest, tcAttributesChest);
-        this.initTableColumn(tcNameBoot, tcAttributesBoot);
-        this.initTableColumn(tcNameClassItem, tcAttributesClassItem);
-        this.initTableColumn(tcNameExotic, tcAttributesExotic);
+        initTableColumn(tcNameHelmet, tcAttributesHelmet);
+        initTableColumn(tcNameArm, tcAttributeArm);
+        initTableColumn(tcNameChest, tcAttributesChest);
+        initTableColumn(tcNameBoot, tcAttributesBoot);
+        initTableColumn(tcNameClassItem, tcAttributesClassItem);
+        initTableColumn(tcNameExotic, tcAttributesExotic);
 
 
         try {
@@ -113,7 +116,6 @@ public class ViewArmorScene extends BasicScene implements Initializable {
             tvChests.setItems(armorRepository.organizeByType("Armadura de Torso"));
             tvBoots.setItems(armorRepository.organizeByType("Armadura de Perna"));
             tvClassItem.setItems(armorRepository.organizeByType("Item de Classe"));
-
             tvExotic.setItems(armorRepository.organizeByRarity("Exótico"));
 
         } catch (SQLException throwables) {
@@ -122,19 +124,13 @@ public class ViewArmorScene extends BasicScene implements Initializable {
     }
 
     private void initTableColumn(TableColumn <Armor, String> tcName, TableColumn<Armor, String> tcAttributes) {
-        tcName.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Armor, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TableColumn.CellDataFeatures<Armor, String> armorStringCellDataFeatures) {
-                return new SimpleStringProperty(armorStringCellDataFeatures.getValue().getName());
-            }
-        });
+        tcName.setCellValueFactory(armorStringCellDataFeatures -> new SimpleStringProperty(armorStringCellDataFeatures.getValue().getName()));
 
-        tcAttributes.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Armor, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TableColumn.CellDataFeatures<Armor, String> armorStringCellDataFeatures) {
-                return new SimpleStringProperty(armorStringCellDataFeatures.getValue().getArmorAttribute().getAttributes());
-            }
-        });
+        tcAttributes.setCellValueFactory(armorStringCellDataFeatures -> new SimpleStringProperty(armorStringCellDataFeatures.getValue().getArmorAttribute().getAttributes()));
+    }
+
+    private void initTableView(TableView <Armor> tableView) {
+        tableView.setOnMouseClicked((evt)-> edit(tableView.getSelectionModel().getSelectedItem()));
     }
 
     @FXML
@@ -150,7 +146,7 @@ public class ViewArmorScene extends BasicScene implements Initializable {
     }
 
     @FXML
-    void comeBack(ActionEvent event) {
+    void comeBack() {
         Main.mainMenu();
     }
 }

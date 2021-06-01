@@ -102,6 +102,7 @@ public class JDBCAttributes implements AttributesDAO {
             int intellect = rs.getInt("intellect");
             int strenght = rs.getInt("strenght");
 
+
             armorAttribute = new ArmorAttribute(id_attributes, mobility, resilience,
                                                 recovery, dicipline, intellect, strenght);
         }
@@ -118,6 +119,8 @@ public class JDBCAttributes implements AttributesDAO {
         Connection conn = connectionsFactory.getConnection();
 
         PreparedStatement pstmt = conn.prepareStatement(UPDATE);
+
+        System.out.println(armorAttribute.toString());
 
         pstmt.setInt(1, armorAttribute.getMobility());
         pstmt.setInt(2, armorAttribute.getResilience());

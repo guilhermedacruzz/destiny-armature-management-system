@@ -28,7 +28,8 @@ public class ArmorAttribute {
     }
 
     public String getAttributes() {
-        return  mobility + "-" +
+        return  id + "+" +
+                mobility + "-" +
                 resilience + "-" +
                 recovery + "-" +
                 dicipline + "-" +

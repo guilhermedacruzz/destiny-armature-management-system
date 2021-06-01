@@ -22,4 +22,6 @@ public interface ArmorRepository {
                                   boolean stasis);
 
     ObservableList<Armor[]> getResultArmors();
+
+    boolean update(Armor armor) throws SQLException;
 }

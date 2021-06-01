@@ -42,6 +42,7 @@ public class ArmorRepositoryImpl implements ArmorRepository {
             armor.setArmorAttribute(armorAttributeList.get(0));
         }
 
+
         armorList = new ArrayList<>();
         armorList.addAll(armorAllList);
 
@@ -121,5 +122,10 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     @Override
     public ObservableList<Armor[]> getResultArmors() {
         return results;
+    }
+
+    @Override
+    public boolean update(Armor armor) throws SQLException {
+        return armorDAO.editArmor(armor);
     }
 }

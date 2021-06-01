@@ -18,4 +18,9 @@ public class ArmorAttributesRepositoryImpl implements ArmorAttributesRepository 
     public boolean registerAttribute(ArmorAttribute armorAttribute) throws SQLException {
         return attributesDAO.createAttributesDAO(armorAttribute);
     }
+
+    @Override
+    public boolean updateAttribute(ArmorAttribute armorAttribute) throws SQLException {
+        return attributesDAO.updateAttributes(armorAttribute);
+    }
 }
