@@ -11,4 +11,6 @@ public interface AttributesDAO {
     List<ArmorAttribute> selectAttributes(int id) throws SQLException;
 
     ArmorAttribute selectIdAttributes(int id) throws SQLException;
+
+    boolean updateAttributes(ArmorAttribute armorAttribute) throws SQLException;
 }

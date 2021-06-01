@@ -11,9 +11,13 @@ import java.util.List;
 
 public class JDBCAttributes implements AttributesDAO {
 
-    private static String INSERT = "insert into table_attributes(mobility, resilience, recovery, dicipline, intellect, strenght) values(?,?,?,?,?,?)";
-    private static String SELECT_ID_ARMOR = "select cod_attributes from table_armor_attributes where cod_armor=?";
-    private static String SELECT_ID = "select * from table_attributes where cod_attributes=?";
+    private static final String INSERT = "insert into table_attributes(mobility, resilience, recovery, dicipline, " +
+            "intellect, strenght) values(?,?,?,?,?,?)";
+    private static final String SELECT_ID_ARMOR = "select cod_attributes from table_armor_attributes where cod_armor=?";
+    private static final String SELECT_ID = "select * from table_attributes where cod_attributes=?";
+    private static final String UPDATE = "update table_attributes set mobility=?, resilience=?, recovery=?," +
+                                                "dicipline=?, intellect=?, strenght=? where cod_attributes=?";
+
     private ConnectionsFactory connectionsFactory;
 
     public JDBCAttributes(ConnectionsFactory connectionsFactory) {
@@ -107,6 +111,29 @@ public class JDBCAttributes implements AttributesDAO {
         conn.close();
 
         return  armorAttribute;
+    }
+
+    @Override
+    public boolean updateAttributes(ArmorAttribute armorAttribute) throws SQLException {
+        Connection conn = connectionsFactory.getConnection();
+
+        PreparedStatement pstmt = conn.prepareStatement(UPDATE);
+
+        pstmt.setInt(1, armorAttribute.getMobility());
+        pstmt.setInt(2, armorAttribute.getResilience());
+        pstmt.setInt(3, armorAttribute.getRecovery());
+
+        pstmt.setInt(4, armorAttribute.getDicipline());
+        pstmt.setInt(5, armorAttribute.getIntellect());
+        pstmt.setInt(6, armorAttribute.getStrenght());
+        pstmt.setInt(7, armorAttribute.getId());
+
+        int ret = pstmt.executeUpdate();
+
+        pstmt.close();
+        conn.close();
+
+        return ret == 1;
     }
 
 }
