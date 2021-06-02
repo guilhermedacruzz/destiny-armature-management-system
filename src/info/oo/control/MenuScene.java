@@ -45,6 +45,11 @@ public class MenuScene extends BasicScene implements Initializable {
     }
 
     @FXML
+    private void openInventory() {
+        Main.changeScene(Main.INVENTORY, (aclass) -> new InventoryScene(authService), 600, 2);
+    }
+
+    @FXML
     private void exit() {
         Main.changeScene(Main.LOGIN,(aClass)->new LoginScene(authService), 600, 2);
     }

@@ -1,5 +1,5 @@
-create database sgda77;
-use sgda77;
+create database sgda78;
+use sgda78;
 
 # =============== TABLE ===============
 
@@ -11,7 +11,7 @@ create table table_user (
     username VARCHAR(255) NOT NULL,
     secret VARCHAR(45) NOT NULL,
     
-    ehancement_module INT,
+    enhancement_module INT,
     improvement_core INT,
     enhancement_prism INT,
     ascendent_fragments INT,
@@ -211,7 +211,7 @@ begin
 		set msg = "Username indisponível";
         signal sqlstate '45000' set message_text = msg;
 	else
-		set new.ehancement_module = 999;
+		set new.enhancement_module = 999;
 		set new.improvement_core = 999;
 		set new.enhancement_prism = 50;
 		set new.ascendent_fragments = 10;

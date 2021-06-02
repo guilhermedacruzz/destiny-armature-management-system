@@ -55,7 +55,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="180.0" text="VER INVENTÁRIO">
+                  <Button mnemonicParsing="false" onAction="#openInventory" prefHeight="36.0" prefWidth="180.0" text="VER INVENTÁRIO">
                      <tooltip>
                         <Tooltip text="Ver inventário" />
                      </tooltip></Button>

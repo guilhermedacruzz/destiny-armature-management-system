@@ -1,4 +1,4 @@
-use sgda77;
+use sgda78;
 
 SET FOREIGN_KEY_CHECKS = 0;
 truncate table table_armor_attributes;
@@ -94,3 +94,5 @@ call rarity_armor(2, "Exótico");
 
 call rarity_type_armor(1, "Manopla", "Lendário");
 call rarity_type_armor(1, "Capacete", "Exótico");
+
+select * from table_user;

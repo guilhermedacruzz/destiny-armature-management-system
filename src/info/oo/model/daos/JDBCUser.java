@@ -47,7 +47,7 @@ public class JDBCUser implements UserDAO {
             int ascendentFragments = rs.getInt("ascendent_fragments");
             int enhancementPrism = rs.getInt("enhancement_prism");
             int improvementCore = rs.getInt("improvement_core");
-            int enhancementModule = rs.getInt("ehancement_module");
+            int enhancementModule = rs.getInt("enhancement_module");
 
             Inventory inventory = new Inventory(lumen, legendaryFragments, ascendentFragments,
                     enhancementPrism, improvementCore, enhancementModule);

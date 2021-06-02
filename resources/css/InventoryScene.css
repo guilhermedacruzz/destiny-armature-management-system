@@ -16,7 +16,6 @@
 
 HBox {
     -fx-background-color: rgb(35, 41, 54);
-    -fx-border-color: rgba(219, 219, 219, 0.5);
 }
 
 .label {
