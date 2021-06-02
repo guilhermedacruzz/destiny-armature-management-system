@@ -6,6 +6,16 @@
     -fx-font-family: ITC Avant Garde Gothic LT Bold;
 }
 
+.button {
+    -fx-background-color: #232936;
+    -fx-border-color: #dbdbdb;
+    -fx-border-width: 5px;
+}
+
+.button:hover {
+    -fx-border-width: 7px;
+}
+
 .label {
   -fx-text-fill: #dbdbdb;
   -fx-font-weight: bold;
