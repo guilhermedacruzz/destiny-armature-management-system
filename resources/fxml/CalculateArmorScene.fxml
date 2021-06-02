@@ -55,7 +55,7 @@
                   <Insets left="50.0" />
                </padding>
             </HBox>
-            <HBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="220.0">
+            <HBox stylesheets="@/css/myButtonGold.css" alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="220.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#comeBack" prefHeight="44.0" prefWidth="180.0" text="VOLTAR" />
                </children>

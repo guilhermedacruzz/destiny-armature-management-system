@@ -59,24 +59,6 @@
     -fx-background-color: transparent;
 }
 
-.button {
-    -fx-background-color: rgba(183,140,37,0.8);
-    -fx-border-color: #ffce1f;
-    -fx-text-fill: #dbdbdb;
-    -fx-font-weight: bold;
-    -fx-font-size: 15;
-}
-
-.button:hover {
-    -fx-underline: true;
-    -fx-border-width: 3px;
-}
-
-.button:focused {
-    -fx-underline: true;
-    -fx-border-width: 3px;
-}
-
 #rbHelmet .radio{
     -fx-background-image: url("/assets/images/helmet_icon.jpg");
 }

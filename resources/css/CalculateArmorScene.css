@@ -24,20 +24,6 @@ VBox, HBox {
   -fx-font-size: 16;
 }
 
-.button {
-    -fx-background-color: rgba(183,140,37,0.8);
-    -fx-border-color: #ffce1f;
-    -fx-text-fill: #dbdbdb;
-    -fx-font-weight: bold;
-    -fx-font-size: 15;
-}
-
-.button:focused,
-.button:hover {
-    -fx-underline: true;
-    -fx-border-width: 3px;
-}
-
 .list-view {
     -fx-padding: 1px;
    -fx-border-color: #dbdbdb;

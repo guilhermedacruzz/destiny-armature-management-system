@@ -12,27 +12,6 @@
   -fx-font-size: 22;
 }
 
-.button {
-    -fx-background-color: #232936;
-    -fx-border-color: #dbdbdb;
-    -fx-border-width: 5px;
-}
-
-.button:hover {
-    -fx-border-width: 7px;
-}
-
-.tooltip {
-    -fx-background: rgba(30,30,30);
-    -fx-text-fill: white;
-    -fx-background-color: rgba(30,30,30,0.8);
-    -fx-background-radius: 6px;
-    -fx-background-insets: 0;
-    -fx-padding: 0.667em 0.75em 0.667em 0.75em;
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 10, 0.0 , 0 , 3 );
-    -fx-font-size: 0.85em;
-}
-
 #btHunter {
     -fx-border-color: #0095E9;
     -fx-background-image: url("/assets/images/hunter_logo.png");
@@ -52,20 +31,6 @@
     -fx-background-image: url("/assets/images/warlock_logo.png");
     -fx-background-repeat: stretch;
     -fx-background-position: center center;
-}
-
-#btReturn {
-    -fx-background-color: rgba(183,140,37,0.8);
-    -fx-border-color: #ffce1f;
-    -fx-border-width: 2px;
-    -fx-text-fill: #dbdbdb;
-    -fx-font-weight: bold;
-    -fx-font-size: 15;
-}
-
-#btReturn:hover {
-    -fx-underline: true;
-    -fx-border-width: 3px;
 }
 
 #painel {

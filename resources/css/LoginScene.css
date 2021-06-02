@@ -29,24 +29,6 @@
     -fx-border-color: #ffce1f;
 }
 
-.button {
-    -fx-background-color: rgba(183,140,37,0.8);
-    -fx-border-color: #ffce1f;
-    -fx-text-fill: #dbdbdb;
-    -fx-font-weight: bold;
-    -fx-font-size: 15;
-}
-
-.button:hover {
-    -fx-underline: true;
-    -fx-border-width: 3px;
-}
-
-.button:focused {
-    -fx-underline: true;
-    -fx-border-width: 3px;
-}
-
 .check-box {
     -fx-text-fill: #dbdbdb;
     -fx-font-size: 13;

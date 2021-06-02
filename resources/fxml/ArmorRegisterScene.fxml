@@ -181,7 +181,7 @@
                         <RadioButton fx:id="rbYesMasterprice" mnemonicParsing="false" toggleGroup="$groupMasterprice" />
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
+                  <HBox stylesheets="@/css/myButtonGold.css" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
                      <children>
                         <Button mnemonicParsing="false" onAction="#register" prefHeight="42.0" prefWidth="201.0" text="CADASTRAR" />
                      </children>
@@ -206,7 +206,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </GridPane>
-      <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="802.0">
+      <HBox stylesheets="@/css/myButtonGold.css" alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="802.0">
          <children>
             <Button mnemonicParsing="false" onAction="#comeBack" prefHeight="34.0" prefWidth="160.0" text="VOLTAR" />
          </children>

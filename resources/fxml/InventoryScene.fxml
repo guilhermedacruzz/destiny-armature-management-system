@@ -137,7 +137,7 @@
             </GridPane>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="760.0">
+      <HBox stylesheets="@/css/myButtonGold.css" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="760.0">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="570.0">
                <children>

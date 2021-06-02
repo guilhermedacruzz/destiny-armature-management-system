@@ -69,7 +69,7 @@
                      </tooltip>
                   </CheckBox>
                   <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <VBox alignment="CENTER" prefHeight="46.0" prefWidth="502.0" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                  <VBox stylesheets="@/css/myButtonGold.css" alignment="CENTER" prefHeight="46.0" prefWidth="502.0" GridPane.columnSpan="2" GridPane.rowIndex="5">
                      <children>
                         <Button fx:id="btCreate" mnemonicParsing="false" onAction="#create" prefHeight="44.0" prefWidth="322.0" text="CRIAR">
                            <tooltip>
@@ -90,7 +90,7 @@
                         </Label>
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                  <VBox stylesheets="@/css/myButtonGold.css" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                      <children>
                         <Button fx:id="btReturn" mnemonicParsing="false" onAction="#comeBack" prefHeight="34.0" prefWidth="170.0" text="Voltar">
                            <tooltip>
