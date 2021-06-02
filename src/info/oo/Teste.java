@@ -1,20 +1,37 @@
 package info.oo;
 
 
-import java.util.ArrayList;
-import java.util.List;
+import info.oo.control.InventoryScene;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Teste{
+public class Teste extends Application {
+
+
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-
-        list.add(12);
-        list.add(13);
-
-        list.addAll(new ArrayList<>());
-
-        System.out.println(list);
+        Application.launch(args);
     }
 
+    @Override
+    public void start(Stage stage) throws Exception {
+
+        FXMLLoader loader = new FXMLLoader();
+
+        loader.setLocation(Main.class.getResource("/fxml/InventoryScene.fxml"));
+        loader.setControllerFactory((aClass) -> new InventoryScene());
+
+        Parent root = loader.load();
+
+        Scene scene = new Scene(root,801, 534);
+
+        stage.setScene(scene);
+        stage.setTitle("Cadastro Pessoa");
+        stage.show();
+
+
+    }
 
 }

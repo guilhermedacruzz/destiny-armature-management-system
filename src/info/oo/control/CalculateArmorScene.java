@@ -2,7 +2,6 @@ package info.oo.control;
 
 import info.oo.Main;
 import info.oo.model.Armor;
-import info.oo.model.ResultArmor;
 import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.services.AuthService;
 import javafx.beans.property.SimpleStringProperty;

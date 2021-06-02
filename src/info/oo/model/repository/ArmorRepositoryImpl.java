@@ -2,7 +2,6 @@ package info.oo.model.repository;
 
 import info.oo.model.Armor;
 import info.oo.model.ArmorAttribute;
-import info.oo.model.ResultArmor;
 import info.oo.model.daos.interfaces.ArmorDAO;
 import info.oo.model.daos.interfaces.AttributesDAO;
 import info.oo.model.repository.interfaces.ArmorRepository;
@@ -41,7 +40,6 @@ public class ArmorRepositoryImpl implements ArmorRepository {
             List<ArmorAttribute> armorAttributeList = attributesDAO.selectAttributes(armor.getId());
             armor.setArmorAttribute(armorAttributeList.get(0));
         }
-
 
         armorList = new ArrayList<>();
         armorList.addAll(armorAllList);
