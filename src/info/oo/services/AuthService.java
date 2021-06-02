@@ -1,5 +1,6 @@
 package info.oo.services;
 
+import info.oo.model.Inventory;
 import info.oo.model.User;
 import info.oo.model.daos.interfaces.UserDAO;
 
@@ -21,6 +22,11 @@ public class AuthService {
 
     public boolean signIn(String name, String surname, String username, String secret) throws SQLException {
         return userDAO.signIn(name, surname, username, secret);
+    }
+
+    public boolean edit(Inventory inventory) throws SQLException{
+        logged.setInventory(inventory);
+        return userDAO.edit(logged);
     }
 
     public User getLogged() {

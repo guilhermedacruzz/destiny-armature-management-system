@@ -12,8 +12,9 @@ import java.sql.SQLException;
 
 public class JDBCUser implements UserDAO {
 
-    private static String INSERT_USER = "INSERT INTO table_user(name, surname, username, secret) values (?,?,?,?)";
-    private static String SELECT_USER = "select * from table_user where username=? and secret=?";
+    private static final String INSERT_USER = "INSERT INTO table_user(name, surname, username, secret) values (?,?,?,?)";
+    private static final String SELECT_USER = "select * from table_user where username=? and secret=?";
+    private static final String UPDATE_USER = "update table_user set lumen=?, legendary_fragments=?, ascendent_fragments=?, enhancement_prism=?, improvement_core=?, enhancement_module=? where cod_user=?;";
 
     private ConnectionsFactory connectionsFactory;
 
@@ -79,5 +80,27 @@ public class JDBCUser implements UserDAO {
         conn.close();
 
         return true;
+    }
+
+    @Override
+    public boolean edit(User user) throws SQLException {
+        Connection conn = connectionsFactory.getConnection();
+
+        PreparedStatement pstmt = conn.prepareStatement(UPDATE_USER);
+
+        pstmt.setInt(1, user.getInventory().getLumen());
+        pstmt.setInt(2, user.getInventory().getLegendaryFragments());
+        pstmt.setInt(3, user.getInventory().getAscendentFragments());
+        pstmt.setInt(4, user.getInventory().getEnhancementPrism());
+        pstmt.setInt(5, user.getInventory().getImprovementCore());
+        pstmt.setInt(6, user.getInventory().getEhancementModule());
+        pstmt.setInt(7, user.getId());
+
+        int ret = pstmt.executeUpdate();
+
+        pstmt.close();
+        conn.close();
+
+        return ret == 1;
     }
 }

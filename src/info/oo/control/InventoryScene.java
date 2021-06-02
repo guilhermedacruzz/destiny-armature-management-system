@@ -1,15 +1,17 @@
 package info.oo.control;
 
 import info.oo.Main;
+import info.oo.model.Inventory;
 import info.oo.services.AuthService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class InventoryScene implements Initializable {
+public class InventoryScene extends BasicScene implements Initializable {
 
     @FXML
     private TextField tfLumen;
@@ -60,6 +62,24 @@ public class InventoryScene implements Initializable {
 
     @FXML
     void update() {
-        System.out.println("Entrou");
+        int lumen = Integer.parseInt(tfLumen.getText());
+        int legendaryFragments = Integer.parseInt(tfLegendaryFragments.getText());
+        int ascendentFragments = Integer.parseInt(tfAscendentFragments.getText());
+        int enhancementPrism = Integer.parseInt(tfEnhancementPrism.getText());
+        int improvementCore = Integer.parseInt(tfImprovementCore.getText());
+        int ehancementModule = Integer.parseInt(tfEhancementModule.getText());
+
+        Inventory inventory = new Inventory(lumen, legendaryFragments, ascendentFragments, enhancementPrism, improvementCore, ehancementModule);
+
+        try {
+            boolean status = authService.edit(inventory);
+            if(status)
+                errorRegister("[OK]", "Inventário Atualizado com Sucesso!");
+            else
+                errorRegister("[ERRO]", "Um erro aconteceu...");
+
+        } catch (SQLException e) {
+            errorRegister("[ERRO]", e.getMessage());
+        }
     }
 }
