@@ -45,7 +45,7 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="762.0">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="542.0" spacing="30.0">
+            <HBox stylesheets="@/css/myCheckBox.css" alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="542.0" spacing="30.0">
                <children>
                   <CheckBox fx:id="cbPowerfulFriends" mnemonicParsing="false" text="AMIGOS PODEROSOS" />
                   <CheckBox fx:id="cbRadiantLight" mnemonicParsing="false" text="LUZ RADIANTE" />

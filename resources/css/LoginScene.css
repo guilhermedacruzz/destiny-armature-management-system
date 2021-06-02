@@ -8,29 +8,6 @@
     -fx-text-fill: rgba(183,140,37,0.8);
 }
 
-.check-box {
-    -fx-text-fill: #dbdbdb;
-    -fx-font-size: 13;
-}
-
-.check-box:hover .box {
-    -fx-border-width: 2px;
-}
-
-.check-box:focused .box {
-    -fx-border-width: 2px;
-}
-
-.check-box .box {
-    -fx-background-color: rgba(183,140,37,0.8);
-    -fx-border-color: #ffce1f;
-}
-
-.check-box:selected .mark {
-    -fx-background-color: #dbdbdb;
-    -fx-border-color: #dbdbdb;
-}
-
 #lbWelcome {
     -fx-text-fill: #dbdbdb;
     -fx-font-weight: bold;

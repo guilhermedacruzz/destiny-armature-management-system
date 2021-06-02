@@ -44,7 +44,7 @@
                      <tooltip>
                         <Tooltip text="Digite a sua senha" />
                      </tooltip></PasswordField>
-                  <CheckBox fx:id="cbPass" mnemonicParsing="false" onAction="#hidePassword" text="Exibir" GridPane.rowIndex="3">
+                  <CheckBox stylesheets="@/css/myCheckBox.css" fx:id="cbPass" mnemonicParsing="false" onAction="#hidePassword" text="Exibir" GridPane.rowIndex="3">
                      <tooltip>
                         <Tooltip text="Desocultar/Ocultar senha" />
                      </tooltip></CheckBox>
