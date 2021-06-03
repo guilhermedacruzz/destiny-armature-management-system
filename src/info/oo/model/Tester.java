@@ -1,6 +1,5 @@
 package info.oo.model;
 
-import info.oo.model.repository.ArmorRepositoryImpl;
 import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.services.AuthService;
 import javafx.collections.FXCollections;
@@ -64,9 +63,5 @@ public class Tester {
 
     public ObservableList<Armor[]> getResults() {
         return results;
-    }
-
-    public void setResults(ObservableList<Armor[]> results) {
-        this.results = results;
     }
 }
