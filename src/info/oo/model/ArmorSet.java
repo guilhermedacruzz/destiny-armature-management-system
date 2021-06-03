@@ -24,7 +24,6 @@ public class ArmorSet {
         if(powerfulFriends)
             mobility += 20;
 
-
         if(radiantLight)
             strenght += 20;
 
