@@ -7,11 +7,9 @@ import info.oo.model.repository.ArmorSetRepositoryImpl;
 import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.services.AuthService;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.util.Callback;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -67,32 +65,17 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
             String guardianClass = authService.getLogged().getGuardianClass();
 
             tvExotic.setItems(armorRepository.selectByRarity(id, guardianClass, "Exótico"));
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            sampleAlert("[ERRO]", e.getMessage());
         }
     }
 
     private void initTableColumn() {
-        tcName.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Armor, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TableColumn.CellDataFeatures<Armor, String> armorStringCellDataFeatures) {
-                return new SimpleStringProperty(armorStringCellDataFeatures.getValue().getName());
-            }
-        });
+        tcName.setCellValueFactory(armorStringCellDataFeatures -> new SimpleStringProperty(armorStringCellDataFeatures.getValue().getName()));
 
-        tcAttributes.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Armor, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TableColumn.CellDataFeatures<Armor, String> armorStringCellDataFeatures) {
-                return new SimpleStringProperty(armorStringCellDataFeatures.getValue().getArmorAttribute().getAttributes());
-            }
-        });
+        tcAttributes.setCellValueFactory(armorStringCellDataFeatures -> new SimpleStringProperty(armorStringCellDataFeatures.getValue().getArmorAttribute().getAttributes()));
 
-        tcResult.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<ArmorSet, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TableColumn.CellDataFeatures<ArmorSet, String> armorSetStringCellDataFeatures) {
-                return new SimpleStringProperty(armorSetStringCellDataFeatures.getValue().generateAttributes().getAttributes());
-            }
-        });
+        tcResult.setCellValueFactory(armorSetStringCellDataFeatures -> new SimpleStringProperty(armorSetStringCellDataFeatures.getValue().generateAttributes().getAttributes()));
 
     }
 
