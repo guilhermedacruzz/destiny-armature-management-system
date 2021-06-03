@@ -15,12 +15,12 @@ public class ArmorAttributesRepositoryImpl implements ArmorAttributesRepository 
     }
 
     @Override
-    public boolean registerAttribute(ArmorAttribute armorAttribute) throws SQLException {
+    public boolean insert(ArmorAttribute armorAttribute) throws SQLException {
         return attributesDAO.insert(armorAttribute);
     }
 
     @Override
-    public boolean updateAttribute(ArmorAttribute armorAttribute) throws SQLException {
+    public boolean update(ArmorAttribute armorAttribute) throws SQLException {
         return attributesDAO.update(armorAttribute);
     }
 }

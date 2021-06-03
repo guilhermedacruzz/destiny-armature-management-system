@@ -272,10 +272,10 @@ public class ArmorRegisterScene extends BasicScene implements Initializable {
         try {
             if(currentArmor != null) {
                 armor.getArmorAttribute().setId(currentArmor.getArmorAttribute().getId());
-                System.out.println(armorAttributesRepository.updateAttribute(armorAttribute));
+                System.out.println(armorAttributesRepository.update(armorAttribute));
             }
             else {
-                armorAttributesRepository.registerAttribute(armorAttribute);
+                armorAttributesRepository.insert(armorAttribute);
             }
         } catch (SQLException e) {
             errorRegister("[ERRO]", e.getMessage());
