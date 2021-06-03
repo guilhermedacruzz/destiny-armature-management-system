@@ -11,15 +11,12 @@ import java.util.List;
 
 public class JDBCArmor implements ArmorDAO {
 
-    private static final String INSERT_ARMOR = "INSERT INTO table_armor(name, guardian_class, type, rarity, status, " +
-            "status_masterprice, element, cod_user) values(?,?,?,?,?,?,?,?)";
-    private static final String INSERT_ARMOR_ATTRIBUTE = "INSERT INTO table_armor_attributes(cod_armor, cod_attributes) " +
-            "values(?,?)";
-
-    private static final String SELECT_ID_USER = "select * from table_armor where cod_user=? and guardian_class=?";
-
-    private static final String UPDATE_ARMOR = "update table_armor set name=?, guardian_class=?, type=?," +
-                                         "rarity=?, status=?, status_masterprice=?, element=? where cod_armor=?";
+    private static final String INSERT_ARMOR = "INSERT INTO table_armor(name, guardian_class, type, rarity, status, status_masterprice, element, cod_user) values(?,?,?,?,?,?,?,?)";
+    private static final String INSERT_ARMOR_ATTRIBUTE = "INSERT INTO table_armor_attributes(cod_armor, cod_attributes) values(?,?)";
+    private static final String SELECT = "select * from table_armor where cod_user=? and guardian_class=?";
+    private static final String SELECT_TYPE = "select * from table_armor where cod_user=? and guardian_class=? and rarity=\"Lendário\" and type=?";
+    private static final String SELECT_RARITY = "select * from table_armor where cod_user=? and guardian_class=? and rarity=?";
+    private static final String UPDATE = "update table_armor set name=?, guardian_class=?, type=?, rarity=?, status=?, status_masterprice=?, element=? where cod_armor=?";
 
     private ConnectionsFactory connectionsFactory;
 
@@ -28,7 +25,7 @@ public class JDBCArmor implements ArmorDAO {
     }
 
     @Override
-    public boolean createArmor(Armor armor) throws SQLException {
+    public boolean insert(Armor armor) throws SQLException {
         Connection conn = connectionsFactory.getConnection();
 
         PreparedStatement pstmt = conn.prepareStatement(INSERT_ARMOR, Statement.RETURN_GENERATED_KEYS);
@@ -70,10 +67,10 @@ public class JDBCArmor implements ArmorDAO {
     }
 
     @Override
-    public boolean editArmor(Armor armor) throws SQLException {
+    public boolean update(Armor armor) throws SQLException {
         Connection conn = connectionsFactory.getConnection();
 
-        PreparedStatement pstmt = conn.prepareStatement(UPDATE_ARMOR);
+        PreparedStatement pstmt = conn.prepareStatement(UPDATE);
 
         pstmt.setString(1, armor.getName());
         pstmt.setString(2, armor.getGuardianClass());
@@ -93,12 +90,12 @@ public class JDBCArmor implements ArmorDAO {
     }
 
     @Override
-    public List selectArmor(int id, String guardianClass) throws SQLException {
+    public List select(int id, String guardianClass) throws SQLException {
         List<Armor> armorList = new ArrayList<>();
 
         Connection conn = connectionsFactory.getConnection();
 
-        PreparedStatement pstmt = conn.prepareStatement(SELECT_ID_USER);
+        PreparedStatement pstmt = conn.prepareStatement(SELECT);
 
         pstmt.setInt(1, id);
         pstmt.setString(2, guardianClass);
@@ -117,6 +114,82 @@ public class JDBCArmor implements ArmorDAO {
             int cod_user = rs.getInt("cod_user");
 
             Armor armor = new Armor(id_armor, name, guardian_class, typeBd, rarity, status,
+                    masterprice, null, element, cod_user);
+
+            armorList.add(armor);
+        }
+
+        rs.close();
+        pstmt.close();
+        conn.close();
+
+        return armorList;
+    }
+
+    @Override
+    public List<Armor> selectByType(int id, String guardianClass, String type) throws SQLException {
+        List<Armor> armorList = new ArrayList<>();
+
+        Connection conn = connectionsFactory.getConnection();
+
+        PreparedStatement pstmt = conn.prepareStatement(SELECT_TYPE);
+
+        pstmt.setInt(1, id);
+        pstmt.setString(2, guardianClass);
+        pstmt.setString(3, type);
+
+        ResultSet rs = pstmt.executeQuery();
+
+        while(rs.next()) {
+            int id_armor = rs.getInt("cod_armor");
+            String name = rs.getString("name");
+            String guardian_class = rs.getString("guardian_class");
+            String typeBd = rs.getString("type");
+            String rarityBd = rs.getString("rarity");
+            boolean status = rs.getBoolean("status");
+            boolean masterprice = rs.getBoolean("status_masterprice");
+            String element = rs.getString("Element");
+            int cod_user = rs.getInt("cod_user");
+
+            Armor armor = new Armor(id_armor, name, guardian_class, typeBd, rarityBd, status,
+                    masterprice, null, element, cod_user);
+
+            armorList.add(armor);
+        }
+
+        rs.close();
+        pstmt.close();
+        conn.close();
+
+        return armorList;
+    }
+
+    @Override
+    public List<Armor> selectByRarity(int id, String guardianClass, String rarity) throws SQLException {
+        List<Armor> armorList = new ArrayList<>();
+
+        Connection conn = connectionsFactory.getConnection();
+
+        PreparedStatement pstmt = conn.prepareStatement(SELECT_RARITY);
+
+        pstmt.setInt(1, id);
+        pstmt.setString(2, guardianClass);
+        pstmt.setString(3, rarity);
+
+        ResultSet rs = pstmt.executeQuery();
+
+        while(rs.next()) {
+            int id_armor = rs.getInt("cod_armor");
+            String name = rs.getString("name");
+            String guardian_class = rs.getString("guardian_class");
+            String typeBd = rs.getString("type");
+            String rarityBd = rs.getString("rarity");
+            boolean status = rs.getBoolean("status");
+            boolean masterprice = rs.getBoolean("status_masterprice");
+            String element = rs.getString("Element");
+            int cod_user = rs.getInt("cod_user");
+
+            Armor armor = new Armor(id_armor, name, guardian_class, typeBd, rarityBd, status,
                     masterprice, null, element, cod_user);
 
             armorList.add(armor);

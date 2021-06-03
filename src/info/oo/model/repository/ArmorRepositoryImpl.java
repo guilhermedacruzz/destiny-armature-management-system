@@ -28,13 +28,13 @@ public class ArmorRepositoryImpl implements ArmorRepository {
 
     @Override
     public boolean register(Armor armor) throws SQLException {
-        return armorDAO.createArmor(armor);
+        return armorDAO.insert(armor);
     }
 
     @Override
     public boolean search(int id, String guardianClass) throws SQLException {
 
-        List<Armor> armorAllList = armorDAO.selectArmor(id, guardianClass);
+        List<Armor> armorAllList = armorDAO.select(id, guardianClass);
 
         for(Armor armor: armorAllList) {
             List<ArmorAttribute> armorAttributeList = attributesDAO.selectAttributes(armor.getId());
@@ -124,6 +124,6 @@ public class ArmorRepositoryImpl implements ArmorRepository {
 
     @Override
     public boolean update(Armor armor) throws SQLException {
-        return armorDAO.editArmor(armor);
+        return armorDAO.update(armor);
     }
 }
