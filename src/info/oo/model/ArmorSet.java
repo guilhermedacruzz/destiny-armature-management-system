@@ -8,10 +8,7 @@ public class ArmorSet {
     private boolean stasis;
 
     public ArmorSet(ArmorSet armorSet) {
-        this.armors = armorSet.getArmors();
-        this.powerfulFriends = armorSet.isPowerfulFriends();
-        this.radiantLight = armorSet.isRadiantLight();
-        this.stasis = armorSet.isStasis();
+        this(armorSet.getArmors().clone(), armorSet.isPowerfulFriends(), armorSet.isRadiantLight(), armorSet.isStasis());
     }
 
     public ArmorSet(Armor[] armors, boolean powerfulFriends, boolean radiantLight, boolean stasis) {
