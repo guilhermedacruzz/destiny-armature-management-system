@@ -6,13 +6,13 @@ import javafx.collections.ObservableList;
 import java.sql.SQLException;
 
 public interface ArmorRepository {
-    boolean register(Armor armor) throws SQLException;
+    boolean insert(Armor armor) throws SQLException;
 
-    boolean search(int id, String guardianClass) throws SQLException;
+    ObservableList<Armor> select(int id, String guardianClass) throws SQLException;
 
-    ObservableList<Armor> organizeByRarity(String rarity);
+    ObservableList<Armor> selectByRarity(int id, String guardianClass, String rarity) throws SQLException;
 
-    ObservableList<Armor> organizeByType(String type);
+    ObservableList<Armor> selectByType(int id, String guardianClass, String type) throws SQLException;
 
     boolean resultCalculateArmors(Armor exotic,
                                   boolean powerfulFriends,

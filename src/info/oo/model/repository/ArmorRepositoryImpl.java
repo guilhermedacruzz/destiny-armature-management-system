@@ -17,7 +17,6 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     private ArmorDAO armorDAO;
     private AttributesDAO attributesDAO;
 
-    private List<Armor> armorList;
     private ObservableList<Armor[]> results;
 
     public ArmorRepositoryImpl(ArmorDAO armorDAO, AttributesDAO attributesDAO) {
@@ -27,12 +26,14 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     }
 
     @Override
-    public boolean register(Armor armor) throws SQLException {
+    public boolean insert(Armor armor) throws SQLException {
         return armorDAO.insert(armor);
     }
 
     @Override
-    public boolean search(int id, String guardianClass) throws SQLException {
+    public ObservableList<Armor> select(int id, String guardianClass) throws SQLException {
+
+        ObservableList<Armor> observableList = FXCollections.observableArrayList();
 
         List<Armor> armorAllList = armorDAO.select(id, guardianClass);
 
@@ -41,40 +42,41 @@ public class ArmorRepositoryImpl implements ArmorRepository {
             armor.setArmorAttribute(armorAttributeList.get(0));
         }
 
-        armorList = new ArrayList<>();
-        armorList.addAll(armorAllList);
+        observableList.addAll(armorAllList);
 
-        return true;
+        return observableList;
     }
 
     @Override
-    public ObservableList<Armor> organizeByType(String type) {
-        ObservableList<Armor> armorObservableList = FXCollections.observableArrayList();
+    public ObservableList<Armor> selectByType(int id, String guardianClass, String type) throws SQLException{
+        ObservableList<Armor> observableList = FXCollections.observableArrayList();
 
-        List<Armor> armorListByType = new ArrayList<>();
+        List<Armor> armorAllList = armorDAO.selectByType(id, guardianClass, type);
 
-        for(Armor armor: armorList)
-            if(armor.getType().equals(type) && armor.getRarity().equals("Lendário"))
-                armorListByType.add(armor);
+        for(Armor armor: armorAllList) {
+            List<ArmorAttribute> armorAttributeList = attributesDAO.selectAttributes(armor.getId());
+            armor.setArmorAttribute(armorAttributeList.get(0));
+        }
 
-        armorObservableList.addAll(armorListByType);
+        observableList.addAll(armorAllList);
 
-        return FXCollections.unmodifiableObservableList(armorObservableList);
+        return observableList;
     }
 
     @Override
-    public ObservableList<Armor> organizeByRarity(String rarity) {
-        ObservableList<Armor> armorObservableList = FXCollections.observableArrayList();
+    public ObservableList<Armor> selectByRarity(int id, String guardianClass, String rarity) throws SQLException{
+        ObservableList<Armor> observableList = FXCollections.observableArrayList();
 
-        List<Armor> armorListByRarity = new ArrayList<>();
+        List<Armor> armorAllList = armorDAO.selectByRarity(id, guardianClass, rarity);
 
-        for(Armor armor: armorList)
-            if(armor.getRarity().equals(rarity))
-                armorListByRarity.add(armor);
+        for(Armor armor: armorAllList) {
+            List<ArmorAttribute> armorAttributeList = attributesDAO.selectAttributes(armor.getId());
+            armor.setArmorAttribute(armorAttributeList.get(0));
+        }
 
-        armorObservableList.addAll(armorListByRarity);
+        observableList.addAll(armorAllList);
 
-        return FXCollections.unmodifiableObservableList(armorObservableList);
+        return observableList;
     }
 
     @Override
@@ -85,6 +87,7 @@ public class ArmorRepositoryImpl implements ArmorRepository {
 
         ObservableList<ObservableList<Armor>> observableList = FXCollections.observableArrayList();
 
+        /*
         if(!exotic.getType().equals("Capacete"))
             observableList.addAll(organizeByType("Capacete"));
         if(!exotic.getType().equals("Manopla"))
@@ -94,7 +97,7 @@ public class ArmorRepositoryImpl implements ArmorRepository {
         if(!exotic.getType().equals("Armadura de Perna"))
             observableList.addAll(organizeByType("Armadura de Perna"));
         if(!exotic.getType().equals("Item de Classe"))
-            observableList.addAll(organizeByType("Item de Classe"));
+            observableList.addAll(organizeByType("Item de Classe"));*/
 
         results.clear();
 
