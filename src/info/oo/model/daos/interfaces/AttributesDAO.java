@@ -6,11 +6,11 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface AttributesDAO {
-    boolean createAttributesDAO(ArmorAttribute armorAttribute) throws SQLException;
+    boolean insert(ArmorAttribute armorAttribute) throws SQLException;
 
-    List<ArmorAttribute> selectAttributes(int id) throws SQLException;
+    List<ArmorAttribute> selectByIdArmor(int id) throws SQLException;
 
-    ArmorAttribute selectIdAttributes(int id) throws SQLException;
+    ArmorAttribute select(int id) throws SQLException;
 
-    boolean updateAttributes(ArmorAttribute armorAttribute) throws SQLException;
+    boolean update(ArmorAttribute armorAttribute) throws SQLException;
 }

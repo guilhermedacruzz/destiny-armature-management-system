@@ -3,7 +3,6 @@ package info.oo.model.daos;
 import info.oo.model.ArmorAttribute;
 import info.oo.model.ConnectionsFactory;
 import info.oo.model.daos.interfaces.AttributesDAO;
-import javafx.fxml.FXML;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -11,12 +10,10 @@ import java.util.List;
 
 public class JDBCAttributes implements AttributesDAO {
 
-    private static final String INSERT = "insert into table_attributes(mobility, resilience, recovery, dicipline, " +
-            "intellect, strenght) values(?,?,?,?,?,?)";
+    private static final String INSERT = "insert into table_attributes(mobility, resilience, recovery, dicipline, intellect, strenght) values(?,?,?,?,?,?)";
     private static final String SELECT_ID_ARMOR = "select cod_attributes from table_armor_attributes where cod_armor=?";
-    private static final String SELECT_ID = "select * from table_attributes where cod_attributes=?";
-    private static final String UPDATE = "update table_attributes set mobility=?, resilience=?, recovery=?," +
-                                                "dicipline=?, intellect=?, strenght=? where cod_attributes=?";
+    private static final String SELECT = "select * from table_attributes where cod_attributes=?";
+    private static final String UPDATE = "update table_attributes set mobility=?, resilience=?, recovery=?, dicipline=?, intellect=?, strenght=? where cod_attributes=?";
 
     private ConnectionsFactory connectionsFactory;
 
@@ -25,7 +22,7 @@ public class JDBCAttributes implements AttributesDAO {
     }
 
     @Override
-    public boolean createAttributesDAO(ArmorAttribute armorAttribute) throws SQLException {
+    public boolean insert(ArmorAttribute armorAttribute) throws SQLException {
         Connection conn = connectionsFactory.getConnection();
 
         PreparedStatement pstmt = conn.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS);
@@ -54,7 +51,7 @@ public class JDBCAttributes implements AttributesDAO {
     }
 
     @Override
-    public List<ArmorAttribute> selectAttributes(int id) throws SQLException {
+    public List<ArmorAttribute> selectByIdArmor(int id) throws SQLException {
         List<ArmorAttribute> armorAttributeList = new ArrayList<>();
 
         Connection conn = connectionsFactory.getConnection();
@@ -68,7 +65,7 @@ public class JDBCAttributes implements AttributesDAO {
         while(rs.next()) {
             int id_attribute = rs.getInt("cod_attributes");
 
-            ArmorAttribute armorAttribute = selectIdAttributes(id_attribute);
+            ArmorAttribute armorAttribute = select(id_attribute);
 
             armorAttributeList.add(armorAttribute);
         }
@@ -81,13 +78,13 @@ public class JDBCAttributes implements AttributesDAO {
     }
 
     @Override
-    public ArmorAttribute selectIdAttributes(int id) throws SQLException {
+    public ArmorAttribute select(int id) throws SQLException {
 
         ArmorAttribute armorAttribute = null;
 
         Connection conn = connectionsFactory.getConnection();
 
-        PreparedStatement pstmt = conn.prepareStatement(SELECT_ID);
+        PreparedStatement pstmt = conn.prepareStatement(SELECT);
 
         pstmt.setInt(1, id);
 
@@ -115,7 +112,7 @@ public class JDBCAttributes implements AttributesDAO {
     }
 
     @Override
-    public boolean updateAttributes(ArmorAttribute armorAttribute) throws SQLException {
+    public boolean update(ArmorAttribute armorAttribute) throws SQLException {
         Connection conn = connectionsFactory.getConnection();
 
         PreparedStatement pstmt = conn.prepareStatement(UPDATE);

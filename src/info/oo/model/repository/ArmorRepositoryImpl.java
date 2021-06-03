@@ -37,7 +37,7 @@ public class ArmorRepositoryImpl implements ArmorRepository {
         List<Armor> armorAllList = armorDAO.select(id, guardianClass);
 
         for(Armor armor: armorAllList) {
-            List<ArmorAttribute> armorAttributeList = attributesDAO.selectAttributes(armor.getId());
+            List<ArmorAttribute> armorAttributeList = attributesDAO.selectByIdArmor(armor.getId());
             armor.setArmorAttribute(armorAttributeList.get(0));
         }
 
@@ -53,7 +53,7 @@ public class ArmorRepositoryImpl implements ArmorRepository {
         List<Armor> armorAllList = armorDAO.selectByType(id, guardianClass, type);
 
         for(Armor armor: armorAllList) {
-            List<ArmorAttribute> armorAttributeList = attributesDAO.selectAttributes(armor.getId());
+            List<ArmorAttribute> armorAttributeList = attributesDAO.selectByIdArmor(armor.getId());
             armor.setArmorAttribute(armorAttributeList.get(0));
         }
 
@@ -69,7 +69,7 @@ public class ArmorRepositoryImpl implements ArmorRepository {
         List<Armor> armorAllList = armorDAO.selectByRarity(id, guardianClass, rarity);
 
         for(Armor armor: armorAllList) {
-            List<ArmorAttribute> armorAttributeList = attributesDAO.selectAttributes(armor.getId());
+            List<ArmorAttribute> armorAttributeList = attributesDAO.selectByIdArmor(armor.getId());
             armor.setArmorAttribute(armorAttributeList.get(0));
         }
 
