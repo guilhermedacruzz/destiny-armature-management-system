@@ -87,6 +87,9 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
 
         Armor exotic = tvExotic.getSelectionModel().getSelectedItem();
 
+        if(exotic == null)
+            return;
+
         try {
             tvResult.setItems(armorSetRepositoryImpl.calculate(exotic, powerfulFriends, radiantLight, stasis));
         } catch (SQLException e) {

@@ -4,23 +4,11 @@ import info.oo.Main;
 import info.oo.services.AuthService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CharacterScene extends BasicScene implements Initializable {
-
-    @FXML
-    private Button btHunter;
-
-    @FXML
-    private Button btTitan;
-
-    @FXML
-    private Button btWarlock;
 
     private AuthService authService;
 
