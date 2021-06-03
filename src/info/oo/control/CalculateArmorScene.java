@@ -15,7 +15,6 @@ import javafx.util.Callback;
 
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class CalculateArmorScene extends BasicScene implements Initializable {
@@ -108,7 +107,7 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
         try {
             tvResult.setItems(armorSetRepositoryImpl.calculate(exotic, powerfulFriends, radiantLight, stasis));
         } catch (SQLException e) {
-            errorRegister("[ERRO]", e.getMessage());
+            sampleAlert("[ERRO]", e.getMessage());
         }
     }
 

@@ -74,12 +74,12 @@ public class InventoryScene extends BasicScene implements Initializable {
         try {
             boolean status = authService.edit(inventory);
             if(status)
-                errorRegister("[OK]", "Inventário Atualizado com Sucesso!");
+                sampleAlert("[OK]", "Inventário Atualizado com Sucesso!");
             else
-                errorRegister("[ERRO]", "Um erro aconteceu...");
+                sampleAlert("[ERRO]", "Um erro aconteceu...");
 
         } catch (SQLException e) {
-            errorRegister("[ERRO]", e.getMessage());
+            sampleAlert("[ERRO]", e.getMessage());
         }
     }
 }

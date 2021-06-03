@@ -233,31 +233,31 @@ public class ArmorRegisterScene extends BasicScene implements Initializable {
 
         String name = getName();
         if(name.equals("")) {
-            errorRegister("ERRO", "Nome Inválido.");
+            sampleAlert("ERRO", "Nome Inválido.");
             return;
         }
 
         int[] attributes = getAttributes();
         if(attributes == null) {
-            errorRegister("ERRO", "Verifiquei o valor dos Atributos.");
+            sampleAlert("ERRO", "Verifiquei o valor dos Atributos.");
             return;
         }
 
         String type = getType();
         if(type.equals("")) {
-            errorRegister("ERRO", "Escolha um Tipo de Armadura.");
+            sampleAlert("ERRO", "Escolha um Tipo de Armadura.");
             return;
         }
 
         String rarity = getRarity();
         if(rarity.equals("")) {
-            errorRegister("ERRO", "Escolha uma raridade.");
+            sampleAlert("ERRO", "Escolha uma raridade.");
             return;
         }
 
         String element = getElement();
         if(element.equals("")) {
-            errorRegister("ERRO", "Escolha um elemento.");
+            sampleAlert("ERRO", "Escolha um elemento.");
             return;
         }
 
@@ -278,7 +278,7 @@ public class ArmorRegisterScene extends BasicScene implements Initializable {
                 armorAttributesRepository.insert(armorAttribute);
             }
         } catch (SQLException e) {
-            errorRegister("[ERRO]", e.getMessage());
+            sampleAlert("[ERRO]", e.getMessage());
             return;
         }
 
@@ -291,11 +291,11 @@ public class ArmorRegisterScene extends BasicScene implements Initializable {
                 armorRepository.insert(armor);
             }
         } catch (SQLException e) {
-            errorRegister("[ERRO]", e.getMessage());
+            sampleAlert("[ERRO]", e.getMessage());
             return;
         }
 
-        errorRegister("[OK]", "Armadura Cadastrada com Sucesso!");
+        sampleAlert("[OK]", "Armadura Cadastrada com Sucesso!");
         clearInfos();
     }
 

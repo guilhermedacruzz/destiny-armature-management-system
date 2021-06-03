@@ -5,7 +5,6 @@ import info.oo.services.AuthService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -70,7 +69,7 @@ public class LoginScene extends BasicScene implements Initializable {
             msg = e.getMessage();
         }
 
-        errorRegister("[ERRO]", msg);
+        sampleAlert("[ERRO]", msg);
     }
 
     @FXML
