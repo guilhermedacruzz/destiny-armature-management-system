@@ -23,15 +23,15 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
         results = FXCollections.observableArrayList();
     }
 
-    private void a(Armor[] resultArmors, ObservableList<ObservableList<Armor>> observableList, int index) {
+    private void a(ArmorSet armorSet, ObservableList<ObservableList<Armor>> observableList, int index) {
         if(index == MAX_SET - 1) {
-            results.add(new ArmorSet(resultArmors.clone(), false, false, false));
+            results.add(new ArmorSet(armorSet));
             return;
         }
 
         for(Armor armor: observableList.get(index)) {
-            resultArmors[index] = armor;
-            a(resultArmors, observableList, index + 1);
+            armorSet.getArmors()[index] = armor;
+            a(armorSet, observableList, index + 1);
         }
     }
 
@@ -62,10 +62,11 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
 
         results.clear();
 
-        Armor[] basicArmors = new Armor[MAX_SET];
-        basicArmors[MAX_SET - 1] = exotic;
+        ArmorSet armorSetBasic = new ArmorSet(new Armor[MAX_SET], powerfulFriends, radiantLight, stasis);
 
-        a(basicArmors, observableList, 0);
+        armorSetBasic.getArmors()[MAX_SET-1] = exotic;
+
+        a(armorSetBasic, observableList, 0);
 
         return FXCollections.unmodifiableObservableList(results);
     }

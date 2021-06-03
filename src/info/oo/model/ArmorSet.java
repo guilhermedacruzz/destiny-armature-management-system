@@ -2,14 +2,26 @@ package info.oo.model;
 
 public class ArmorSet {
     private Armor[] armors;
-    private ArmorAttribute attributes;
+
+    private boolean powerfulFriends;
+    private boolean radiantLight;
+    private boolean stasis;
+
+    public ArmorSet(ArmorSet armorSet) {
+        this.armors = armorSet.getArmors();
+        this.powerfulFriends = armorSet.isPowerfulFriends();
+        this.radiantLight = armorSet.isRadiantLight();
+        this.stasis = armorSet.isStasis();
+    }
 
     public ArmorSet(Armor[] armors, boolean powerfulFriends, boolean radiantLight, boolean stasis) {
         this.armors = armors;
-        attributes = generateAttributes(powerfulFriends, radiantLight, stasis);
+        this.powerfulFriends = powerfulFriends;
+        this.radiantLight = radiantLight;
+        this.stasis = stasis;
     }
 
-    private ArmorAttribute generateAttributes(boolean powerfulFriends, boolean radiantLight, boolean stasis) {
+    public ArmorAttribute generateAttributes() {
         int mobility = 0, resilience = 0, recovery = 0, dicipline = 0, intellect = 0, strenght = 0;
 
         for(Armor armor: armors) {
@@ -41,7 +53,31 @@ public class ArmorSet {
         return armors;
     }
 
-    public ArmorAttribute getAttributes() {
-        return attributes;
+    public void setArmors(Armor[] armors) {
+        this.armors = armors;
+    }
+
+    public boolean isPowerfulFriends() {
+        return powerfulFriends;
+    }
+
+    public void setPowerfulFriends(boolean powerfulFriends) {
+        this.powerfulFriends = powerfulFriends;
+    }
+
+    public boolean isRadiantLight() {
+        return radiantLight;
+    }
+
+    public void setRadiantLight(boolean radiantLight) {
+        this.radiantLight = radiantLight;
+    }
+
+    public boolean isStasis() {
+        return stasis;
+    }
+
+    public void setStasis(boolean stasis) {
+        this.stasis = stasis;
     }
 }
