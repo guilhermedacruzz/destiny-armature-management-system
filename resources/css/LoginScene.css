@@ -1,3 +1,15 @@
+@font-face {
+  src: url("/assets/fonts/itc-avant-garde-gothic-lt-bold.ttf");
+}
+
+.text {
+    -fx-font-family: ITC Avant Garde Gothic LT Bold;
+}
+
+#pane {
+    -fx-background-color: #181c25;
+}
+
 .label {
   -fx-text-fill: #dbdbdb;
   -fx-font-weight: bold;
@@ -12,4 +24,51 @@
     -fx-text-fill: #dbdbdb;
     -fx-font-weight: bold;
     -fx-font-size: 22;
+}
+
+.text-field {
+    -fx-text-fill: #dbdbdb;
+    -fx-background-color:#181c25;
+    -fx-border-color: #dbdbdb;
+    -fx-font-family: ITC Avant Garde Gothic LT Bold;
+    -fx-font-size: 15;
+}
+
+.text-field:focused {
+    -fx-border-width: 3px;
+    -fx-border-color: #ffce1f;
+}
+
+.check-box {
+    -fx-text-fill: #dbdbdb;
+    -fx-font-size: 13;
+}
+
+.check-box:focused .box,
+.check-box:hover .box {
+    -fx-border-width: 2px;
+}
+
+.check-box .box {
+    -fx-background-color: rgba(183,140,37,0.8);
+    -fx-border-color: #ffce1f;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #dbdbdb;
+    -fx-border-color: #dbdbdb;
+}
+
+.button {
+    -fx-background-color: rgba(183,140,37,0.8);
+    -fx-border-color: #ffce1f;
+    -fx-text-fill: #dbdbdb;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+}
+
+.button:focused,
+.button:hover {
+    -fx-underline: true;
+    -fx-border-width: 3px;
 }

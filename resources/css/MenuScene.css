@@ -1,3 +1,15 @@
+@font-face {
+  src: url("/assets/fonts/itc-avant-garde-gothic-lt-bold.ttf");
+}
+
+.text {
+    -fx-font-family: ITC Avant Garde Gothic LT Bold;
+}
+
+#pane {
+    -fx-background-color: #181c25;
+}
+
 .button {
     -fx-background-color: rgba(35, 41, 54, 0.7);
     -fx-border-color: #dbdbdb;

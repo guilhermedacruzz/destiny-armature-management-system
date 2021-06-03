@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="pane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="801.0" spacing="60.0" stylesheets="@/css/myFont.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="info.oo.control.CharacterScene">
+<VBox fx:id="pane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="801.0" spacing="60.0" stylesheets="@/css/CharacterScene.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="info.oo.control.CharacterScene">
    <children>
       <Label text="ESCOLHA UMA CLASSE">
          <tooltip>
@@ -29,7 +29,7 @@
                </tooltip></Button>
          </children>
       </HBox>
-      <Button stylesheets="@/css/myButtonGold.css" fx:id="btReturn" mnemonicParsing="false" onAction="#comeBack" prefHeight="44.0" prefWidth="244.0" text="VOLTAR">
+      <Button fx:id="btReturn" mnemonicParsing="false" onAction="#comeBack" prefHeight="44.0" prefWidth="244.0" text="VOLTAR">
          <tooltip>
             <Tooltip text="Voltar" />
          </tooltip></Button>
