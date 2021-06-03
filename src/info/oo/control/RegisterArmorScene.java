@@ -15,7 +15,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class ArmorRegisterScene extends BasicScene implements Initializable {
+public class RegisterArmorScene extends BasicScene implements Initializable {
 
     @FXML
     TextField tfName;
@@ -80,7 +80,7 @@ public class ArmorRegisterScene extends BasicScene implements Initializable {
     private ArmorAttributesRepository armorAttributesRepository;
     private Armor currentArmor;
 
-    public ArmorRegisterScene(AuthService authService, ArmorRepository armorRepository,
+    public RegisterArmorScene(AuthService authService, ArmorRepository armorRepository,
                               ArmorAttributesRepository armorAttributesRepository, Armor currentArmor) {
         this.authService = authService;
         this.armorRepository = armorRepository;
@@ -88,7 +88,7 @@ public class ArmorRegisterScene extends BasicScene implements Initializable {
         this.currentArmor = currentArmor;
     }
 
-    public ArmorRegisterScene(AuthService authService, ArmorRepository armorRepository,
+    public RegisterArmorScene(AuthService authService, ArmorRepository armorRepository,
                               ArmorAttributesRepository armorAttributesRepository) {
         this(authService, armorRepository, armorAttributesRepository, null);
     }

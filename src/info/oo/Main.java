@@ -32,7 +32,7 @@ public class Main extends Application {
     public static final String REGISTER = "/fxml/SignInScene.fxml";
     public static final String CHARACTER = "/fxml/CharacterScene.fxml";
     public static final String MENU = "/fxml/MenuScene.fxml";
-    public static final String REGISTER_ARMORS = "/fxml/ArmorRegisterScene.fxml";
+    public static final String REGISTER_ARMORS = "/fxml/RegisterArmorScene.fxml";
     public static final String VIEWS_ARMORS = "/fxml/ViewArmorScene.fxml";
     public static final String CALCULE_ARMORS =  "/fxml/CalculateArmorScene.fxml";
     public static final String INVENTORY = "/fxml/InventoryScene.fxml";

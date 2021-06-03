@@ -6,19 +6,14 @@ import info.oo.model.repository.interfaces.ArmorAttributesRepository;
 import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.services.AuthService;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.input.MouseEvent;
-import javafx.util.Callback;
 
 
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class ViewArmorScene extends BasicScene implements Initializable {
@@ -134,7 +129,7 @@ public class ViewArmorScene extends BasicScene implements Initializable {
     @FXML
     void edit(Armor armor) {
         if(armor != null) {
-            Main.changeScene(Main.REGISTER_ARMORS, (aclass) -> new ArmorRegisterScene(authService,
+            Main.changeScene(Main.REGISTER_ARMORS, (aclass) -> new RegisterArmorScene(authService,
                     armorRepository, armorAttributesRepository, armor), 650, 2);
             System.out.println("df");
         }
