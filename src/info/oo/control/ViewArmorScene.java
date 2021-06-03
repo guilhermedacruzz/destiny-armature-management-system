@@ -109,14 +109,12 @@ public class ViewArmorScene extends BasicScene implements Initializable {
             int id = authService.getLogged().getId();
             String guardianClass = authService.getLogged().getGuardianClass();
 
-            armorRepository.search(id, guardianClass);
-
-            tvHelmet.setItems(armorRepository.organizeByType("Capacete"));
-            tvArms.setItems(armorRepository.organizeByType("Manopla"));
-            tvChests.setItems(armorRepository.organizeByType("Armadura de Torso"));
-            tvBoots.setItems(armorRepository.organizeByType("Armadura de Perna"));
-            tvClassItem.setItems(armorRepository.organizeByType("Item de Classe"));
-            tvExotic.setItems(armorRepository.organizeByRarity("Exótico"));
+            tvHelmet.setItems(armorRepository.selectByType(id, guardianClass, "Capacete"));
+            tvArms.setItems(armorRepository.selectByType(id, guardianClass, "Manopla"));
+            tvChests.setItems(armorRepository.selectByType(id, guardianClass, "Armadura de Torso"));
+            tvBoots.setItems(armorRepository.selectByType(id, guardianClass, "Armadura de Perna"));
+            tvClassItem.setItems(armorRepository.selectByType(id, guardianClass, "Item de Classe"));
+            tvExotic.setItems(armorRepository.selectByRarity(id, guardianClass, "Exótico"));
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();

@@ -288,7 +288,7 @@ public class ArmorRegisterScene extends BasicScene implements Initializable {
                 armorRepository.update(armor);
             }
             else {
-                armorRepository.register(armor);
+                armorRepository.insert(armor);
             }
         } catch (SQLException e) {
             errorRegister("[ERRO]", e.getMessage());

@@ -62,9 +62,7 @@ public class CalculateArmorScene implements Initializable {
             int id = authService.getLogged().getId();
             String guardianClass = authService.getLogged().getGuardianClass();
 
-            armorRepository.search(id, guardianClass);
-
-            tvExotic.setItems(armorRepository.organizeByRarity("Exótico"));
+            tvExotic.setItems(armorRepository.selectByRarity(id, guardianClass, "Exótico"));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
