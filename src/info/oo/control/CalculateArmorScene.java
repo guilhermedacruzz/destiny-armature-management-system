@@ -2,6 +2,7 @@ package info.oo.control;
 
 import info.oo.Main;
 import info.oo.model.Armor;
+import info.oo.model.Tester;
 import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.services.AuthService;
 import javafx.beans.property.SimpleStringProperty;
@@ -44,10 +45,13 @@ public class CalculateArmorScene implements Initializable {
 
     private ArmorRepository armorRepository;
     private AuthService authService;
+    private Tester tester;
 
     public CalculateArmorScene(ArmorRepository armorRepository, AuthService authService) {
         this.armorRepository = armorRepository;
         this.authService = authService;
+
+        tester =  new Tester(authService, armorRepository);
     }
 
     @Override
@@ -100,9 +104,13 @@ public class CalculateArmorScene implements Initializable {
 
         Armor exotic = tvExotic.getSelectionModel().getSelectedItem();
 
-        armorRepository.resultCalculateArmors(exotic, powerfulFriends, radiantLight, stasis);
+        try {
+            tester.resultCalculateArmors(exotic, powerfulFriends, radiantLight, stasis);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
 
-        tvResult.setItems(armorRepository.getResultArmors());
+        tvResult.setItems(tester.getResults());
     }
 
 

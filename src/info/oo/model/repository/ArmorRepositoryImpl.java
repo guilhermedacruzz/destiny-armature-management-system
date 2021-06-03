@@ -79,52 +79,6 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     }
 
     @Override
-    public boolean resultCalculateArmors(Armor exotic,
-                                         boolean powerfulFriends,
-                                         boolean radiantLight,
-                                         boolean stasis) {
-
-        ObservableList<ObservableList<Armor>> observableList = FXCollections.observableArrayList();
-
-        /*
-        if(!exotic.getType().equals("Capacete"))
-            observableList.addAll(organizeByType("Capacete"));
-        if(!exotic.getType().equals("Manopla"))
-            observableList.addAll(organizeByType("Manopla"));
-        if(!exotic.getType().equals("Armadura de Torso"))
-            observableList.addAll(organizeByType("Armadura de Torso"));
-        if(!exotic.getType().equals("Armadura de Perna"))
-            observableList.addAll(organizeByType("Armadura de Perna"));
-        if(!exotic.getType().equals("Item de Classe"))
-            observableList.addAll(organizeByType("Item de Classe"));*/
-
-        results.clear();
-
-        Armor[] basic = new Armor[5];
-        basic[4] = exotic;
-
-        a(basic, observableList, 0);
-
-        return true;
-    }
-
-    private void a(Armor[] resultArmors, ObservableList<ObservableList<Armor>> observableList, int index) {
-        if(index == 4) {
-            results.add(resultArmors.clone());
-            return;
-        }
-        for(Armor armor: observableList.get(index)) {
-            resultArmors[index] = armor;
-            a(resultArmors, observableList, index + 1);
-        }
-    }
-
-    @Override
-    public ObservableList<Armor[]> getResultArmors() {
-        return results;
-    }
-
-    @Override
     public boolean update(Armor armor) throws SQLException {
         return armorDAO.update(armor);
     }

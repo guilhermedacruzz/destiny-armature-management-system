@@ -14,12 +14,5 @@ public interface ArmorRepository {
 
     ObservableList<Armor> selectByType(int id, String guardianClass, String type) throws SQLException;
 
-    boolean resultCalculateArmors(Armor exotic,
-                                  boolean powerfulFriends,
-                                  boolean radiantLight,
-                                  boolean stasis);
-
-    ObservableList<Armor[]> getResultArmors();
-
     boolean update(Armor armor) throws SQLException;
 }
