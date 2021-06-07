@@ -46,3 +46,18 @@
     -fx-background-repeat: stretch;
     -fx-background-position: center center;
 }
+
+#btReturn {
+    -fx-background-color: rgba(183,140,37,0.8);
+    -fx-border-color: #ffce1f;
+    -fx-text-fill: #dbdbdb;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+    -fx-border-width: 1px;
+}
+
+#btReturn:focused,
+#btReturn:hover {
+    -fx-underline: true;
+    -fx-border-width: 3px;
+}

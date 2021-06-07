@@ -11,7 +11,12 @@
 }
 
 #btTitle {
-    -fx-font-size: 32;
+    -fx-font-size: 24;
+}
+
+#center {
+    -fx-background-color: rgba(35, 41, 54, 0.7);
+    -fx-border-color: rgba(219, 219, 219, 0.5);
 }
 
 HBox {

@@ -10,6 +10,11 @@
     -fx-background-color: #181c25;
 }
 
+#center {
+    -fx-background-color: rgba(35, 41, 54, 0.7);
+    -fx-border-color: rgba(219, 219, 219, 0.5);
+}
+
 #btTitle {
     -fx-font-size: 24;
 }
