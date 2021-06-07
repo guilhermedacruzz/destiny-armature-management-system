@@ -7,6 +7,7 @@ import info.oo.model.repository.ArmorSetRepositoryImpl;
 import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.services.AuthService;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -45,6 +46,8 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
     private AuthService authService;
     private ArmorSetRepositoryImpl armorSetRepositoryImpl;
 
+    private ObservableList<ArmorSet> armorSetObservableList;
+
     public CalculateArmorScene(ArmorRepository armorRepository, AuthService authService) {
         this.armorRepository = armorRepository;
         this.authService = authService;
@@ -54,6 +57,10 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        tvResult.setOnMouseClicked((evt)-> {
+            open();
+        });
+
         tvExotic.setOnMouseClicked((evt)->{
             calcule();
         });
@@ -101,5 +108,13 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
     @FXML
     private void comeBack() {
         Main.mainMenu();
+    }
+
+    void open() {
+        ArmorSet armorSet = tvResult.getSelectionModel().getSelectedItem();
+
+        if(armorSet != null) {
+            System.out.println(armorSet.toString());
+        }
     }
 }
