@@ -12,6 +12,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -98,7 +102,8 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
             return;
 
         try {
-            tvResult.setItems(armorSetRepositoryImpl.calculate(exotic, powerfulFriends, radiantLight, stasis));
+            armorSetObservableList = armorSetRepositoryImpl.calculate(exotic, powerfulFriends, radiantLight, stasis);
+            tvResult.setItems(armorSetObservableList);
         } catch (SQLException e) {
             sampleAlert("[ERRO]", e.getMessage());
         }
@@ -114,7 +119,21 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
         ArmorSet armorSet = tvResult.getSelectionModel().getSelectedItem();
 
         if(armorSet != null) {
-            System.out.println(armorSet.toString());
+            String path = System.getProperty("user.dir") + "\\resources\\results\\" + authService.getLogged().getUsername() + ".txt";
+            path = path.replaceAll(" ", "_");
+
+
+            try(BufferedWriter bw = new BufferedWriter(
+                    new FileWriter(
+                            path))){
+
+                for(ArmorSet armorSet1: armorSetObservableList) {
+                    bw.write(armorSet.generateAttributes().getAttributes());
+                }
+
+            }catch (IOException e){
+                sampleAlert("[ERRO]", e.getMessage());
+            }
         }
     }
 }
