@@ -1,0 +1,115 @@
+@font-face {
+  src: url("/assets/fonts/itc-avant-garde-gothic-lt-bold.ttf");
+}
+
+.text {
+    -fx-font-family: ITC Avant Garde Gothic LT Bold;
+}
+
+#pane {
+    -fx-background-color: #181c25;
+}
+
+#btTitle {
+    -fx-font-size: 24;
+}
+
+VBox, HBox {
+    -fx-background-color: rgb(35, 41, 54);
+}
+
+.label {
+  -fx-text-fill: #dbdbdb;
+  -fx-font-weight: bold;
+  -fx-font-size: 15;
+}
+
+.scroll-pane {
+    -fx-background-color: rgb(35, 41, 54);
+    -fx-border-color: rgba(219, 219, 219, 0.5);
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(219, 219, 219, 0.5);
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: rgba(35, 41, 54, 0.7);
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #ffce1f;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #dbdbdb;
+}
+
+.table-view .column-header {
+    -fx-background-color: rgba(183,140,37,0.8);
+}
+
+.table-view .table-cell{
+    -fx-text-fill: #dbdbdb;
+    -fx-table-cell-border-color: #ffce1f;
+    -fx-font-size: 14;
+}
+
+.table-row-cell{
+    -fx-background-color: rgb(35, 41, 54);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: #181c25;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(183,140,37,0.6);
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.button {
+    -fx-background-color: rgba(183,140,37,0.8);
+    -fx-border-color: #ffce1f;
+    -fx-text-fill: #dbdbdb;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+}
+
+.button:focused,
+.button:hover {
+    -fx-underline: true;
+    -fx-border-width: 3px;
+}
+
+.text-field {
+    -fx-text-fill: #dbdbdb;
+    -fx-background-color:#181c25;
+    -fx-border-color: #dbdbdb;
+    -fx-font-family: ITC Avant Garde Gothic LT Bold;
+    -fx-font-size: 15;
+}
