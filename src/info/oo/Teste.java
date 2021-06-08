@@ -1,7 +1,5 @@
 package info.oo;
 
-import info.oo.control.ViewArmorScene;
-import info.oo.control.ViewArmorSetScene;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
