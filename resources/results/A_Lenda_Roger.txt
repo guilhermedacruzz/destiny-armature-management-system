@@ -1,6 +1,6 @@
 59-41-100-52-105-48
-ATADURAS DA CANALIZAÇÃO (CODA) - Manopla
-TRAÇO DO TESSERATO IV - Armadura de Torso
-SOLA DA CANALIZAÇÃO (CODA) - Armadura de Perna
-FOGO DA FÊNIX - Item de Classe
-VÈU DA APOTEOSE - Capacete
+ATADURAS DA CANALIZAÇÃO (CODA) - Manopla \ 4-8-26-18-20-10
+TRAÇO DO TESSERATO IV - Armadura de Torso \ 9-9-20-14-27-4
+SOLA DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-24-4-31-24
+FOGO DA FÊNIX - Item de Classe \ 22-2-12-2-2-2
+VÈU DA APOTEOSE - Capacete \ 11-11-18-14-25-8

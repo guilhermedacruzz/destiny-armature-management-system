@@ -123,7 +123,6 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
             String path = System.getProperty("user.dir") + "\\resources\\results\\" + authService.getLogged().getUsername() + ".txt";
             path = path.replaceAll(" ", "_");
 
-
             try(BufferedWriter bw = new BufferedWriter(
                     new FileWriter(
                             path))){
@@ -133,7 +132,7 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
                     bw.newLine();
 
                     for(Armor armor: armorSet1.getArmors()) {
-                        bw.write(armor.getName() + " - " + armor.getType());
+                        bw.write(armor.getName() + " - " + armor.getType() + " \\ " + armor.getArmorAttribute().getAttributes());
                         bw.newLine();
                     }
                 }
