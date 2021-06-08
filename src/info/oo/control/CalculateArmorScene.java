@@ -11,6 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 import java.awt.*;
 import java.io.BufferedWriter;
@@ -63,7 +64,7 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tvResult.setOnMouseClicked((evt)-> {
-            open();
+            open(evt);
         });
 
         tvExotic.setOnMouseClicked((evt)->{
@@ -116,10 +117,10 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
         Main.mainMenu();
     }
 
-    void open() {
+    void open(MouseEvent evt) {
         ArmorSet armorSet = tvResult.getSelectionModel().getSelectedItem();
 
-        if(armorSet != null) {
+        if(armorSet != null && evt.getClickCount() == 2) {
             String path = System.getProperty("user.dir") + "\\resources\\results\\" + authService.getLogged().getUsername() + ".txt";
             path = path.replaceAll(" ", "_");
 
