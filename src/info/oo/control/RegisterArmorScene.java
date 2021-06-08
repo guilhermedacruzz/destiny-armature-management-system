@@ -338,6 +338,8 @@ public class RegisterArmorScene extends BasicScene implements Initializable {
     private void delete() {
         try {
             armorRepository.delete(currentArmor);
+            sampleAlert("[OK]", "Armadura Desmontada com Sucesso!");
+            Main.changeScene(Main.VIEWS_ARMORS, (aclass)->new ViewArmorScene(armorRepository, armorAttributesRepository, authService), 600, 2);
         } catch (SQLException e){
             sampleAlert("[ERRO]", e.getMessage());
         }

@@ -13,9 +13,9 @@ public class JDBCArmor implements ArmorDAO {
 
     private static final String INSERT_ARMOR = "INSERT INTO table_armor(name, guardian_class, type, rarity, status, status_masterprice, element, cod_user) values(?,?,?,?,?,?,?,?)";
     private static final String INSERT_ARMOR_ATTRIBUTE = "INSERT INTO table_armor_attributes(cod_armor, cod_attributes) values(?,?)";
-    private static final String SELECT = "select * from table_armor where cod_user=? and guardian_class=?";
-    private static final String SELECT_TYPE = "select * from table_armor where cod_user=? and guardian_class=? and rarity=\"Lendário\" and type=?";
-    private static final String SELECT_RARITY = "select * from table_armor where cod_user=? and guardian_class=? and rarity=?";
+    private static final String SELECT = "select * from table_armor where cod_user=? and guardian_class=? and status=1";
+    private static final String SELECT_TYPE = "select * from table_armor where cod_user=? and guardian_class=? and rarity=\"Lendário\" and type=? and status=1";
+    private static final String SELECT_RARITY = "select * from table_armor where cod_user=? and guardian_class=? and rarity=? and status=1";
     private static final String UPDATE = "update table_armor set name=?, guardian_class=?, type=?, rarity=?, status=?, status_masterprice=?, element=? where cod_armor=?";
     private static final String DELETE = "update table_armor set status=? where cod_armor=?";
 
