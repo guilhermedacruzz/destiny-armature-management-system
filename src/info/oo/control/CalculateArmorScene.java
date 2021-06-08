@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
+import java.awt.*;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -128,12 +129,28 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
                             path))){
 
                 for(ArmorSet armorSet1: armorSetObservableList) {
-                    bw.write(armorSet.generateAttributes().getAttributes());
+                    bw.write(armorSet1.generateAttributes().getAttributes());
+                    bw.newLine();
+
+                    for(Armor armor: armorSet1.getArmors()) {
+                        bw.write(armor.getName() + " - " + armor.getType());
+                        bw.newLine();
+                    }
                 }
 
             }catch (IOException e){
                 sampleAlert("[ERRO]", e.getMessage());
             }
+
+            File u = new File(path);
+            Desktop d = Desktop.getDesktop();
+
+            try {
+                d.open(u);
+            } catch (IOException e) {
+                sampleAlert("[ERRO]", e.getMessage());
+            }
+
         }
     }
 }
