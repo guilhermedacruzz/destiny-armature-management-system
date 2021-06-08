@@ -17,6 +17,7 @@ public class JDBCArmor implements ArmorDAO {
     private static final String SELECT_TYPE = "select * from table_armor where cod_user=? and guardian_class=? and rarity=\"Lendário\" and type=?";
     private static final String SELECT_RARITY = "select * from table_armor where cod_user=? and guardian_class=? and rarity=?";
     private static final String UPDATE = "update table_armor set name=?, guardian_class=?, type=?, rarity=?, status=?, status_masterprice=?, element=? where cod_armor=?";
+    private static final String DELETE = "update table_armor set status=? where cod_armor=?";
 
     private ConnectionsFactory connectionsFactory;
 
@@ -200,6 +201,23 @@ public class JDBCArmor implements ArmorDAO {
         conn.close();
 
         return armorList;
+    }
+
+    @Override
+    public boolean delete(Armor armor) throws SQLException {
+        Connection conn = connectionsFactory.getConnection();
+
+        PreparedStatement pstmt = conn.prepareStatement(DELETE);
+
+        pstmt.setBoolean(1, false);
+        pstmt.setInt(2, armor.getId());
+
+        int ret = pstmt.executeUpdate();
+
+        pstmt.close();
+        conn.close();
+
+        return ret == 1;
     }
 
 }

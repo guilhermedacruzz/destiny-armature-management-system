@@ -206,8 +206,9 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </GridPane>
-      <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="740.0">
+      <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="740.0" spacing="20.0">
          <children>
+            <Button fx:id="btDelete" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="200.0" text="DELETAR" />
             <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#comeBack" prefHeight="40.0" prefWidth="200.0" text="VOLTAR" />
          </children>
          <padding>

@@ -15,4 +15,6 @@ public interface ArmorRepository {
     ObservableList<Armor> selectByType(int id, String guardianClass, String type) throws SQLException;
 
     boolean update(Armor armor) throws SQLException;
+
+    boolean delete(Armor armor) throws SQLException;
 }

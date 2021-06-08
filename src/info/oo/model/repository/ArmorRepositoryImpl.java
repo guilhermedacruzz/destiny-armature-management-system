@@ -82,4 +82,9 @@ public class ArmorRepositoryImpl implements ArmorRepository {
     public boolean update(Armor armor) throws SQLException {
         return armorDAO.update(armor);
     }
+
+    @Override
+    public boolean delete(Armor armor) throws SQLException {
+        return armorDAO.delete(armor);
+    }
 }

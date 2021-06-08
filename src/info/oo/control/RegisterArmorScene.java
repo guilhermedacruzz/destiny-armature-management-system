@@ -8,6 +8,7 @@ import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.services.AuthService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 
@@ -75,6 +76,9 @@ public class RegisterArmorScene extends BasicScene implements Initializable {
     @FXML
     private RadioButton rbArc;
 
+    @FXML
+    private Button btDelete;
+
     private AuthService authService;
     private ArmorRepository armorRepository;
     private ArmorAttributesRepository armorAttributesRepository;
@@ -103,6 +107,8 @@ public class RegisterArmorScene extends BasicScene implements Initializable {
         tfDicipline.setText("2");
         tfIntellect.setText("2");
         tfStrenght.setText("2");
+
+        btDelete.setDisable(true);
 
         if(!(currentArmor == null)) {
             tfName.setText(currentArmor.getName());
@@ -155,6 +161,8 @@ public class RegisterArmorScene extends BasicScene implements Initializable {
 
             rbYesMasterprice.setSelected(currentArmor.isStatusMasterprice());
             rbNoMasterprice.setSelected(!currentArmor.isStatusMasterprice());
+
+            btDelete.setDisable(false);
         }
     }
 
@@ -324,6 +332,15 @@ public class RegisterArmorScene extends BasicScene implements Initializable {
         rbChest.setSelected(false);
         rbBoot.setSelected(false);
         rbClassItem.setSelected(false);
+    }
+
+    @FXML
+    private void delete() {
+        try {
+            armorRepository.delete(currentArmor);
+        } catch (SQLException e){
+            sampleAlert("[ERRO]", e.getMessage());
+        }
     }
 
     @FXML

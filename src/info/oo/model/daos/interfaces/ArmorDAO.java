@@ -15,4 +15,6 @@ public interface ArmorDAO {
     List<Armor> selectByType(int id, String guardianClass, String type) throws SQLException;
 
     List<Armor> selectByRarity(int id, String guardianClass, String Rarity) throws SQLException;
+
+    boolean delete(Armor armor) throws SQLException;
 }
