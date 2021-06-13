@@ -1,5 +1,12 @@
 package info.oo;
 
+/*
+* Descrição do git
+* ReadMe do git
+* Relatório Semanal kkkkk
+* Encontrar um icone melhor para as obras-primas
+* */
+
 import info.oo.control.LoginScene;
 import info.oo.control.MenuScene;
 import info.oo.model.ConnectionsFactory;
