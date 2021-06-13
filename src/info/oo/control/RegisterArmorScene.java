@@ -181,6 +181,7 @@ public class RegisterArmorScene extends BasicScene implements Initializable {
             attributes[5] = Integer.parseInt(tfStrenght.getText());
         } catch (NumberFormatException e) {
             attributes = null;
+            sampleAlert("[ERRO]", "Não digite letras onde é para por números! Seu Chato");
         }
 
         return attributes;

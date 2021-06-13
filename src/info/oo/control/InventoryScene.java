@@ -62,12 +62,19 @@ public class InventoryScene extends BasicScene implements Initializable {
 
     @FXML
     void update() {
-        int lumen = Integer.parseInt(tfLumen.getText());
-        int legendaryFragments = Integer.parseInt(tfLegendaryFragments.getText());
-        int ascendentFragments = Integer.parseInt(tfAscendentFragments.getText());
-        int enhancementPrism = Integer.parseInt(tfEnhancementPrism.getText());
-        int improvementCore = Integer.parseInt(tfImprovementCore.getText());
-        int ehancementModule = Integer.parseInt(tfEhancementModule.getText());
+        int lumen = 0, legendaryFragments = 0, ascendentFragments = 0, enhancementPrism = 0, improvementCore = 0, ehancementModule = 0;
+
+        try {
+            lumen = Integer.parseInt(tfLumen.getText());
+            legendaryFragments = Integer.parseInt(tfLegendaryFragments.getText());
+            ascendentFragments = Integer.parseInt(tfAscendentFragments.getText());
+            enhancementPrism = Integer.parseInt(tfEnhancementPrism.getText());
+            improvementCore = Integer.parseInt(tfImprovementCore.getText());
+            ehancementModule = Integer.parseInt(tfEhancementModule.getText());
+        } catch (NumberFormatException e) {
+            sampleAlert("[ERRO]", "Não digite letras onde é para por números! Seu Chato");
+            return;
+        }
 
         Inventory inventory = new Inventory(lumen, legendaryFragments, ascendentFragments, enhancementPrism, improvementCore, ehancementModule);
 
