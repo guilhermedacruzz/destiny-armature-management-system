@@ -19,8 +19,7 @@ import java.util.ResourceBundle;
 public class RegisterArmorScene extends BasicScene implements Initializable {
 
     @FXML
-    TextField tfName;
-
+    private TextField tfName;
 
     @FXML
     private TextField tfMobility;
