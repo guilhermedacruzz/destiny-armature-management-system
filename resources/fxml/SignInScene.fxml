@@ -80,7 +80,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="50.0" prefWidth="322.0" GridPane.columnSpan="2">
                      <children>
-                        <Label fx:id="lbTitle" text="VAMOS LÁ!">
+                        <Label styleClass="title" text="VAMOS LÁ!">
                            <font>
                               <Font size="22.0" />
                            </font>

@@ -15,11 +15,11 @@
 
 <VBox fx:id="pane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="801.0" spacing="20.0" stylesheets="@/css/scenes/InventoryScene.css, @/css/scenes/BasicScene.css, @/css/components/goldButton.css, @/css/components/textField.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="info.oo.control.InventoryScene">
    <children>
-      <Label fx:id="lbTitle" text="INVENTÁRIO">
+      <Label styleClass="title"  text="INVENTÁRIO">
          <font>
             <Font size="24.0" />
          </font></Label>
-      <HBox fx:id="center" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="760.0" spacing="40.0" styleClass="center">
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="760.0" spacing="40.0" styleClass="center">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>

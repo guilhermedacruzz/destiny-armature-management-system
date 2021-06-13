@@ -12,7 +12,7 @@
 
 <VBox fx:id="pane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="801.0" spacing="20.0" stylesheets="@../css/scenes/ViewArmorScene.css, @/css/scenes/BasicScene.css, @/css/components/goldButton.css, @/css/components/tableView.css, @/css/components/scrollPane.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="info.oo.control.ViewArmorScene">
    <children>
-      <Label fx:id="lbTitle" text="VISUALIZAR ARMADURAS">
+      <Label styleClass="title"  text="VISUALIZAR ARMADURAS">
          <font>
             <Font size="32.0" />
          </font>
