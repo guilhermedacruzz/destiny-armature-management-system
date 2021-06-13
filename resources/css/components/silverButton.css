@@ -1,0 +1,13 @@
+.button {
+    -fx-background-color: rgba(35, 41, 54, 0.7);
+    -fx-border-color: #dbdbdb;
+    -fx-text-fill: #dbdbdb;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+}
+
+.button:focused,
+.button:hover {
+    -fx-border-width: 3px;
+    -fx-underline: true;
+}
