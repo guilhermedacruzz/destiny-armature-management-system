@@ -2,10 +2,6 @@
     -fx-font-size: 24;
 }
 
-VBox, HBox {
-    -fx-background-color: rgba(35, 41, 54, 0.7);
-}
-
 .center {
     -fx-background-color: rgba(35, 41, 54, 0.7);
     -fx-border-color: rgba(219, 219, 219, 0.3);
