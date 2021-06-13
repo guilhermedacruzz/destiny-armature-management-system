@@ -47,9 +47,9 @@
          <children>
             <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="542.0" spacing="30.0">
                <children>
-                  <CheckBox fx:id="cbPowerfulFriends" mnemonicParsing="false" text="AMIGOS PODEROSOS" />
-                  <CheckBox fx:id="cbRadiantLight" mnemonicParsing="false" text="LUZ RADIANTE" />
-                  <CheckBox fx:id="cbStasis" mnemonicParsing="false" text="ESTASE" />
+                  <CheckBox fx:id="cbPowerfulFriends" mnemonicParsing="false" onAction="#changeState" text="AMIGOS PODEROSOS" />
+                  <CheckBox fx:id="cbRadiantLight" mnemonicParsing="false" onAction="#changeState" text="LUZ RADIANTE" />
+                  <CheckBox fx:id="cbStasis" mnemonicParsing="false" onAction="#changeState" text="ESTASE" />
                </children>
                <padding>
                   <Insets left="50.0" />

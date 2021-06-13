@@ -111,6 +111,11 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
         }
     }
 
+    @FXML
+    private void changeState() {
+        calcule();
+    }
+
 
     @FXML
     private void comeBack() {
