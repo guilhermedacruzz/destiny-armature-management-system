@@ -1,0 +1,21 @@
+.radio-button > .radio {
+    -fx-background-color: transparent;
+    -fx-background-image: url("/assets/images/exotic_armor_icon.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50%;
+    -fx-background-size: 35px;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0px;
+    -fx-border-color: #dbdbdb;
+    -fx-padding: 15px;
+}
+
+.radio-button:selected > .radio {
+    -fx-border-color: #ffce1f;
+    -fx-border-width: 2px;
+    -fx-color: transparent;
+}
+
+.radio-button .dot {
+    -fx-background-color: transparent;
+}
