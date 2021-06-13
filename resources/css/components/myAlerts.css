@@ -1,11 +1,3 @@
-@font-face {
-  src: url("/assets/fonts/itc-avant-garde-gothic-lt-bold.ttf");
-}
-
-.text {
-    -fx-font-family: ITC Avant Garde Gothic LT Bold;
-}
-
 .myDialog{
     -fx-background-color: #232936;
     -fx-graphic: url("/assets/images/guardians_logo.png");

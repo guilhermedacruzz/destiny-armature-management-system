@@ -1,0 +1,15 @@
+.label {
+  -fx-text-fill: #dbdbdb;
+  -fx-font-weight: bold;
+  -fx-font-size: 15;
+}
+
+.label:hover {
+    -fx-text-fill: rgba(183,140,37,0.8);
+}
+
+#lbWelcome {
+    -fx-text-fill: #dbdbdb;
+    -fx-font-weight: bold;
+    -fx-font-size: 22;
+}

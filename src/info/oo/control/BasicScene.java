@@ -9,7 +9,7 @@ public class BasicScene {
         DialogPane dialogPane = alert.getDialogPane();
         alert.setHeaderText(title);
         dialogPane.getStylesheets().add(
-                getClass().getResource("/css/myAlerts.css").toExternalForm());
+                getClass().getResource("/css/components/myAlerts.css").toExternalForm());
         dialogPane.getStyleClass().add("myDialog");
         alert.showAndWait();
     }
