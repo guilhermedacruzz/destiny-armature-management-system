@@ -6,6 +6,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -21,8 +22,11 @@
          <font>
             <Font size="24.0" />
          </font>
+         <tooltip>
+            <Tooltip text="CADASTRO DE ARMADURAS" />
+         </tooltip>
       </Label>
-      <GridPane styleClass="center" alignment="CENTER" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="740.0" vgap="10.0">
+      <GridPane alignment="CENTER" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="740.0" styleClass="center" vgap="10.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -39,7 +43,10 @@
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="3">
                <children>
-                  <TextField fx:id="tfName" prefHeight="46.0" prefWidth="225.0" />
+                  <TextField fx:id="tfName" prefHeight="46.0" prefWidth="225.0">
+                     <tooltip>
+                        <Tooltip text="Digite o nome da armadura" />
+                     </tooltip></TextField>
                </children>
                <padding>
                   <Insets bottom="12.0" left="10.0" right="10.0" top="12.0" />
@@ -60,18 +67,54 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="MOBILIDADE" GridPane.columnIndex="1" />
-                  <Label text="RESILIÊNCIA" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label text="RECUPERAÇÃO" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label text="DISCIPLINA" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Label text="INTELECTO" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <Label text="FORÇA" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <TextField fx:id="tfMobility" alignment="CENTER" GridPane.columnIndex="2" />
-                  <TextField fx:id="tfResilience" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField fx:id="tfRecovery" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <TextField fx:id="tfDicipline" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <TextField fx:id="tfIntellect" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                  <TextField fx:id="tfStrenght" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Label text="MOBILIDADE" GridPane.columnIndex="1">
+                     <tooltip>
+                        <Tooltip text="MOBILIDADE" />
+                     </tooltip></Label>
+                  <Label text="RESILIÊNCIA" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <tooltip>
+                        <Tooltip text="RESILIÊNCIA" />
+                     </tooltip></Label>
+                  <Label text="RECUPERAÇÃO" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <tooltip>
+                        <Tooltip text="RECUPERAÇÃO" />
+                     </tooltip></Label>
+                  <Label text="DISCIPLINA" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <tooltip>
+                        <Tooltip text="DISCIPLINA" />
+                     </tooltip></Label>
+                  <Label text="INTELECTO" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <tooltip>
+                        <Tooltip text="INTELECTO" />
+                     </tooltip></Label>
+                  <Label text="FORÇA" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <tooltip>
+                        <Tooltip text="FORÇA" />
+                     </tooltip></Label>
+                  <TextField fx:id="tfMobility" alignment="CENTER" GridPane.columnIndex="2">
+                     <tooltip>
+                        <Tooltip text="Mobilidade da Armadura" />
+                     </tooltip></TextField>
+                  <TextField fx:id="tfResilience" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <tooltip>
+                        <Tooltip text="Resiliência da Armdura" />
+                     </tooltip></TextField>
+                  <TextField fx:id="tfRecovery" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <tooltip>
+                        <Tooltip text="Recuperação da Armadura" />
+                     </tooltip></TextField>
+                  <TextField fx:id="tfDicipline" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <tooltip>
+                        <Tooltip text="Disciplina da Armadura" />
+                     </tooltip></TextField>
+                  <TextField fx:id="tfIntellect" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <tooltip>
+                        <Tooltip text="Intelecto da Armadura" />
+                     </tooltip></TextField>
+                  <TextField fx:id="tfStrenght" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <tooltip>
+                        <Tooltip text="Força da Armadura" />
+                     </tooltip></TextField>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
@@ -148,7 +191,10 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="3">
                      <children>
-                        <Label text="CARACTERÍSTICAS" />
+                        <Label text="CARACTERÍSTICAS">
+                           <tooltip>
+                              <Tooltip text="CARACTERÍSTICAS" />
+                           </tooltip></Label>
                      </children>
                   </VBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
@@ -156,11 +202,26 @@
                         <RadioButton fx:id="rbHelmet" mnemonicParsing="false">
                            <toggleGroup>
                               <ToggleGroup fx:id="groupArmors" />
-                           </toggleGroup></RadioButton>
-                        <RadioButton fx:id="rbArm" mnemonicParsing="false" toggleGroup="$groupArmors" />
-                        <RadioButton fx:id="rbChest" mnemonicParsing="false" toggleGroup="$groupArmors" />
-                        <RadioButton fx:id="rbBoot" mnemonicParsing="false" toggleGroup="$groupArmors" />
-                        <RadioButton fx:id="rbClassItem" mnemonicParsing="false" toggleGroup="$groupArmors" />
+                           </toggleGroup>
+                           <tooltip>
+                              <Tooltip text="CAPACETE" />
+                           </tooltip></RadioButton>
+                        <RadioButton fx:id="rbArm" mnemonicParsing="false" toggleGroup="$groupArmors">
+                           <tooltip>
+                              <Tooltip text="MANOPLA" />
+                           </tooltip></RadioButton>
+                        <RadioButton fx:id="rbChest" mnemonicParsing="false" toggleGroup="$groupArmors">
+                           <tooltip>
+                              <Tooltip text="TORSO" />
+                           </tooltip></RadioButton>
+                        <RadioButton fx:id="rbBoot" mnemonicParsing="false" toggleGroup="$groupArmors">
+                           <tooltip>
+                              <Tooltip text="BOTA" />
+                           </tooltip></RadioButton>
+                        <RadioButton fx:id="rbClassItem" mnemonicParsing="false" toggleGroup="$groupArmors">
+                           <tooltip>
+                              <Tooltip text="ITEM DE CLASSE" />
+                           </tooltip></RadioButton>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnSpan="3" GridPane.rowIndex="3">
@@ -168,8 +229,14 @@
                         <RadioButton fx:id="rbExotic" mnemonicParsing="false">
                            <toggleGroup>
                               <ToggleGroup fx:id="groupType" />
-                           </toggleGroup></RadioButton>
-                        <RadioButton fx:id="rbLegendary" mnemonicParsing="false" toggleGroup="$groupType" />
+                           </toggleGroup>
+                           <tooltip>
+                              <Tooltip text="ARMADURA EXÓTICA" />
+                           </tooltip></RadioButton>
+                        <RadioButton fx:id="rbLegendary" mnemonicParsing="false" toggleGroup="$groupType">
+                           <tooltip>
+                              <Tooltip text="ARMADURA LENDÁRIA" />
+                           </tooltip></RadioButton>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnSpan="3" GridPane.rowIndex="4">
@@ -177,13 +244,22 @@
                         <RadioButton fx:id="rbNoMasterprice" mnemonicParsing="false">
                            <toggleGroup>
                               <ToggleGroup fx:id="groupMasterprice" />
-                           </toggleGroup></RadioButton>
-                        <RadioButton fx:id="rbYesMasterprice" mnemonicParsing="false" toggleGroup="$groupMasterprice" />
+                           </toggleGroup>
+                           <tooltip>
+                              <Tooltip text="NÃO OBRA-PRIMA" />
+                           </tooltip></RadioButton>
+                        <RadioButton fx:id="rbYesMasterprice" mnemonicParsing="false" toggleGroup="$groupMasterprice">
+                           <tooltip>
+                              <Tooltip text="OBRA-PRIMA" />
+                           </tooltip></RadioButton>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#register" prefHeight="42.0" prefWidth="201.0" text="CADASTRAR" />
+                        <Button mnemonicParsing="false" onAction="#register" prefHeight="42.0" prefWidth="201.0" text="CADASTRAR">
+                           <tooltip>
+                              <Tooltip text="CADASTRAR" />
+                           </tooltip></Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnSpan="3" GridPane.rowIndex="2">
@@ -191,9 +267,18 @@
                         <RadioButton fx:id="rbSolar" mnemonicParsing="false">
                            <toggleGroup>
                               <ToggleGroup fx:id="groupElements" />
-                           </toggleGroup></RadioButton>
-                        <RadioButton fx:id="rbVoid" mnemonicParsing="false" toggleGroup="$groupElements" />
-                        <RadioButton fx:id="rbArc" mnemonicParsing="false" toggleGroup="$groupElements" />
+                           </toggleGroup>
+                           <tooltip>
+                              <Tooltip text="ELEMENTO SOLAR" />
+                           </tooltip></RadioButton>
+                        <RadioButton fx:id="rbVoid" mnemonicParsing="false" toggleGroup="$groupElements">
+                           <tooltip>
+                              <Tooltip text="ELEMENTO VÁCUO" />
+                           </tooltip></RadioButton>
+                        <RadioButton fx:id="rbArc" mnemonicParsing="false" toggleGroup="$groupElements">
+                           <tooltip>
+                              <Tooltip text="ELEMENTO ARCO" />
+                           </tooltip></RadioButton>
                      </children>
                   </HBox>
                </children>
@@ -206,10 +291,16 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </GridPane>
-      <HBox styleClass="center" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="740.0" spacing="20.0">
+      <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="740.0" spacing="20.0" styleClass="center">
          <children>
-            <Button fx:id="btDelete" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="200.0" text="DELETAR" />
-            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#comeBack" prefHeight="40.0" prefWidth="200.0" text="VOLTAR" />
+            <Button fx:id="btDelete" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="200.0" text="DELETAR">
+               <tooltip>
+                  <Tooltip text="DELETAR" />
+               </tooltip></Button>
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#comeBack" prefHeight="40.0" prefWidth="200.0" text="VOLTAR">
+               <tooltip>
+                  <Tooltip text="VOLTAR" />
+               </tooltip></Button>
          </children>
          <padding>
             <Insets right="20.0" />

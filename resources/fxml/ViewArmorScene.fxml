@@ -6,16 +6,20 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <VBox fx:id="pane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="801.0" spacing="20.0" stylesheets="@/css/scenes/BasicScene.css, @/css/components/goldButton.css, @/css/components/tableView.css, @/css/components/scrollPane.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="info.oo.control.ViewArmorScene">
    <children>
-      <Label styleClass="title"  text="VISUALIZAR ARMADURAS">
+      <Label styleClass="title" text="VISUALIZAR ARMADURAS">
          <font>
             <Font size="32.0" />
          </font>
+         <tooltip>
+            <Tooltip text="VISUALIZAR ARMADURAS" />
+         </tooltip>
       </Label>
       <ScrollPane prefHeight="494.0" prefWidth="761.0" styleClass="center">
          <content>
@@ -27,12 +31,18 @@
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <tooltip>
+                              <Tooltip text="CAPACETES" />
+                           </tooltip>
                         </Label>
                         <TableView fx:id="tvHelmet" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="424.0" prefWidth="260.0">
                           <columns>
                             <TableColumn fx:id="tcNameHelmet" prefWidth="128.0" text="NOME" />
                               <TableColumn fx:id="tcAttributesHelmet" prefWidth="128.0" text="ATRIBUTOS" />
                           </columns>
+                           <tooltip>
+                              <Tooltip text="Todos os capacetes lendários" />
+                           </tooltip>
                         </TableView>
                      </children>
                      <padding>
@@ -45,12 +55,18 @@
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <tooltip>
+                              <Tooltip text="MANOPLAS" />
+                           </tooltip>
                         </Label>
                         <TableView fx:id="tvArms" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="420.0" prefWidth="260.0">
                            <columns>
                               <TableColumn fx:id="tcNameArm" prefWidth="128.0" text="NOME" />
                               <TableColumn fx:id="tcAttributeArm" prefWidth="128.0" text="ATRIBUTOS" />
                            </columns>
+                           <tooltip>
+                              <Tooltip text="Todas as Manoplas lendárias" />
+                           </tooltip>
                         </TableView>
                      </children>
                      <padding>
@@ -63,12 +79,18 @@
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <tooltip>
+                              <Tooltip text="TORSOS" />
+                           </tooltip>
                         </Label>
                         <TableView fx:id="tvChests" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="424.0" prefWidth="260.0">
                            <columns>
                               <TableColumn fx:id="tcNameChest" prefWidth="128.0" text="NOME" />
                               <TableColumn fx:id="tcAttributesChest" prefWidth="128.0" text="ATRIBUTOS" />
                            </columns>
+                           <tooltip>
+                              <Tooltip text="Todos os torsos lendários" />
+                           </tooltip>
                         </TableView>
                      </children>
                      <padding>
@@ -81,12 +103,18 @@
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <tooltip>
+                              <Tooltip text="BOTAS" />
+                           </tooltip>
                         </Label>
                         <TableView fx:id="tvBoots" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="424.0" prefWidth="260.0">
                            <columns>
                               <TableColumn fx:id="tcNameBoot" prefWidth="128.0" text="NOME" />
                               <TableColumn fx:id="tcAttributesBoot" prefWidth="128.0" text="ATRIBUTOS" />
                            </columns>
+                           <tooltip>
+                              <Tooltip text="Todas as botas lendárias" />
+                           </tooltip>
                         </TableView>
                      </children>
                      <padding>
@@ -99,12 +127,18 @@
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <tooltip>
+                              <Tooltip text="CLASSES" />
+                           </tooltip>
                         </Label>
                         <TableView fx:id="tvClassItem" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="424.0" prefWidth="260.0">
                            <columns>
                               <TableColumn fx:id="tcNameClassItem" prefWidth="128.0" text="NOME" />
                               <TableColumn fx:id="tcAttributesClassItem" prefWidth="128.0" text="ATRIBUTOS" />
                            </columns>
+                           <tooltip>
+                              <Tooltip text="Todos os itens de classe lendários" />
+                           </tooltip>
                         </TableView>
                      </children>
                      <padding>
@@ -117,12 +151,18 @@
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <tooltip>
+                              <Tooltip text="EXÓTICOS" />
+                           </tooltip>
                         </Label>
                         <TableView fx:id="tvExotic" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="424.0" prefWidth="260.0">
                            <columns>
                               <TableColumn fx:id="tcNameExotic" prefWidth="128.0" text="NOME" />
                               <TableColumn fx:id="tcAttributesExotic" prefWidth="128.0" text="ATRIBUTOS" />
                            </columns>
+                           <tooltip>
+                              <Tooltip text="Todos os exóticos" />
+                           </tooltip>
                         </TableView>
                      </children>
                      <padding>
@@ -138,7 +178,10 @@
       </ScrollPane>
       <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="760.0" styleClass="center">
          <children>
-            <Button fx:id="btReturn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#comeBack" prefHeight="40.0" prefWidth="200.0" text="VOLTAR" />
+            <Button fx:id="btReturn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#comeBack" prefHeight="40.0" prefWidth="200.0" text="VOLTAR">
+               <tooltip>
+                  <Tooltip text="VOLTAR" />
+               </tooltip></Button>
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

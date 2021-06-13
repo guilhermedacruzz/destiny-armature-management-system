@@ -6,12 +6,16 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox fx:id="pane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="801.0" spacing="20.0" stylesheets="@/css/scenes/BasicScene.css, @/css/components/tableView.css, @/css/components/goldButton.css, @/css/components/checkBox.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="info.oo.control.CalculateArmorScene">
    <children>
-      <Label styleClass="title" text="CALCULAR ARMADURAS" />
+      <Label styleClass="title" text="CALCULAR ARMADURAS">
+         <tooltip>
+            <Tooltip text="CALCULAR ARMADURAS" />
+         </tooltip></Label>
       <HBox alignment="CENTER" prefHeight="387.0" prefWidth="762.0" spacing="50.0" styleClass="center">
          <padding>
             <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
@@ -19,18 +23,27 @@
          <children>
             <VBox alignment="CENTER" layoutX="301.0" layoutY="20.0" prefHeight="306.0" prefWidth="380.0" spacing="20.0">
                <children>
-                  <Label text="EXÓTICOS" />
+                  <Label text="EXÓTICOS">
+                     <tooltip>
+                        <Tooltip text="EXÓTICOS" />
+                     </tooltip></Label>
                   <TableView fx:id="tvExotic" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="324.0" prefWidth="380.0">
                      <columns>
                         <TableColumn fx:id="tcName" prefWidth="188.0" text="NOME" />
                         <TableColumn fx:id="tcAttributes" prefWidth="188.0" text="ATRIBUTOS" />
                      </columns>
+                     <tooltip>
+                        <Tooltip text="Tabela com todas a suas armaduras exóticas" />
+                     </tooltip>
                   </TableView>
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="362.0" prefWidth="214.0" spacing="15.0">
                <children>
-                  <Label text="RESULTADOS" />
+                  <Label text="RESULTADOS">
+                     <tooltip>
+                        <Tooltip text="RESULTADOS" />
+                     </tooltip></Label>
                   <TableView fx:id="tvResult" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="324.0" prefWidth="188.0">
                      <columns>
                         <TableColumn fx:id="tcResult" prefWidth="186.0" text="RESULTADOS" />
@@ -38,6 +51,9 @@
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
+                     <tooltip>
+                        <Tooltip text="Todas as combinações possíveis de armaduras." />
+                     </tooltip>
                   </TableView>
                </children>
             </VBox>
@@ -47,9 +63,18 @@
          <children>
             <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="542.0" spacing="30.0">
                <children>
-                  <CheckBox fx:id="cbPowerfulFriends" mnemonicParsing="false" onAction="#changeState" text="AMIGOS PODEROSOS" />
-                  <CheckBox fx:id="cbRadiantLight" mnemonicParsing="false" onAction="#changeState" text="LUZ RADIANTE" />
-                  <CheckBox fx:id="cbStasis" mnemonicParsing="false" onAction="#changeState" text="ESTASE" />
+                  <CheckBox fx:id="cbPowerfulFriends" mnemonicParsing="false" onAction="#changeState" text="AMIGOS PODEROSOS">
+                     <tooltip>
+                        <Tooltip text="Ativar/Desativar AMIGOS PODEROSOS" />
+                     </tooltip></CheckBox>
+                  <CheckBox fx:id="cbRadiantLight" mnemonicParsing="false" onAction="#changeState" text="LUZ RADIANTE">
+                     <tooltip>
+                        <Tooltip text="Ativar/Desativar LUZ RADIANTE" />
+                     </tooltip></CheckBox>
+                  <CheckBox fx:id="cbStasis" mnemonicParsing="false" onAction="#changeState" text="ESTASE">
+                     <tooltip>
+                        <Tooltip text="Ativar/Desativar ESTASE" />
+                     </tooltip></CheckBox>
                </children>
                <padding>
                   <Insets left="50.0" />
@@ -57,7 +82,10 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="220.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#comeBack" prefHeight="40.0" prefWidth="200.0" text="VOLTAR" />
+                  <Button mnemonicParsing="false" onAction="#comeBack" prefHeight="40.0" prefWidth="200.0" text="VOLTAR">
+                     <tooltip>
+                        <Tooltip text="VOLTAR" />
+                     </tooltip></Button>
                </children>
                <HBox.margin>
                   <Insets right="10.0" />
