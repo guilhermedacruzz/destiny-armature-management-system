@@ -23,7 +23,7 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
         results = FXCollections.observableArrayList();
     }
 
-    private void a(ArmorSet armorSet, ObservableList<ObservableList<Armor>> observableList, int index) {
+    private void scaleArmors(ArmorSet armorSet, ObservableList<ObservableList<Armor>> observableList, int index) {
         if(index == MAX_SET - 1) {
             results.add(new ArmorSet(armorSet));
             return;
@@ -31,11 +31,11 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
 
         for(Armor armor: observableList.get(index)) {
             armorSet.getArmors()[index] = armor;
-            a(armorSet, observableList, index + 1);
+            scaleArmors(armorSet, observableList, index + 1);
         }
     }
 
-    private void b(ObservableList<ObservableList<Armor>> observableList , Armor exotic, String type) throws SQLException {
+    private void loadArmors(ObservableList<ObservableList<Armor>> observableList , Armor exotic, String type) throws SQLException {
         int id = authService.getLogged().getId();
         String guardianClass = authService.getLogged().getGuardianClass();
 
@@ -54,11 +54,11 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
     public ObservableList<ArmorSet> calculate(Armor exotic, boolean powerfulFriends, boolean radiantLight, boolean stasis) throws SQLException {
         ObservableList<ObservableList<Armor>> observableList = FXCollections.observableArrayList();
 
-        b(observableList, exotic, "Capacete");
-        b(observableList, exotic, "Manopla");
-        b(observableList, exotic, "Armadura de Torso");
-        b(observableList, exotic, "Armadura de Perna");
-        b(observableList, exotic, "Item de Classe");
+        loadArmors(observableList, exotic, "Capacete");
+        loadArmors(observableList, exotic, "Manopla");
+        loadArmors(observableList, exotic, "Armadura de Torso");
+        loadArmors(observableList, exotic, "Armadura de Perna");
+        loadArmors(observableList, exotic, "Item de Classe");
 
         results.clear();
 
@@ -66,7 +66,7 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
 
         armorSetBasic.getArmors()[MAX_SET-1] = exotic;
 
-        a(armorSetBasic, observableList, 0);
+        scaleArmors(armorSetBasic, observableList, 0);
 
         return FXCollections.unmodifiableObservableList(results);
     }
