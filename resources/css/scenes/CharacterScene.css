@@ -8,12 +8,6 @@
     -fx-border-width: 7px;
 }
 
-.label {
-  -fx-text-fill: #dbdbdb;
-  -fx-font-weight: bold;
-  -fx-font-size: 22;
-}
-
 #btHunter {
     -fx-border-color: #0095E9;
     -fx-background-image: url("/assets/images/hunter_logo.png");
