@@ -18,3 +18,76 @@ Criando as transições entre telas.
 
 19/05/2021
 Criando o modelo relacional do Banco.
+
+21/05/2021
+Implementando as Tables do Banco de Dados
+Implementando a Triggers que verifica os Usernames duplicados.
+
+23/05/2021
+Implementando o relacionamento entre as tabelas.
+Implementando as stored procedures.
+Implementando a function que gera as #x.x.x de duplicadas das armaduras
+Implementando a function que soma dos atributos das armaduras.
+Implementando a triggers que coloca um #x.x.x nas armaduras duplicadas.
+
+24/05/2021
+Criando a conexão com o banco de dados.
+Criando o serviço de Login do Usuário.
+Craindo o serviço de Criação de Contas.
+Integrando o login e a criação de contas com a Interface gráficas.
+
+25/05/2021
+Implementação de uma Alerta customizado.
+Implementando o Menu Principal.
+Implementando o estilo do Menu principal.
+
+26/05/2021
+Implementando o Tela de Cadastro de Armaduras.
+Implementando o Objeto Armor.
+Implementando o Objeto ArmorAttributes.
+Implementando a Inserção de atributos no Banco.
+
+27/05/2021
+Implementando a Inserção de armaduras no Banco.
+Refatorando todo o código.
+
+28/05/2021
+Implementando a busca de armduras no banco de dados.
+
+29/05/2021
+Implementando a Tela de visualização de Armaduras.
+Mudando o css
+Resolvendo bugs.
+
+31/05/2021
+Implementando a Tela de Cálculos de Armaduras.
+Resolvendo bugs.
+Implementando o repositório que cálcula as melhores armaduras.
+Implementando os modificadores.
+Mudando o css.
+
+01/06/2021
+Refatoração do código
+Implementado o update das armaduras.
+
+02/06/2021
+Implementado o Objeto ArmorSet para guardar o resultado das armaduras.
+Implementado o Repositório de ArmorSet.
+
+03/06/2021
+Resolvendo bugs.
+
+07/06/2021
+Implementando o acesso a tela de visualização de Armaduras pelo cálculo.
+
+08/06/2021
+Implementando uma maneira de retornar os resultados ao Usuário.
+
+13/06/2021
+Refatorando todo o css.
+Colocando tooltips sem uso.
+Resolvendo bugs.
+
+
+
+
