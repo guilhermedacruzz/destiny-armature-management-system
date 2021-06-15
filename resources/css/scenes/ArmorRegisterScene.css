@@ -39,9 +39,11 @@
 }
 
 #rbNoMasterprice .radio {
-    -fx-background-image: url("/assets/images/no_masterprice.jpg");
+    -fx-background-image: url("/assets/images/master_icon.png");
+    -fx-background-color: rgba(82, 47, 101, 0.3);
 }
 
 #rbYesMasterprice .radio {
-    -fx-background-image: url("/assets/images/yes_masterprice.jpg");
+    -fx-background-image: url("/assets/images/master_icon.png");
+    -fx-background-color: rgba(255, 206, 31, 0.3);
 }

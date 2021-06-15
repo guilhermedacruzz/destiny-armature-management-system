@@ -1,9 +1,6 @@
 package info.oo;
 
 /*
-* Descrição do git
-* ReadMe do git
-* Relatório Semanal kkkkk
 * Encontrar um icone melhor para as obras-primas
 * */
 
