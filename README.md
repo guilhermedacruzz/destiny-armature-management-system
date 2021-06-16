@@ -12,3 +12,7 @@ Destiny Armature Managemnet System é um sistema desenvolvido para auxiliar os j
 - Abra o IntelliJ IDEA
 - Clique em new project from version control
 - Copie a url do projeto https://github.com/indexGuilherme/destiny-armature-management-system.git
+
+# Apresentação
+
+-  https://youtu.be/JJ_9vHk_8lE
