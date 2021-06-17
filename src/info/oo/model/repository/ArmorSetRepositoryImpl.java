@@ -28,7 +28,9 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
 
     private void scaleArmors(ArmorSet armorSet, ObservableList<ObservableList<Armor>> observableList, int index) {
         if(index == MAX_SET - 1) {
-            results.add(new ArmorSet(armorSet));
+            ArmorSet newArmorSet = new ArmorSet(armorSet);
+            if(compareAttributes(newArmorSet.generateAttributes()))
+                results.add(armorSet);
             return;
         }
 
@@ -71,23 +73,17 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
 
         scaleArmors(armorSetBasic, observableList, 0);
 
-        filterArmors(inventory);
-
         return FXCollections.unmodifiableObservableList(results);
     }
 
-    private void filterArmors(Inventory inventory) {
-        for(ArmorSet armorSet: results) {
-            Inventory armorInventory = armorSet.generateSpent();
+    private boolean compareAttributes(ArmorAttribute armorAttribute) {
+        int[] rstVetor = armorAttribute.getAttributesVetor();
+        int sum = 0;
 
-            if(armorInventory.getAscendentFragments() >= inventory.getAscendentFragments())
-                results.remove(armorSet);
-
-            int[] armorAttribute = armorSet.generateAttributes().getAttributesVetor();
-            int sum = IntStream.of(armorAttribute).sum();
-
-            if(sum <= 39)
-                results.remove(armorSet);
+        for(int i: rstVetor) {
+            sum += i / 10;
         }
+
+        return sum >= 38;
     }
 }
