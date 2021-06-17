@@ -79,7 +79,7 @@ public class JDBCArmor implements ArmorDAO {
         pstmt.setString(4, armor.getRarity());
         pstmt.setBoolean(5, armor.isStatus());
         pstmt.setBoolean(6, armor.isStatusMasterprice());
-        pstmt.setString(7, armor.getRarity());
+        pstmt.setString(7, armor.getElement());
         pstmt.setInt(8, armor.getId());
 
         int ret = pstmt.executeUpdate();
@@ -111,7 +111,7 @@ public class JDBCArmor implements ArmorDAO {
             String rarity = rs.getString("rarity");
             boolean status = rs.getBoolean("status");
             boolean masterprice = rs.getBoolean("status_masterprice");
-            String element = rs.getString("Element");
+            String element = rs.getString("element");
             int cod_user = rs.getInt("cod_user");
 
             Armor armor = new Armor(id_armor, name, guardian_class, typeBd, rarity, status,
@@ -149,7 +149,7 @@ public class JDBCArmor implements ArmorDAO {
             String rarityBd = rs.getString("rarity");
             boolean status = rs.getBoolean("status");
             boolean masterprice = rs.getBoolean("status_masterprice");
-            String element = rs.getString("Element");
+            String element = rs.getString("element");
             int cod_user = rs.getInt("cod_user");
 
             Armor armor = new Armor(id_armor, name, guardian_class, typeBd, rarityBd, status,
@@ -187,7 +187,7 @@ public class JDBCArmor implements ArmorDAO {
             String rarityBd = rs.getString("rarity");
             boolean status = rs.getBoolean("status");
             boolean masterprice = rs.getBoolean("status_masterprice");
-            String element = rs.getString("Element");
+            String element = rs.getString("element");
             int cod_user = rs.getInt("cod_user");
 
             Armor armor = new Armor(id_armor, name, guardian_class, typeBd, rarityBd, status,
