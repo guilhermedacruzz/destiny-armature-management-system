@@ -52,7 +52,7 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
     }
 
     @Override
-    public ObservableList<ArmorSet> calculate(Armor exotic, boolean powerfulFriends, boolean radiantLight, boolean stasis, Inventory inventory) throws SQLException {
+    public ObservableList<ArmorSet> calculate(Armor exotic, boolean powerfulFriends, boolean radiantLight, boolean stasis) throws SQLException {
         ObservableList<ObservableList<Armor>> observableList = FXCollections.observableArrayList();
 
         loadArmors(observableList, exotic, "Capacete");

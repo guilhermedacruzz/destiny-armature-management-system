@@ -8,5 +8,5 @@ import javafx.collections.ObservableList;
 import java.sql.SQLException;
 
 public interface ArmorSetRepository {
-    ObservableList<ArmorSet> calculate(Armor exotic, boolean powerfulFriends, boolean radiantLight, boolean stasis, Inventory inventory) throws SQLException;
+    ObservableList<ArmorSet> calculate(Armor exotic, boolean powerfulFriends, boolean radiantLight, boolean stasis) throws SQLException;
 }
