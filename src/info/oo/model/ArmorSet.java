@@ -30,7 +30,15 @@ public class ArmorSet {
             dicipline += armor.getArmorAttribute().getDicipline();
             intellect += armor.getArmorAttribute().getIntellect();
             strenght += armor.getArmorAttribute().getStrenght();
-        }
+
+            if(!armor.isStatusMasterprice()) {
+                mobility += 2;
+                resilience += 2;
+                recovery += 2;
+                dicipline += 2;
+                intellect += 2;
+                strenght += 2;
+            }        }
 
         if(powerfulFriends)
             mobility += 20;
