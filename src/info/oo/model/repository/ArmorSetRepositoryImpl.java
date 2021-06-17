@@ -40,7 +40,7 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
         if(index == MAX_SET - 1) {
             ArmorSet newArmorSet = new ArmorSet(armorSet);
             if(compareAttributes(newArmorSet.generateAttributes()))
-                results.add(armorSet);
+                results.add(newArmorSet);
             return;
         }
 

@@ -1,7 +1,819 @@
-60-40-101-52-103-51
-Inventory{lumen=0, legendaryFragments=0, ascendentFragments=0, enhancementPrism=0, improvementCore=0, ehancementModule=0}
-ATADURAS DA CANALIZAÇÃO (CODA) - Manopla \ 4-8-26-18-20-10
-TRAÇO DO TESSERATO IV - Armadura de Torso \ 9-9-20-14-27-4
-SOLA DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-24-4-31-24
-FOGO DA FÊNIX - Item de Classe \ 22-2-12-2-2-2
-VÉU DA APOTEOSE#639 - Capacete \ 12-10-19-14-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
+42-50-69-35-78-43
+Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
+TÚNICA DA DEFESA FIRME#938 - Manopla \ 9-14-9-6-12-12
+TÚNICA DO EXÍLIO - Armadura de Torso \ 2-9-21-15-6-10
+SOLAS DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-14-4-31-4
+FOGO DA FÊNIX - Item de Classe \ 2-2-2-2-2-2
+VÉU DA APOTEOSE - Capacete \ 12-10-19-4-23-11
