@@ -1,6 +1,6 @@
-79-51-110-52-115-68
+60-40-101-52-103-51Inventory{lumen=10000, legendaryFragments=30, ascendentFragments=2, enhancementPrism=0, improvementCore=6, ehancementModule=8}
 ATADURAS DA CANALIZAÇÃO (CODA) - Manopla \ 4-8-26-18-20-10
 TRAÇO DO TESSERATO IV - Armadura de Torso \ 9-9-20-14-27-4
 SOLA DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-24-4-31-24
 FOGO DA FÊNIX - Item de Classe \ 22-2-12-2-2-2
-VÈU DA APOTEOSE - Capacete \ 11-11-18-14-25-8
+VÉU DA APOTEOSE#639 - Capacete \ 12-10-19-14-23-11

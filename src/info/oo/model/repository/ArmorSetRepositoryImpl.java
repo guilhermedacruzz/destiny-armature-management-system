@@ -2,6 +2,7 @@ package info.oo.model.repository;
 
 import info.oo.model.Armor;
 import info.oo.model.ArmorSet;
+import info.oo.model.Inventory;
 import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.model.repository.interfaces.ArmorSetRepository;
 import info.oo.services.AuthService;
@@ -51,7 +52,7 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
     }
 
     @Override
-    public ObservableList<ArmorSet> calculate(Armor exotic, boolean powerfulFriends, boolean radiantLight, boolean stasis) throws SQLException {
+    public ObservableList<ArmorSet> calculate(Armor exotic, boolean powerfulFriends, boolean radiantLight, boolean stasis, Inventory inventory) throws SQLException {
         ObservableList<ObservableList<Armor>> observableList = FXCollections.observableArrayList();
 
         loadArmors(observableList, exotic, "Capacete");

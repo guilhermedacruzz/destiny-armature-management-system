@@ -21,24 +21,48 @@ public class Inventory {
         return lumen;
     }
 
+    public void setLumen(int lumen) {
+        this.lumen = lumen;
+    }
+
     public int getLegendaryFragments() {
         return legendaryFragments;
+    }
+
+    public void setLegendaryFragments(int legendaryFragments) {
+        this.legendaryFragments = legendaryFragments;
     }
 
     public int getAscendentFragments() {
         return ascendentFragments;
     }
 
+    public void setAscendentFragments(int ascendentFragments) {
+        this.ascendentFragments = ascendentFragments;
+    }
+
     public int getEnhancementPrism() {
         return enhancementPrism;
+    }
+
+    public void setEnhancementPrism(int enhancementPrism) {
+        this.enhancementPrism = enhancementPrism;
     }
 
     public int getImprovementCore() {
         return improvementCore;
     }
 
+    public void setImprovementCore(int improvementCore) {
+        this.improvementCore = improvementCore;
+    }
+
     public int getEhancementModule() {
         return ehancementModule;
+    }
+
+    public void setEhancementModule(int ehancementModule) {
+        this.ehancementModule = ehancementModule;
     }
 
     @Override

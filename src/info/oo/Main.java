@@ -1,9 +1,5 @@
 package info.oo;
 
-/*
-* Encontrar um icone melhor para as obras-primas
-* */
-
 import info.oo.control.LoginScene;
 import info.oo.control.MenuScene;
 import info.oo.model.ConnectionsFactory;

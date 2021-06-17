@@ -3,6 +3,7 @@ package info.oo.control;
 import info.oo.Main;
 import info.oo.model.Armor;
 import info.oo.model.ArmorSet;
+import info.oo.model.Inventory;
 import info.oo.model.repository.ArmorSetRepositoryImpl;
 import info.oo.model.repository.interfaces.ArmorRepository;
 import info.oo.services.AuthService;
@@ -104,7 +105,8 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
             return;
 
         try {
-            armorSetObservableList = armorSetRepositoryImpl.calculate(exotic, powerfulFriends, radiantLight, stasis);
+            Inventory inventory = authService.getLogged().getInventory();
+            armorSetObservableList = armorSetRepositoryImpl.calculate(exotic, powerfulFriends, radiantLight, stasis, inventory);
             tvResult.setItems(armorSetObservableList);
         } catch (SQLException e) {
             sampleAlert("[ERRO]", e.getMessage());
@@ -135,6 +137,7 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
 
                 for(ArmorSet armorSet1: armorSetObservableList) {
                     bw.write(armorSet1.generateAttributes().getAttributes());
+                    bw.write(armorSet1.generateSpent().toString());
                     bw.newLine();
 
                     for(Armor armor: armorSet1.getArmors()) {
