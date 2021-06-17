@@ -280,7 +280,6 @@ public class RegisterArmorScene extends BasicScene implements Initializable {
         try {
             if(currentArmor != null) {
                 armor.getArmorAttribute().setId(currentArmor.getArmorAttribute().getId());
-                System.out.println(armorAttributesRepository.update(armorAttribute));
             }
             else {
                 armorAttributesRepository.insert(armorAttribute);

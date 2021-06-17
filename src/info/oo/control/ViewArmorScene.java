@@ -131,10 +131,6 @@ public class ViewArmorScene extends BasicScene implements Initializable {
         if(armor != null) {
             Main.changeScene(Main.REGISTER_ARMORS, (aclass) -> new RegisterArmorScene(authService,
                     armorRepository, armorAttributesRepository, armor), 650, 2);
-            System.out.println("df");
-        }
-        else {
-            System.out.println("as");
         }
     }
 

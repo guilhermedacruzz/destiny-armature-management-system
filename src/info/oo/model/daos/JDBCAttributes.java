@@ -117,8 +117,6 @@ public class JDBCAttributes implements AttributesDAO {
 
         PreparedStatement pstmt = conn.prepareStatement(UPDATE);
 
-        System.out.println(armorAttribute.toString());
-
         pstmt.setInt(1, armorAttribute.getMobility());
         pstmt.setInt(2, armorAttribute.getResilience());
         pstmt.setInt(3, armorAttribute.getRecovery());
