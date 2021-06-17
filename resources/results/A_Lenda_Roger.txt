@@ -1,4 +1,5 @@
-60-40-101-52-103-51Inventory{lumen=0, legendaryFragments=0, ascendentFragments=0, enhancementPrism=0, improvementCore=0, ehancementModule=0}
+60-40-101-52-103-51
+Inventory{lumen=0, legendaryFragments=0, ascendentFragments=0, enhancementPrism=0, improvementCore=0, ehancementModule=0}
 ATADURAS DA CANALIZAÇÃO (CODA) - Manopla \ 4-8-26-18-20-10
 TRAÇO DO TESSERATO IV - Armadura de Torso \ 9-9-20-14-27-4
 SOLA DA CANALIZAÇÃO (CODA) - Armadura de Perna \ 13-11-24-4-31-24

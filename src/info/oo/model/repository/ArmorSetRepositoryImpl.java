@@ -1,6 +1,7 @@
 package info.oo.model.repository;
 
 import info.oo.model.Armor;
+import info.oo.model.ArmorAttribute;
 import info.oo.model.ArmorSet;
 import info.oo.model.Inventory;
 import info.oo.model.repository.interfaces.ArmorRepository;
@@ -10,6 +11,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.sql.SQLException;
+import java.util.stream.IntStream;
 
 public class ArmorSetRepositoryImpl implements ArmorSetRepository {
 
@@ -52,7 +54,7 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
     }
 
     @Override
-    public ObservableList<ArmorSet> calculate(Armor exotic, boolean powerfulFriends, boolean radiantLight, boolean stasis) throws SQLException {
+    public ObservableList<ArmorSet> calculate(Armor exotic, boolean powerfulFriends, boolean radiantLight, boolean stasis, Inventory inventory) throws SQLException {
         ObservableList<ObservableList<Armor>> observableList = FXCollections.observableArrayList();
 
         loadArmors(observableList, exotic, "Capacete");
@@ -69,6 +71,23 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
 
         scaleArmors(armorSetBasic, observableList, 0);
 
+        filterArmors(inventory);
+
         return FXCollections.unmodifiableObservableList(results);
+    }
+
+    private void filterArmors(Inventory inventory) {
+        for(ArmorSet armorSet: results) {
+            Inventory armorInventory = armorSet.generateSpent();
+
+            if(armorInventory.getAscendentFragments() >= inventory.getAscendentFragments())
+                results.remove(armorSet);
+
+            int[] armorAttribute = armorSet.generateAttributes().getAttributesVetor();
+            int sum = IntStream.of(armorAttribute).sum();
+
+            if(sum <= 39)
+                results.remove(armorSet);
+        }
     }
 }

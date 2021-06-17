@@ -105,7 +105,8 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
             return;
 
         try {
-            armorSetObservableList = armorSetRepositoryImpl.calculate(exotic, powerfulFriends, radiantLight, stasis);
+            Inventory inventory = authService.getLogged().getInventory();
+            armorSetObservableList = armorSetRepositoryImpl.calculate(exotic, powerfulFriends, radiantLight, stasis, inventory);
             tvResult.setItems(armorSetObservableList);
         } catch (SQLException e) {
             sampleAlert("[ERRO]", e.getMessage());
@@ -136,6 +137,7 @@ public class CalculateArmorScene extends BasicScene implements Initializable {
 
                 for(ArmorSet armorSet1: armorSetObservableList) {
                     bw.write(armorSet1.generateAttributes().getAttributes());
+                    bw.newLine();
                     bw.write(armorSet1.generateSpent().toString());
                     bw.newLine();
 
