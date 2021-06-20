@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.MouseEvent;
 
 
 import java.net.URL;
@@ -123,12 +124,12 @@ public class ViewArmorScene extends BasicScene implements Initializable {
     }
 
     private void initTableView(TableView <Armor> tableView) {
-        tableView.setOnMouseClicked((evt)-> edit(tableView.getSelectionModel().getSelectedItem()));
+        tableView.setOnMouseClicked((evt)-> edit(evt, tableView.getSelectionModel().getSelectedItem()));
     }
 
     @FXML
-    void edit(Armor armor) {
-        if(armor != null) {
+    void edit(MouseEvent evt, Armor armor) {
+        if(armor != null && evt.getClickCount() == 2) {
             Main.changeScene(Main.REGISTER_ARMORS, (aclass) -> new RegisterArmorScene(authService,
                     armorRepository, armorAttributesRepository, armor), 650, 2);
         }

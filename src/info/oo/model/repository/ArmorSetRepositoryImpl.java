@@ -33,7 +33,7 @@ public class ArmorSetRepositoryImpl implements ArmorSetRepository {
         for(int i: rstVetor)
             sum += i / 10;
 
-        return sum >= 29;
+        return sum >= 31;
     }
 
     private void scaleArmors(ArmorSet armorSet, ObservableList<ObservableList<Armor>> observableList, int index) {
