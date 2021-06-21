@@ -271,14 +271,15 @@ public class RegisterArmorScene extends BasicScene implements Initializable {
 
         boolean isMasterprice = getMasterprice();
 
-        ArmorAttribute armorAttribute = new ArmorAttribute(currentArmor.getArmorAttribute().getId(), attributes[0], attributes[1], attributes[2],
+        ArmorAttribute armorAttribute = new ArmorAttribute(attributes[0], attributes[1], attributes[2],
                                                            attributes[3], attributes[4], attributes[5]);
 
-        Armor armor = new Armor(currentArmor.getId(), name, authService.getLogged().getGuardianClass(), type, rarity, true, isMasterprice,
+        Armor armor = new Armor(name, authService.getLogged().getGuardianClass(), type, rarity, true, isMasterprice,
                 armorAttribute, element, authService.getLogged().getId());
 
         try {
             if(currentArmor != null) {
+                armorAttribute.setId(currentArmor.getArmorAttribute().getId());
                 armorAttributesRepository.update(armorAttribute);
             }
             else {
@@ -291,6 +292,7 @@ public class RegisterArmorScene extends BasicScene implements Initializable {
 
         try {
             if(currentArmor != null) {
+                armor.setId(currentArmor.getId());
                 armorRepository.update(armor);
             }
             else {
